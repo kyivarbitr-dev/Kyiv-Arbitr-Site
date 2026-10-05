@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+# Після підключення домену замініть адресу нижче на свою
+Sitemap: https://YOUR-DOMAIN.COM.UA/sitemap.xml
