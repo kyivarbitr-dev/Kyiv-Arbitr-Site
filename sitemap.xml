@@ -3,4 +3,22 @@
   <url>
     <loc>https://YOUR-DOMAIN.COM.UA/</loc>
   </url>
+  <url>
+    <loc>https://YOUR-DOMAIN.COM.UA/about.html</loc>
+  </url>
+  <url>
+    <loc>https://YOUR-DOMAIN.COM.UA/services.html</loc>
+  </url>
+  <url>
+    <loc>https://YOUR-DOMAIN.COM.UA/analytics.html</loc>
+  </url>
+  <url>
+    <loc>https://YOUR-DOMAIN.COM.UA/news.html</loc>
+  </url>
+  <url>
+    <loc>https://YOUR-DOMAIN.COM.UA/info.html</loc>
+  </url>
+  <url>
+    <loc>https://YOUR-DOMAIN.COM.UA/contacts.html</loc>
+  </url>
 </urlset>

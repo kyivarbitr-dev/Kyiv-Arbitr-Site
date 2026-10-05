@@ -5,6 +5,7 @@
   var moreBtn = document.getElementById('news-more');
   if (!box) return;
 
+  var LIMIT = parseInt(box.getAttribute('data-limit'), 10) || 0;
   var PAGE = 6;
   var items = [];
   var shown = 0;
@@ -60,7 +61,7 @@
   }
 
   function renderMore() {
-    var end = Math.min(shown + PAGE, items.length);
+    var end = Math.min(shown + (LIMIT || PAGE), items.length);
     for (; shown < end; shown++) box.appendChild(card(items[shown]));
     if (moreBtn) moreBtn.hidden = shown >= items.length;
   }
@@ -78,6 +79,7 @@
       items = list.filter(function (i) {
         return i && i.title && i.date && String(i.date) <= today; /* майбутні дати приховані до свого дня */
       }).sort(function (a, b) { return String(b.date).localeCompare(String(a.date)); });
+      if (LIMIT) items = items.slice(0, LIMIT);
       while (box.firstChild) box.removeChild(box.firstChild);
       if (!items.length) { box.appendChild(el('p', 'w-loading', 'Новин поки немає.')); return; }
       renderMore();

@@ -21,6 +21,16 @@
     if (mf) mf.src = C.MAP_EMBED_URL;
   }
 
+  /* Мобільне меню */
+  var mb = document.querySelector('.menu-btn');
+  var hd = document.querySelector('header.site');
+  if (mb && hd) {
+    mb.addEventListener('click', function () {
+      var open = hd.classList.toggle('open');
+      mb.setAttribute('aria-expanded', open ? 'true' : 'false');
+    });
+  }
+
   /* Форма звернення */
   var f = document.getElementById('f');
   var st = document.getElementById('status');

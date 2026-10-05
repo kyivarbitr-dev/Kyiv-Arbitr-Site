@@ -243,3 +243,64 @@ nav.main a{font-size:14px}
   .news-card{padding:24px 20px}
   .news-card h3{font-size:20px;line-height:28px}
 }
+
+
+/* ===== багатосторінкова версія: компактні відступи ===== */
+section{padding:56px 0}
+section.tight{padding:32px 0}
+.section-head{margin-bottom:28px}
+.section-head h2{margin-bottom:12px}
+section h1{font-size:40px;line-height:48px;letter-spacing:-.25px;margin-bottom:12px}
+.sub-h{margin:48px 0 24px}
+.hero{padding:40px 0 48px}
+.hero-grid{gap:48px}
+.hero h1{font-size:48px;line-height:56px;margin-bottom:20px}
+.hero .sub{margin-bottom:24px}
+.hero .actions{margin-bottom:24px}
+.portrait img{height:440px}
+.bar{min-height:64px;padding-top:8px;padding-bottom:8px}
+.map-block{margin-top:40px}
+.card{padding:24px}
+.w-card{padding:24px 28px}
+.news-card{padding:24px 28px}
+.about-grid,.contact-grid{gap:48px}
+.facts{margin:24px 0}
+.cert{margin-top:32px}
+footer{padding:40px 0 24px}
+.legal{margin-top:32px}
+section.alt .news-card{background:var(--bg)}
+.cta{background:var(--dark-bg);color:var(--on-dark);padding:36px 0}
+.cta-in{display:flex;justify-content:space-between;align-items:center;gap:24px;flex-wrap:wrap}
+.cta h2{color:var(--on-dark);font-size:28px;line-height:36px;margin-bottom:6px}
+.cta p{margin:0;color:rgba(243,244,247,.78)}
+html,body{min-height:100%}
+body{display:flex;flex-direction:column;min-height:100vh}
+main{flex:1}
+
+/* меню */
+.menu-btn{display:none;background:transparent;border:1px solid rgba(243,244,247,.4);color:var(--on-dark);font:600 14px/20px var(--sans);padding:8px 16px;border-radius:2px;cursor:pointer}
+nav.main a[aria-current="page"]{border-bottom-color:var(--accent)}
+@media (max-width:1099px){
+  .menu-btn{display:inline-flex}
+  nav.main{display:none;width:100%;flex-direction:column;gap:0;order:3}
+  header.site.open nav.main{display:flex}
+  nav.main a{padding:12px 0;border-bottom:1px solid rgba(243,244,247,.12);font-size:15px}
+  .hdr-cta{display:none}
+}
+@media (max-width:1199px){
+  .hero h1{font-size:40px;line-height:48px}
+}
+@media (max-width:767px){
+  section{padding:36px 0}
+  section.tight{padding:24px 0}
+  section h1{font-size:28px;line-height:36px}
+  .hero{padding:28px 0 36px}
+  .hero h1{font-size:32px;line-height:40px}
+  .portrait img{height:340px}
+  .sub-h{margin:36px 0 20px}
+  .map-block{margin-top:32px}
+  .about-grid,.contact-grid{gap:28px}
+  .card,.w-card,.news-card{padding:20px}
+  .cta h2{font-size:22px;line-height:30px}
+  footer{padding:32px 0 20px}
+}

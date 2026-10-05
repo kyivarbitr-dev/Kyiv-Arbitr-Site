@@ -204,16 +204,8 @@
     var nbuP = loadNBU();
     loadCrypto(nbuP);
     loadProzorro();
-    setInterval(function () { loadCrypto(Promise.resolve()); }, 120 * 1000);
+    if ($('w-crypto')) setInterval(function () { loadCrypto(Promise.resolve()); }, 120 * 1000);
   }
 
-  var sec = $('info');
-  if ('IntersectionObserver' in window && sec) {
-    var io = new IntersectionObserver(function (entries) {
-      if (entries[0].isIntersecting) { io.disconnect(); start(); }
-    }, { rootMargin: '300px' });
-    io.observe(sec);
-  } else {
-    start();
-  }
+  start();
 })();
