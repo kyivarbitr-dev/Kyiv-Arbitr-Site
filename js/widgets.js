@@ -54,6 +54,18 @@
     box.appendChild(p);
   }
 
+  /* Значок-монета з символом валюти */
+  var SYM = { USD: '$', EUR: '€', GBP: '£', PLN: 'zł', CHF: '₣', JPY: '¥', CNY: '¥', CAD: '$', BTC: '₿', ETH: 'Ξ', XRP: 'XRP' };
+  function coin(code, idx, crypto) {
+    var s = SYM[code] || code;
+    var w = el('span', 'coin' + (crypto ? ' crypto' : '') + (s.length > 1 ? ' sm' : ''));
+    w.setAttribute('aria-hidden', 'true');
+    var i = el('i', null, s);
+    i.style.setProperty('--d', (idx * 0.45) + 's');
+    w.appendChild(i);
+    return w;
+  }
+
   /* ---------- Курси НБУ ---------- */
   function loadNBU() {
     var box = $('w-nbu'), meta = $('w-nbu-date');
@@ -70,11 +82,14 @@
         if (list[i].cc === 'USD') { window.__usdRate = Number(list[i].rate); break; }
       }
       clear(box);
-      rows.forEach(function (r) {
+      rows.forEach(function (r, idx) {
         var row = el('div', 'w-row');
-        var left = el('div');
-        left.appendChild(el('b', null, r.cc));
-        left.appendChild(el('span', 'n', r.txt || ''));
+        var left = el('div', 'w-name');
+        left.appendChild(coin(r.cc, idx, false));
+        var tx = el('div');
+        tx.appendChild(el('b', null, r.cc));
+        tx.appendChild(el('span', 'n', r.txt || ''));
+        left.appendChild(tx);
         row.appendChild(left);
         row.appendChild(el('div', 'w-val', fmt(Number(r.rate), 4) + ' грн'));
         box.appendChild(row);
@@ -121,11 +136,14 @@
       });
     }).then(function (rows) {
       clear(box);
-      rows.forEach(function (r) {
+      rows.forEach(function (r, idx) {
         var row = el('div', 'w-row');
-        var left = el('div');
-        left.appendChild(el('b', null, r.c.sym));
-        left.appendChild(el('span', 'n', r.c.name));
+        var left = el('div', 'w-name');
+        left.appendChild(coin(r.c.sym, idx + 4, true));
+        var tx = el('div');
+        tx.appendChild(el('b', null, r.c.sym));
+        tx.appendChild(el('span', 'n', r.c.name));
+        left.appendChild(tx);
         row.appendChild(left);
         var val = el('div', 'w-val', '$' + fmtPrice(r.usd));
         var parts = [];

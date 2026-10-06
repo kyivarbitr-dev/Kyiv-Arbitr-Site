@@ -3,14 +3,14 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Інформер: торги, суди, реєстри · Раковський О. П.</title>
-<meta name="description" content="Відкриті торги Prozorro.Sale, сервіси судової влади та реєстри боржників Міністерства юстиції.">
+<title>Інформер: торги майном банкрутів · Раковський О. П.</title>
+<meta name="description" content="Відкриті торги майном банкрутів на Prozorro.Sale.">
 <meta name="theme-color" content="#0B1F3A">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="uk_UA">
-<meta property="og:title" content="Інформер: торги, суди, реєстри · Раковський О. П.">
-<meta property="og:description" content="Відкриті торги Prozorro.Sale, сервіси судової влади та реєстри боржників Міністерства юстиції.">
+<meta property="og:title" content="Інформер: торги майном банкрутів · Раковський О. П.">
+<meta property="og:description" content="Відкриті торги майном банкрутів на Prozorro.Sale.">
 <!-- Після підключення домену розкоментуйте й підставте адресу сторінки:
 <link rel="canonical" href="https://ВАШ-ДОМЕН/info.html">
 -->
@@ -19,6 +19,8 @@
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Source+Serif+4:wght@600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/style.css">
 <script src="js/config.js"></script>
+<script>(function(d){if('IntersectionObserver' in window&&!(window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches)){d.classList.add('reveal');setTimeout(function(){if(!window.__revealReady)d.classList.remove('reveal')},2500)}})(document.documentElement)</script>
+<script src="js/reveal.js" defer></script>
 <script src="js/app.js" defer></script>
 <script src="js/widgets.js" defer></script>
 <script src="js/news.js" defer></script>
@@ -28,21 +30,21 @@
   <div class="wrap bar">
     <a class="brand" href="index.html"><b>Раковський О. П.</b><span>Арбітражний керуючий</span></a>
     <button class="menu-btn" type="button" aria-label="Відкрити меню" aria-expanded="false" aria-controls="mainnav">Меню</button>
-    <nav class="main" id="mainnav" aria-label="Основне меню"><a href="index.html">Головна</a><a href="about.html">Про мене</a><a href="services.html">Послуги</a><a href="analytics.html">Аналітика</a><a href="news.html">Новини</a><a href="info.html" aria-current="page">Інформер</a><a href="contacts.html">Контакти</a></nav>
+    <nav class="main" id="mainnav" aria-label="Основне меню"><a href="index.html">Головна</a><a href="about.html">Про мене</a><a href="services.html">Послуги</a><a href="analytics.html">Аналітика</a><a href="news.html">Новини</a><a href="info.html" aria-current="page">Інформер</a><a href="links.html">Корисні посилання</a><a href="contacts.html">Контакти</a></nav>
     <a class="btn btn-primary hdr-cta" href="contacts.html">Звернутися</a>
   </div>
 </header>
 <main>
 <section id="info" class="alt">
   <div class="wrap">
-    <div class="section-head">
+    <div class="section-head scroll-reveal">
       <p class="eyebrow">Інформер</p>
       <h1>Інформер</h1>
-      <p class="lead">Відкриті торги Prozorro.Sale, сервіси судової влади та реєстри Міністерства юстиції. Курси валют і криптовалют дивіться на головній сторінці.</p>
+      <p class="lead">Нещодавно оновлені відкриті торги майном боржників у справах про банкрутство. Курси валют і криптовалют дивіться на головній сторінці, офіційні сервіси судів і реєстрів — у розділі <a href="links.html">«Корисні посилання»</a>.</p>
     </div>
     <div class="w-grid">
 
-      <div class="w-card">
+      <div class="w-card w-wide scroll-reveal">
         <h3>Prozorro.Sale: майно банкрутів</h3>
         <p class="w-sub">Нещодавно оновлені відкриті торги</p>
         <div class="w-body" id="w-pz"><p class="w-loading">Завантаження…</p></div>
@@ -51,28 +53,6 @@
           <a href="https://prozorro.sale/auction" target="_blank" rel="noopener">Усі аукціони</a>
         </div>
         <p class="w-foot">Джерело: <a href="https://prozorro.sale/opendata/" target="_blank" rel="noopener">Prozorro.Sale</a> (відкриті дані).</p>
-      </div>
-
-      <div class="w-card">
-        <h3>Судова влада: стан розгляду справ</h3>
-        <p class="w-sub">Офіційні сервіси для перевірки справ</p>
-        <ul class="w-links">
-          <li><a href="https://court.gov.ua/fair/" target="_blank" rel="noopener">Стан розгляду справ</a><small>Стадія розгляду, склад суду, рішення. Пошук за номером справи або сторонами.</small></li>
-          <li><a href="https://reyestr.court.gov.ua/" target="_blank" rel="noopener">Єдиний державний реєстр судових рішень</a><small>Тексти судових рішень.</small></li>
-          <li><a href="https://supreme.court.gov.ua/supreme/pro_sud/stan_rozg" target="_blank" rel="noopener">Верховний Суд: стан розгляду справ</a><small>Касаційні провадження.</small></li>
-          <li><a href="https://cabinet.court.gov.ua/" target="_blank" rel="noopener">Електронний кабінет ЄСІТС</a><small>Подання документів до суду в електронній формі.</small></li>
-          <li><a href="https://court.gov.ua/" target="_blank" rel="noopener">Судова влада України</a><small>Офіційний веб-портал.</small></li>
-        </ul>
-      </div>
-
-      <div class="w-card w-wide">
-        <h3>Реєстр боржників</h3>
-        <p class="w-sub">Офіційні ресурси Міністерства юстиції України</p>
-        <ul class="w-links w-cols">
-          <li><a href="https://erb.minjust.gov.ua/" target="_blank" rel="noopener">Єдиний реєстр боржників</a><small>Відкрита база відомостей про боржників за виконавчими провадженнями, що оприлюднюється в режимі реального часу.</small></li>
-          <li><a href="https://asvpweb.minjust.gov.ua/" target="_blank" rel="noopener">Автоматизована система виконавчого провадження</a><small>Інформація про виконавчі провадження.</small></li>
-        </ul>
-        <p class="w-foot">Джерело: <a href="https://minjust.gov.ua/" target="_blank" rel="noopener">Міністерство юстиції України</a>. Внесення до реєстру не замінює судового рішення та не є оцінкою фінансового стану особи.</p>
       </div>
 
     </div>
@@ -85,7 +65,7 @@
     <div class="f-grid">
       <div>
         <h5>Контакти</h5>
-        <p>м. Київ, вул. Дениса Монастирського, буд. 3, оф. 4<br><a href="tel:+380668440888">+380668440888</a><br><a href="mailto:kyivarbitr@gmail.com">kyivarbitr@gmail.com</a><br>Години прийому: 10:00–18:00</p>
+        <p>м. Київ, вул. Дениса Монастирського, буд. 3, оф. 4<br><a href="tel:+380668440888">+380668440888</a><br><a href="mailto:kyivarbitr@gmail.com">kyivarbitr@gmail.com</a><br>Графік роботи: Пн–Пт, 10:00–18:00<br>Особистий прийом за попереднім записом</p>
       </div>
       <div>
         <h5>Меню</h5>
@@ -96,6 +76,7 @@
           <li><a href="analytics.html">Аналітика</a></li>
           <li><a href="news.html">Новини</a></li>
           <li><a href="info.html">Інформер</a></li>
+          <li><a href="links.html">Корисні посилання</a></li>
           <li><a href="contacts.html">Контакти</a></li>
         </ul>
       </div>

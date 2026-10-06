@@ -19,6 +19,8 @@
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Source+Serif+4:wght@600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/style.css">
 <script src="js/config.js"></script>
+<script>(function(d){if('IntersectionObserver' in window&&!(window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches)){d.classList.add('reveal');setTimeout(function(){if(!window.__revealReady)d.classList.remove('reveal')},2500)}})(document.documentElement)</script>
+<script src="js/reveal.js" defer></script>
 <script src="js/app.js" defer></script>
 <script src="js/widgets.js" defer></script>
 <script src="js/news.js" defer></script>
@@ -28,7 +30,7 @@
   <div class="wrap bar">
     <a class="brand" href="index.html"><b>Раковський О. П.</b><span>Арбітражний керуючий</span></a>
     <button class="menu-btn" type="button" aria-label="Відкрити меню" aria-expanded="false" aria-controls="mainnav">Меню</button>
-    <nav class="main" id="mainnav" aria-label="Основне меню"><a href="index.html">Головна</a><a href="about.html">Про мене</a><a href="services.html">Послуги</a><a href="analytics.html">Аналітика</a><a href="news.html">Новини</a><a href="info.html">Інформер</a><a href="contacts.html" aria-current="page">Контакти</a></nav>
+    <nav class="main" id="mainnav" aria-label="Основне меню"><a href="index.html">Головна</a><a href="about.html">Про мене</a><a href="services.html">Послуги</a><a href="analytics.html">Аналітика</a><a href="news.html">Новини</a><a href="info.html">Інформер</a><a href="links.html">Корисні посилання</a><a href="contacts.html" aria-current="page">Контакти</a></nav>
     <a class="btn btn-primary hdr-cta" href="contacts.html">Звернутися</a>
   </div>
 </header>
@@ -40,12 +42,12 @@
       <h1 style="margin-bottom:24px">Контакти арбітражного керуючого</h1>
       <p>Раковський Олексій Павлович, арбітражний керуючий.</p>
       <dl style="margin-top:32px">
-        <div class="cl"><dt>Адреса</dt><dd>м. Київ, вул. Дениса Монастирського, буд. 3, оф. 4</dd></div>
-        <div class="cl"><dt>Телефон</dt><dd><a href="tel:+380668440888">+380668440888</a></dd></div>
-        <div class="cl"><dt>Email</dt><dd><a href="mailto:kyivarbitr@gmail.com">kyivarbitr@gmail.com</a></dd></div>
-        <div class="cl"><dt>Години прийому</dt><dd>10:00–18:00</dd></div>
+        <div cl scroll-revealass="cl scroll-reveal"><dt>Адреса</dt><dd>м. Київ, вул. Дениса Монастирського, буд. 3, оф. 4</dd></div>
+        <div cl scroll-revealass="cl scroll-reveal"><dt>Телефон</dt><dd><a href="tel:+380668440888">+380668440888</a></dd></div>
+        <div cl scroll-revealass="cl scroll-reveal"><dt>Email</dt><dd><a href="mailto:kyivarbitr@gmail.com">kyivarbitr@gmail.com</a></dd></div>
+        <div cl scroll-revealass="cl scroll-reveal"><dt>Графік роботи</dt><dd>Пн–Пт: 10:00–18:00<br>Особистий прийом здійснюється за попереднім записом</dd></div>
         <!-- Соцмережі: додайте блок після створення каналів
-        <div class="cl"><dt>Соцмережі</dt><dd><a href="URL">Telegram</a> · <a href="URL">Instagram</a> · <a href="URL">YouTube</a> · <a href="URL">X</a></dd></div>
+        <div cl scroll-revealass="cl scroll-reveal"><dt>Соцмережі</dt><dd><a href="URL">Telegram</a> · <a href="URL">Instagram</a> · <a href="URL">YouTube</a> · <a href="URL">X</a></dd></div>
         -->
       </dl>
     </div>
@@ -63,11 +65,11 @@
         <button class="btn btn-primary" type="submit">Надіслати звернення</button>
         <div id="status" role="status"></div>
       </form>
-      <p class="note" style="margin-top:16px">Надсилання форми не створює відносин між адвокатом і клієнтом і не гарантує жодного результату. Не надсилайте через форму конфіденційні документи.</p>
+      <p class="note" style="margin-top:16px">Надсилання форми не створює відносин між арбітражним керуючим і клієнтом і не гарантує жодного результату. Не надсилайте через форму конфіденційні документи.</p>
     </div>
   </div>
 
-  <div class="wrap map-block">
+  <div class="wrap map-block scroll-reveal">
     <h3 style="margin-bottom:16px">Як нас знайти</h3>
     <div class="map-frame">
       <iframe id="map-iframe" title="Карта: м. Київ, вул. Дениса Монастирського, 3" src="https://www.google.com/maps?q=%D0%B2%D1%83%D0%BB.+%D0%94%D0%B5%D0%BD%D0%B8%D1%81%D0%B0+%D0%9C%D0%BE%D0%BD%D0%B0%D1%81%D1%82%D0%B8%D1%80%D1%81%D1%8C%D0%BA%D0%BE%D0%B3%D0%BE%2C+3%2C+%D0%9A%D0%B8%D1%97%D0%B2%2C+%D0%A3%D0%BA%D1%80%D0%B0%D1%97%D0%BD%D0%B0&amp;hl=uk&amp;z=16&amp;output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
@@ -84,7 +86,7 @@
     <div class="f-grid">
       <div>
         <h5>Контакти</h5>
-        <p>м. Київ, вул. Дениса Монастирського, буд. 3, оф. 4<br><a href="tel:+380668440888">+380668440888</a><br><a href="mailto:kyivarbitr@gmail.com">kyivarbitr@gmail.com</a><br>Години прийому: 10:00–18:00</p>
+        <p>м. Київ, вул. Дениса Монастирського, буд. 3, оф. 4<br><a href="tel:+380668440888">+380668440888</a><br><a href="mailto:kyivarbitr@gmail.com">kyivarbitr@gmail.com</a><br>Графік роботи: Пн–Пт, 10:00–18:00<br>Особистий прийом за попереднім записом</p>
       </div>
       <div>
         <h5>Меню</h5>
@@ -95,6 +97,7 @@
           <li><a href="analytics.html">Аналітика</a></li>
           <li><a href="news.html">Новини</a></li>
           <li><a href="info.html">Інформер</a></li>
+          <li><a href="links.html">Корисні посилання</a></li>
           <li><a href="contacts.html">Контакти</a></li>
         </ul>
       </div>

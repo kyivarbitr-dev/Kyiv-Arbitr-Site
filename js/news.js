@@ -31,7 +31,7 @@
   }
 
   function card(n) {
-    var a = el('article', 'news-card');
+    var a = el('article', 'news-card scroll-reveal');
     var meta = el('div', 'news-meta');
     var t = el('time', null, fmtDate(n.date));
     t.setAttribute('datetime', n.date);

@@ -19,6 +19,9 @@
     <loc>https://YOUR-DOMAIN.COM.UA/info.html</loc>
   </url>
   <url>
+    <loc>https://YOUR-DOMAIN.COM.UA/links.html</loc>
+  </url>
+  <url>
     <loc>https://YOUR-DOMAIN.COM.UA/contacts.html</loc>
   </url>
 </urlset>
