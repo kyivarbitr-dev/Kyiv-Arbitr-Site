@@ -54,16 +54,18 @@
       </dl>
     </div>
     <div>
-      <h3 style="margin-bottom:8px">Залишити звернення</h3>
+      <h3 id="form" style="margin-bottom:8px">Залишити звернення</h3>
       <p class="note" style="margin-bottom:24px">Опишіть ситуацію коротко. Контакти для&nbsp;відповіді вказуйте ті, якими користуєтесь.</p>
-      <form id="f" novalidate>
-        <div><label for="n">Ім'я *</label><input id="n" name="n" required autocomplete="name"></div>
-        <div><label for="p">Телефон *</label><input id="p" name="p" type="tel" required autocomplete="tel"></div>
-        <div><label for="e">Email</label><input id="e" name="e" type="email" autocomplete="email"></div>
+      <form id="f" name="zvernennya" method="POST" action="/thanks.html" data-netlify="true" netlify-honeypot="bot-field" novalidate>
+        <input type="hidden" name="form-name" value="zvernennya">
+        <p class="hp" aria-hidden="true"><label>Не&nbsp;заповнюйте це поле, якщо ви людина: <input name="bot-field" tabindex="-1" autocomplete="off"></label></p>
+        <div><label for="n">Ім'я *</label><input id="n" name="name" required autocomplete="name"></div>
+        <div><label for="p">Телефон *</label><input id="p" name="phone" type="tel" required autocomplete="tel"></div>
+        <div><label for="e">Email</label><input id="e" name="email" type="email" autocomplete="email"></div>
         <div><label for="t">Ви звертаєтесь як</label>
-          <select id="t" name="t"><option>Кредитор</option><option>Боржник&nbsp;— юридична особа</option><option>Боржник&nbsp;— фізична особа</option><option>Інше</option></select></div>
-        <div><label for="m">Короткий опис ситуації</label><textarea id="m" name="m"></textarea></div>
-        <label class="check"><input type="checkbox" id="c" required><span>Погоджуюсь на&nbsp;обробку персональних даних для&nbsp;розгляду звернення.</span></label>
+          <select id="t" name="role"><option>Кредитор</option><option>Боржник&nbsp;— юридична особа</option><option>Боржник&nbsp;— фізична особа</option><option>Інше</option></select></div>
+        <div><label for="m">Короткий опис ситуації</label><textarea id="m" name="message"></textarea></div>
+        <label class="check"><input type="checkbox" id="c" name="consent" value="так" required><span>Погоджуюсь на&nbsp;обробку персональних даних відповідно до&nbsp;<a href="privacy.html" target="_blank">Політики конфіденційності</a>.</span></label>
         <button class="btn btn-primary" type="submit">Надіслати звернення</button>
         <div id="status" role="status"></div>
       </form>
@@ -112,7 +114,7 @@
         <p>Свідоцтво про&nbsp;право на&nbsp;здійснення діяльності арбітражного керуючого №&nbsp;2211 від&nbsp;13.08.2026.</p>
       </div>
     </div>
-    <p class="legal">Інформація на&nbsp;цьому сайті має загальний інформаційний характер і&nbsp;не&nbsp;є юридичною консультацією чи&nbsp;гарантією певного результату. © 2026 Раковський&nbsp;О.&nbsp;П.</p>
+    <p class="legal">Інформація на&nbsp;цьому сайті має загальний інформаційний характер і&nbsp;не&nbsp;є юридичною консультацією чи&nbsp;гарантією певного результату. © 2026 Раковський&nbsp;О.&nbsp;П. <a class="f-privacy" href="privacy.html">Політика конфіденційності</a></p>
   </div>
 </footer>
 </body>

@@ -42,4 +42,10 @@
   <url>
     <loc>https://YOUR-DOMAIN.COM.UA/en/contacts.html</loc>
   </url>
+  <url>
+    <loc>https://YOUR-DOMAIN.COM.UA/privacy.html</loc>
+  </url>
+  <url>
+    <loc>https://YOUR-DOMAIN.COM.UA/en/privacy.html</loc>
+  </url>
 </urlset>

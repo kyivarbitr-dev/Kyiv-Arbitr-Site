@@ -53,16 +53,18 @@
       </dl>
     </div>
     <div>
-      <h3 style="margin-bottom:8px">Send an&nbsp;enquiry</h3>
+      <h3 id="form" style="margin-bottom:8px">Send an&nbsp;enquiry</h3>
       <p class="note" style="margin-bottom:24px">Describe your situation briefly. Please give contact details you actually use.</p>
-      <form id="f" novalidate>
-        <div><label for="n">Name *</label><input id="n" name="n" required autocomplete="name"></div>
-        <div><label for="p">Phone *</label><input id="p" name="p" type="tel" required autocomplete="tel"></div>
-        <div><label for="e">Email</label><input id="e" name="e" type="email" autocomplete="email"></div>
+      <form id="f" name="enquiry-en" method="POST" action="/en/thanks.html" data-netlify="true" netlify-honeypot="bot-field" novalidate>
+        <input type="hidden" name="form-name" value="enquiry-en">
+        <p class="hp" aria-hidden="true"><label>Do not fill in&nbsp;this field if you are a&nbsp;person: <input name="bot-field" tabindex="-1" autocomplete="off"></label></p>
+        <div><label for="n">Name *</label><input id="n" name="name" required autocomplete="name"></div>
+        <div><label for="p">Phone *</label><input id="p" name="phone" type="tel" required autocomplete="tel"></div>
+        <div><label for="e">Email</label><input id="e" name="email" type="email" autocomplete="email"></div>
         <div><label for="t">You are contacting us as</label>
-          <select id="t" name="t"><option>Creditor</option><option>Debtor&nbsp;— legal entity</option><option>Debtor&nbsp;— individual</option><option>Other</option></select></div>
-        <div><label for="m">Brief description of&nbsp;the&nbsp;situation</label><textarea id="m" name="m"></textarea></div>
-        <label class="check"><input type="checkbox" id="c" required><span>I consent to&nbsp;the&nbsp;processing of&nbsp;my personal data for the&nbsp;purpose of&nbsp;considering this enquiry.</span></label>
+          <select id="t" name="role"><option>Creditor</option><option>Debtor&nbsp;— legal entity</option><option>Debtor&nbsp;— individual</option><option>Other</option></select></div>
+        <div><label for="m">Brief description of&nbsp;the&nbsp;situation</label><textarea id="m" name="message"></textarea></div>
+        <label class="check"><input type="checkbox" id="c" name="consent" value="yes" required><span>I consent to&nbsp;the&nbsp;processing of&nbsp;my personal data in&nbsp;accordance with the&nbsp;<a href="privacy.html" target="_blank">Privacy Policy</a>.</span></label>
         <button class="btn btn-primary" type="submit">Send enquiry</button>
         <div id="status" role="status"></div>
       </form>
@@ -111,7 +113,7 @@
         <p>Certificate of&nbsp;the&nbsp;right to&nbsp;act as an&nbsp;arbitration manager No.&nbsp;2211 dated 13&nbsp;August 2026.</p>
       </div>
     </div>
-    <p class="legal">The information on&nbsp;this website is of&nbsp;a&nbsp;general nature and does not constitute legal advice or a&nbsp;guarantee of&nbsp;any particular outcome. The English version is provided for convenience; in&nbsp;case of&nbsp;any discrepancy, the&nbsp;Ukrainian version prevails. © 2026 Oleksii Rakovskyi</p>
+    <p class="legal">The information on&nbsp;this website is of&nbsp;a&nbsp;general nature and does not constitute legal advice or a&nbsp;guarantee of&nbsp;any particular outcome. The English version is provided for convenience; in&nbsp;case of&nbsp;any discrepancy, the&nbsp;Ukrainian version prevails. © 2026 Oleksii Rakovskyi <a class="f-privacy" href="privacy.html">Privacy Policy</a></p>
   </div>
 </footer>
 </body>

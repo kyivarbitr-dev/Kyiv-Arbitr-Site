@@ -48,24 +48,36 @@
     return;
   }
 
+  var L = EN ? {
+    need: 'Please enter your name and phone number.', consent: 'Please confirm your consent to the processing of personal data.',
+    sending: 'Sending…', ok: 'Thank you! Your enquiry has been received. We will contact you using the details you provided.',
+    fail: 'The enquiry could not be sent. Please call +380 66 844 08 88 or write to kyivarbitr@gmail.com.'
+  } : {
+    need: 'Вкажіть ім\'я та телефон.', consent: 'Підтвердьте згоду на обробку персональних даних.',
+    sending: 'Надсилаємо…', ok: 'Дякуємо! Звернення отримано. Ми зв\'яжемося з вами за вказаними контактами.',
+    fail: 'Не вдалося надіслати звернення. Зателефонуйте за номером +380 66 844 08 88 або напишіть на kyivarbitr@gmail.com.'
+  };
+  var btn = f.querySelector('button[type="submit"]');
+  function say(text, kind) { st.textContent = text; st.className = kind || ''; }
+
   f.addEventListener('submit', function (ev) {
     ev.preventDefault();
-    var n = f.n.value.trim(), p = f.p.value.trim();
-    var L = EN ? {
-      need: 'Please enter your name and phone number.', consent: 'Consent to the processing of personal data is required.',
-      name: 'Name', phone: 'Phone', as: 'Contacting as', subj: 'Enquiry from the website (EN)',
-      ok: 'Your email app has opened with a ready message. If it did not open, write to kyivarbitr@gmail.com.'
-    } : {
-      need: 'Вкажіть ім\'я та телефон.', consent: 'Потрібна згода на обробку персональних даних.',
-      name: 'Ім\'я', phone: 'Телефон', as: 'Звертається як', subj: 'Звернення з сайту',
-      ok: 'Відкрито поштову програму з готовим листом. Якщо вона не відкрилась, напишіть на kyivarbitr@gmail.com.'
-    };
-    if (!n || !p) { st.textContent = L.need; return; }
-    if (!document.getElementById('c').checked) { st.textContent = L.consent; return; }
-    var body = L.name + ': ' + n + '\n' + L.phone + ': ' + p + '\nEmail: ' + f.e.value.trim() +
-               '\n' + L.as + ': ' + f.t.value + '\n\n' + f.m.value.trim();
-    window.location.href = 'mailto:kyivarbitr@gmail.com?subject=' +
-      encodeURIComponent(L.subj) + '&body=' + encodeURIComponent(body);
-    st.textContent = L.ok;
+    if (!document.getElementById('n').value.trim() || !document.getElementById('p').value.trim()) { say(L.need, 'err'); return; }
+    if (!document.getElementById('c').checked) { say(L.consent, 'err'); return; }
+    if (!window.fetch || !window.URLSearchParams || !window.FormData) { f.submit(); return; }
+    btn.disabled = true; say(L.sending);
+    /* Netlify Forms: надсилання на кореневу адресу з полем form-name */
+    fetch('/', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+      body: new URLSearchParams(new FormData(f)).toString()
+    }).then(function (r) {
+      if (!r.ok) throw new Error('HTTP ' + r.status);
+      f.reset();
+      say(L.ok, 'ok');
+      if (window.gtag) window.gtag('event', 'generate_lead', { form: f.getAttribute('name') });
+    }).catch(function () {
+      say(L.fail, 'err');
+    }).then(function () { btn.disabled = false; });
   });
 })();

@@ -12,6 +12,8 @@ analytics.html   Аналітика й запитання
 news.html        Новини
 links.html       Корисні посилання: суди, реєстри, Prozorro.Sale, джерела курсів
 en/              англійська версія сайту (ті самі назви файлів)
+privacy.html     Політика конфіденційності
+thanks.html      сторінка «Дякуємо» після надсилання форми
 contacts.html    Контакти, форма, карта
 css/style.css    стилі
 js/config.js     НАЛАШТУВАННЯ (форма, аналітика, карта, віджети)
@@ -32,7 +34,7 @@ favicon.svg, 404.html, robots.txt, sitemap.xml
 
 | Параметр | Призначення |
 |---|---|
-| `GOOGLE_FORM_URL` | Адреса вбудованої Google Form. Порожньо: працює запасна форма через пошту |
+| `GOOGLE_FORM_URL` | Адреса вбудованої Google Form. Порожньо: працює власна форма сайту через Netlify Forms |
 | `GA4_ID` | Ідентифікатор Google Analytics 4 (`G-XXXXXXXXXX`). Порожньо: аналітика вимкнена |
 | `MAP_EMBED_URL` | Необов'язково: власний код карти з Google Maps |
 | `NBU_CURRENCIES` | Валюти для показу (за замовчуванням USD, EUR, GBP, PLN) |
@@ -156,3 +158,15 @@ favicon.svg, 404.html, robots.txt, sitemap.xml
 Англійська версія лежить у папці `en/` і має ті самі назви файлів. Перемикач UA / EN у шапці веде на відповідну сторінку іншою мовою. Якщо змінюєте текст українською, оновіть і англійську сторінку.
 
 Щоб новина з'явилася в англійській версії, додайте в `news/news.json` поля з суфіксом `_en`: `title_en`, `summary_en`, а за потреби `text_en`, `tag_en`, `linkLabel_en`. Новина без `title_en` показується лише українською.
+
+
+## Форма звернення (Netlify Forms)
+
+Форми на сторінках `contacts.html` (назва `zvernennya`) та `en/contacts.html` (назва `enquiry-en`) працюють через Netlify Forms. Заявки зберігаються в кабінеті Netlify: Site → Forms. Від спаму захищає приховане поле `bot-field` і вбудований фільтр Netlify.
+
+Один раз після першої публікації:
+1. У кабінеті Netlify відкрийте розділ Forms і ввімкніть виявлення форм (Enable form detection), якщо воно вимкнене.
+2. Опублікуйте сайт ще раз (Deploys → Trigger deploy), щоб Netlify знайшов форми.
+3. Налаштуйте сповіщення: Forms → Form notifications → Email notification → kyivarbitr@gmail.com.
+
+Форма працює лише на Netlify. На GitHub Pages чи при відкритті файлу з комп'ютера відвідувач побачить повідомлення з телефоном і email.

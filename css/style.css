@@ -413,3 +413,21 @@ h1,h2,h3,h4,.t{text-wrap:balance}
   .langs a{padding:5px 8px}
   .menu-btn{padding:7px 12px}
 }
+
+/* форма звернення */
+.hp{position:absolute!important;left:-9999px;width:1px;height:1px;overflow:hidden}
+#status.ok{color:#2E6B4A;font-weight:600}
+#status.err{color:#A23B2A}
+@media (prefers-color-scheme:dark){#status.ok{color:#7FC79E}#status.err{color:#E7917F}}
+:root[data-theme="dark"] #status.ok{color:#7FC79E}
+:root[data-theme="dark"] #status.err{color:#E7917F}
+.check a{color:var(--heading);border-bottom:1px solid var(--accent);text-decoration:none}
+button[disabled]{opacity:.6;cursor:progress}
+#form{scroll-margin-top:96px}
+/* політика конфіденційності */
+.policy{max-width:760px}
+.policy h2{font-size:26px;line-height:34px;margin:48px 0 16px}
+.policy p,.policy li{font-size:17px;line-height:28px}
+.policy ul{padding-left:22px}
+.policy li + li{margin-top:6px}
+.policy .meta{color:var(--muted);font-size:14px}
