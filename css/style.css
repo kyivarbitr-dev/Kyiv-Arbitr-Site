@@ -335,3 +335,14 @@ nav.main a[aria-current="page"]{border-bottom-color:var(--accent)}
 @media print{
   .reveal .scroll-reveal{opacity:1!important;transform:none!important}
 }
+
+/* права частина шапки: перемикач мови, кнопка, меню */
+.hdr-right{display:flex;align-items:center;gap:20px}
+.langs{display:flex;border:1px solid rgba(243,244,247,.35);border-radius:2px}
+.langs a{font:600 13px/20px var(--sans);letter-spacing:.5px;padding:6px 10px;text-decoration:none;color:var(--on-dark)}
+.langs a[aria-current]{background:rgba(243,244,247,.14);color:var(--accent)}
+.langs a:hover{color:var(--accent)}
+.langs a:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+@media (max-width:1279px){
+  .hdr-right{order:2;gap:12px}
+}

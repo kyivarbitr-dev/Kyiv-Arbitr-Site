@@ -4,6 +4,11 @@
   var box = document.getElementById('news-list');
   var moreBtn = document.getElementById('news-more');
   if (!box) return;
+  var EN = (document.documentElement.lang || '').slice(0, 2) === 'en';
+  var T = EN ? { more: 'Read more', src: 'Source', none: 'No news yet.', fail: 'Could not load the news. Please try again later.' }
+             : { more: 'Читати повністю', src: 'Джерело', none: 'Новин поки немає.', fail: 'Не вдалося завантажити новини. Спробуйте пізніше.' };
+  /* Англійська версія показує поля title_en, summary_en, text_en, tag_en, linkLabel_en */
+  function f(n, k) { return EN ? n[k + '_en'] : n[k]; }
 
   var LIMIT = parseInt(box.getAttribute('data-limit'), 10) || 0;
   var PAGE = 6;
@@ -20,7 +25,7 @@
   function fmtDate(s) {
     var d = new Date(s + 'T00:00:00');
     if (isNaN(d.getTime())) return s;
-    try { return d.toLocaleDateString('uk-UA', { day: 'numeric', month: 'long', year: 'numeric' }); }
+    try { return d.toLocaleDateString(EN ? 'en-GB' : 'uk-UA', { day: 'numeric', month: 'long', year: 'numeric' }); }
     catch (e) { return s; }
   }
   function todayISO() {
@@ -36,16 +41,16 @@
     var t = el('time', null, fmtDate(n.date));
     t.setAttribute('datetime', n.date);
     meta.appendChild(t);
-    if (n.tag) meta.appendChild(el('span', 'news-tag', n.tag));
+    if (f(n, 'tag')) meta.appendChild(el('span', 'news-tag', f(n, 'tag')));
     a.appendChild(meta);
-    a.appendChild(el('h3', null, n.title));
-    if (n.summary) a.appendChild(el('p', null, n.summary));
+    a.appendChild(el('h3', null, f(n, 'title')));
+    if (f(n, 'summary')) a.appendChild(el('p', null, f(n, 'summary')));
 
-    if (n.text) {
+    if (f(n, 'text')) {
       var det = el('details');
-      det.appendChild(el('summary', null, 'Читати повністю'));
+      det.appendChild(el('summary', null, T.more));
       var body = el('div', 'body');
-      String(n.text).split(/\n{2,}/).forEach(function (par) {
+      String(f(n, 'text')).split(/\n{2,}/).forEach(function (par) {
         if (par.trim()) body.appendChild(el('p', null, par.trim()));
       });
       det.appendChild(body);
@@ -53,7 +58,7 @@
     }
     var url = safeUrl(n.link);
     if (url) {
-      var l = el('a', 'news-link', (n.linkLabel || 'Джерело') + ' →');
+      var l = el('a', 'news-link', (f(n, 'linkLabel') || T.src) + ' →');
       l.href = url; l.target = '_blank'; l.rel = 'noopener';
       a.appendChild(l);
     }
@@ -71,20 +76,20 @@
     box.appendChild(el('p', 'w-err', msg));
   }
 
-  fetch('news/news.json', { cache: 'no-cache' })
+  fetch(box.getAttribute('data-src') || 'news/news.json', { cache: 'no-cache' })
     .then(function (r) { if (!r.ok) throw new Error('HTTP ' + r.status); return r.json(); })
     .then(function (list) {
       if (!Array.isArray(list)) throw new Error('format');
       var today = todayISO();
       items = list.filter(function (i) {
-        return i && i.title && i.date && String(i.date) <= today; /* майбутні дати приховані до свого дня */
+        return i && f(i, 'title') && i.date && String(i.date) <= today; /* майбутні дати приховані до свого дня */
       }).sort(function (a, b) { return String(b.date).localeCompare(String(a.date)); });
       if (LIMIT) items = items.slice(0, LIMIT);
       while (box.firstChild) box.removeChild(box.firstChild);
-      if (!items.length) { box.appendChild(el('p', 'w-loading', 'Новин поки немає.')); return; }
+      if (!items.length) { box.appendChild(el('p', 'w-loading', T.none)); return; }
       renderMore();
     })
-    .catch(function () { fail('Не вдалося завантажити новини. Спробуйте пізніше.'); });
+    .catch(function () { fail(T.fail); });
 
   if (moreBtn) moreBtn.addEventListener('click', renderMore);
 })();

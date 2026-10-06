@@ -7,13 +7,21 @@
     "summary": "Судова влада України надає електронний сервіс «Стан розгляду справ»: за номером справи або даними сторін можна дізнатися, на якій стадії перебуває справа.",
     "text": "Сервіс доступний на офіційному порталі «Судова влада України».\n\nДля пошуку потрібно вказати номер справи або дані сторін, а також регіон і назву суду. У результатах відображається стадія розгляду справи та, за наявності, рішення.\n\nТексти судових рішень також можна знайти в Єдиному державному реєстрі судових рішень.",
     "link": "https://court.gov.ua/fair/",
-    "linkLabel": "Стан розгляду справ"
+    "linkLabel": "Стан розгляду справ",
+    "tag_en": "Services",
+    "title_en": "How to check the status of a court case online",
+    "summary_en": "The Judiciary of Ukraine provides an online service, “Status of case proceedings”: you can find out at what stage a case is by its number or the parties’ details.",
+    "text_en": "The service is available on the official portal of the Judiciary of Ukraine (in Ukrainian).\n\nTo search, enter the case number or the parties’ details, as well as the region and the name of the court. The results show the stage of the proceedings and, if available, the decision.\n\nThe texts of court decisions can also be found in the Unified State Register of Court Decisions.",
+    "linkLabel_en": "Status of case proceedings"
   },
   {
     "id": "2026-10-05-1",
     "date": "2026-10-05",
     "tag": "Сайт",
-    "title": "У розділі «Інформер» з'явилися нові сервіси",
-    "summary": "Тепер на сайті доступні офіційні курси НБУ, ринок криптовалют, відкриті торги Prozorro.Sale, посилання на сервіси судової влади та Єдиний реєстр боржників."
+    "title": "На сайті з'явилися нові сервіси",
+    "summary": "Тепер на сайті доступні офіційні курси НБУ та ринок криптовалют, а в розділі «Корисні посилання» зібрані торги Prozorro.Sale, сервіси судової влади та Єдиний реєстр боржників.",
+    "tag_en": "Website",
+    "title_en": "New services on the website",
+    "summary_en": "The website now shows official NBU exchange rates and cryptocurrency prices, and the Useful Links section brings together Prozorro.Sale auctions, judiciary services and the Unified Register of Debtors."
   }
 ]

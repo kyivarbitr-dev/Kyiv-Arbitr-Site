@@ -17,11 +17,5 @@ window.SITE_CONFIG = {
     { id: 'bitcoin',  sym: 'BTC', name: 'Bitcoin',  binance: 'BTCUSDT' },
     { id: 'ethereum', sym: 'ETH', name: 'Ethereum', binance: 'ETHUSDT' },
     { id: 'ripple',   sym: 'XRP', name: 'XRP',      binance: 'XRPUSDT' }
-  ],
-
-  /* Prozorro.Sale (відкриті дані, нова ЦБД). */
-  PROZORRO_API: 'https://procedure.prozorro.sale/api',
-  PROZORRO_LOOKBACK_HOURS: 48,
-  PROZORRO_METHOD_REGEX: 'bankruptcy',
-  PROZORRO_MAX_ITEMS: 6
+  ]
 };
