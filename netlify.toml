@@ -21,3 +21,10 @@
   from = "/info.html"
   to = "/links.html"
   status = 301
+
+# Файл підтвердження Google Search Console: віддаємо як є, без перенаправлень
+[[redirects]]
+  from = "/googlef2fb6751539090c3.html"
+  to = "/googlef2fb6751539090c3.html"
+  status = 200
+  force = true
