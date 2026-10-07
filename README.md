@@ -170,3 +170,8 @@ favicon.svg, 404.html, robots.txt, sitemap.xml
 3. Налаштуйте сповіщення: Forms → Form notifications → Email notification → kyivarbitr@gmail.com.
 
 Форма працює лише на Netlify. На GitHub Pages чи при відкритті файлу з комп'ютера відвідувач побачить повідомлення з телефоном і email.
+
+
+## Новини з картинками
+
+Картинки до новин лежать у папці `news/img/`. У `news/news.json` у новині вказується поле `"image": "img/назва-файлу.jpg"` (шлях відносно папки `news`) і, за бажанням, `"image_alt"` / `"image_alt_en"` з описом картинки. Рекомендований розмір картинки 1200×630, формат JPG, до 150 КБ. Новина без поля `image` показується без картинки.

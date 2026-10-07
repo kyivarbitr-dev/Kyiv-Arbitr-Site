@@ -440,3 +440,13 @@ button[disabled]{opacity:.6;cursor:progress}
 .step::before{color:var(--accent-text)}
 .hero .eyebrow,.cta .eyebrow,header.site .brand span,footer h5,
 .langs a[aria-current],.langs a:hover{color:var(--accent-on-dark)}
+
+/* ---------- Новини з картинкою ---------- */
+.news-card.has-img{display:grid;grid-template-columns:minmax(220px,340px) 1fr;gap:28px;align-items:start}
+.news-img{margin:0}
+.news-img img{display:block;width:100%;height:auto;aspect-ratio:1200/630;object-fit:cover;border-radius:2px;border:1px solid var(--border)}
+.news-body{min-width:0}
+.news-card details .body p{margin:0 0 14px}
+@media (max-width:767px){
+  .news-card.has-img{grid-template-columns:1fr;gap:16px}
+}

@@ -9,6 +9,8 @@
              : { more: 'Читати повністю', src: 'Джерело', none: 'Новин поки немає.', fail: 'Не вдалося завантажити новини. Спробуйте пізніше.' };
   /* Англійська версія показує поля title_en, summary_en, text_en, tag_en, linkLabel_en */
   function f(n, k) { return EN ? n[k + '_en'] : n[k]; }
+  var SRC = box.getAttribute('data-src') || 'news/news.json';
+  var BASE = SRC.replace(/[^\/]*$/, '');
 
   var LIMIT = parseInt(box.getAttribute('data-limit'), 10) || 0;
   var PAGE = 6;
@@ -37,14 +39,28 @@
 
   function card(n) {
     var a = el('article', 'news-card scroll-reveal');
+    var wrap = a;
+    /* Картинка до новини: поле image (шлях відносно папки news/), image_alt / image_alt_en */
+    if (n.image && /^[\w\-\/.]+\.(jpe?g|png|webp)$/i.test(n.image)) {
+      a.className += ' has-img';
+      var fig = el('figure', 'news-img');
+      var img = el('img');
+      img.src = BASE + n.image;
+      img.alt = f(n, 'image_alt') || f(n, 'title') || '';
+      img.loading = 'lazy'; img.decoding = 'async'; img.width = 1200; img.height = 630;
+      fig.appendChild(img);
+      a.appendChild(fig);
+      wrap = el('div', 'news-body');
+      a.appendChild(wrap);
+    }
     var meta = el('div', 'news-meta');
     var t = el('time', null, fmtDate(n.date));
     t.setAttribute('datetime', n.date);
     meta.appendChild(t);
     if (f(n, 'tag')) meta.appendChild(el('span', 'news-tag', f(n, 'tag')));
-    a.appendChild(meta);
-    a.appendChild(el('h3', null, f(n, 'title')));
-    if (f(n, 'summary')) a.appendChild(el('p', null, f(n, 'summary')));
+    wrap.appendChild(meta);
+    wrap.appendChild(el('h3', null, f(n, 'title')));
+    if (f(n, 'summary')) wrap.appendChild(el('p', null, f(n, 'summary')));
 
     if (f(n, 'text')) {
       var det = el('details');
@@ -54,13 +70,13 @@
         if (par.trim()) body.appendChild(el('p', null, par.trim()));
       });
       det.appendChild(body);
-      a.appendChild(det);
+      wrap.appendChild(det);
     }
     var url = safeUrl(n.link);
     if (url) {
       var l = el('a', 'news-link', (f(n, 'linkLabel') || T.src) + ' →');
       l.href = url; l.target = '_blank'; l.rel = 'noopener';
-      a.appendChild(l);
+      wrap.appendChild(l);
     }
     return a;
   }
@@ -76,7 +92,7 @@
     box.appendChild(el('p', 'w-err', msg));
   }
 
-  fetch(box.getAttribute('data-src') || 'news/news.json', { cache: 'no-cache' })
+  fetch(SRC, { cache: 'no-cache' })
     .then(function (r) { if (!r.ok) throw new Error('HTTP ' + r.status); return r.json(); })
     .then(function (list) {
       if (!Array.isArray(list)) throw new Error('format');
