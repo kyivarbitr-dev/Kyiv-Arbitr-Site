@@ -431,3 +431,12 @@ button[disabled]{opacity:.6;cursor:progress}
 .policy ul{padding-left:22px}
 .policy li + li{margin-top:6px}
 .policy .meta{color:var(--muted);font-size:14px}
+
+/* ---------- Контраст тексту (WCAG AA, не менше 4,5:1) ---------- */
+:root{--accent-text:#7E6230;--accent-on-dark:#C9A45C}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--accent-text:#C9A45C}}
+:root[data-theme="dark"]{--accent-text:#C9A45C}
+.eyebrow{color:var(--accent-text)}
+.step::before{color:var(--accent-text)}
+.hero .eyebrow,.cta .eyebrow,header.site .brand span,footer h5,
+.langs a[aria-current],.langs a:hover{color:var(--accent-on-dark)}
