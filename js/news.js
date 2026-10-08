@@ -72,12 +72,17 @@
       det.appendChild(body);
       wrap.appendChild(det);
     }
-    var url = safeUrl(n.link);
-    if (url) {
-      var l = el('a', 'news-link', (f(n, 'linkLabel') || T.src) + ' →');
-      l.href = url; l.target = '_blank'; l.rel = 'noopener';
-      wrap.appendChild(l);
-    }
+    /* Кілька посилань: поле links = [{url, label, label_en}] */
+    var list = (n.links && n.links.length) ? n.links : [{ url: n.link, label: n.linkLabel, label_en: n.linkLabel_en }];
+    var lw = el('div', 'news-links');
+    list.forEach(function (x) {
+      var u = safeUrl(x && x.url);
+      if (!u) return;
+      var l = el('a', 'news-link', ((EN ? x.label_en : x.label) || T.src) + ' →');
+      l.href = u; l.target = '_blank'; l.rel = 'noopener';
+      lw.appendChild(l);
+    });
+    if (lw.childNodes.length) wrap.appendChild(lw);
     return a;
   }
 

@@ -450,3 +450,5 @@ button[disabled]{opacity:.6;cursor:progress}
 @media (max-width:767px){
   .news-card.has-img{grid-template-columns:1fr;gap:16px}
 }
+
+.news-links{display:flex;flex-wrap:wrap;gap:8px 24px}
