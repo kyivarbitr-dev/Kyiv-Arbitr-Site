@@ -9,6 +9,7 @@ index.html       Головна: курси НБУ, криптовалюти, к
 about.html       Про мене
 services.html    Послуги, судові витрати, процес роботи
 analytics.html   Аналітика й запитання
+prozorro-map.html  Мапа аукціонів Prozorro.Продажі (див. README-prozorro-map.md)
 news.html        Новини
 links.html       Корисні посилання: суди, реєстри, Prozorro.Sale, джерела курсів
 en/              англійська версія сайту (ті самі назви файлів)

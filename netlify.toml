@@ -16,6 +16,26 @@
   [headers.values]
     Cache-Control = "public, max-age=604800"
 
+# Дані мапи Prozorro оновлюються щодня: короткий кеш; самі файли даних у пошуку не потрібні
+[[headers]]
+  for = "/data/*"
+  [headers.values]
+    Cache-Control = "public, max-age=3600"
+    X-Robots-Tag = "noindex"
+
+# Службові файли мапи не потрібні відвідувачам
+[[redirects]]
+  from = "/data/prozorro-state.json"
+  to = "/404.html"
+  status = 404
+  force = true
+
+[[redirects]]
+  from = "/data/geocache.json"
+  to = "/404.html"
+  status = 404
+  force = true
+
 # Розділ «Інформер» прибрано: старі посилання ведуть на «Корисні посилання»
 [[redirects]]
   from = "/info.html"
