@@ -1,0 +1,40 @@
+name: Мапа Prozorro (Україна) — щоденне оновлення
+
+on:
+  schedule:
+    # 03:10 UTC = 06:10 за Києвом влітку / 05:10 взимку
+    - cron: "10 3 * * *"
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+concurrency:
+  group: prozorro-map
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    timeout-minutes: 150
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Зібрати лоти та оновити GeoJSON
+        run: python scripts/prozorro_ua.py
+
+      - name: Зберегти зміни в репозиторій
+        run: |
+          git config user.name  "prozorro-map-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add data/prozorro-ua.geojson data/prozorro-summary.json data/prozorro-state.json data/geocache.json sitemap.xml
+          if git diff --cached --quiet; then
+            echo "Змін немає"
+          else
+            git commit -m "Мапа Prozorro: оновлення $(date -u +%Y-%m-%d)"
+            git push
+          fi
