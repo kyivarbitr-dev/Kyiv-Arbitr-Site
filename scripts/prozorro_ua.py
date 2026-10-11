@@ -31,6 +31,8 @@ import time
 import urllib.error
 import urllib.parse
 import urllib.request
+from collections import Counter
+from html.parser import HTMLParser
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
 
@@ -49,6 +51,9 @@ STATE_FILE = DATA / "prozorro-state.json"
 GEOCACHE_FILE = DATA / "geocache.json"
 OUT_FILE = DATA / "prozorro-ua.geojson"
 SUMMARY_FILE = DATA / "prozorro-summary.json"  # коротка статистика для анонсу на сторінці «Аналітика»
+DEP_FILE = DATA / "dep-lots.json"  # лоти для сторінки «Перевірка лота DEP»: банкрутство, ФГВФО, держбанки
+DEP_PREFIXES = ("BR", "GF", "NL")
+MAX_DEP_BACKFILL = int(os.environ.get("MAX_DEP_BACKFILL", "800"))  # дозавантажень за запуск  # префікси auctionId: майно банкрутів, активи ФГВФО, активи держбанків
 SITEMAP_FILE = ROOT / "sitemap.xml"
 MAP_PAGE_URL = "https://kyivarbitr.com.ua/prozorro-map"
 
@@ -86,6 +91,13 @@ REGIONS = [
     ("м. Севастополь", r"севастоп|sevastop"),
 ]
 REGION_RE = [(name, re.compile(pat, re.I)) for name, pat in REGIONS]
+
+# Лоти ФГВФО (ID GFE…/GFD…) не приходять у пошуку byDateModified, тому їх беремо з публічного
+# переліку на порталі (той самий, що бачить відвідувач). Вимкнути: DGF_PORTAL=0.
+DGF_PORTAL = os.environ.get("DGF_PORTAL", "1") != "0"
+DGF_LIST_URL = "https://prozorro.sale/auction/?status=active_tendering&stream=dgf&size=50&page={page}"
+DGF_MAX_PAGES = int(os.environ.get("DGF_MAX_PAGES", "20"))
+PORTAL_PREFIX = "portal:"  # ключ у state для лотів, узятих з порталу
 
 # Статуси, за яких лот ще можна купити.
 EXCLUDED_ACTIVE = {"active_qualification", "active_awarded", "active_contracting"}
@@ -222,8 +234,12 @@ def summarize(proc: dict) -> dict | None:
     return {
         "id": proc.get("_id") or proc.get("id"),
         "auctionId": proc.get("auctionId") or proc.get("lotId") or "",
+        "lotId": str(proc.get("lotId") or proc.get("lotIdentifier") or ""),
         "status": proc.get("status") or "",
         "title": ml(proc.get("title")) or ml(it.get("description")) or "Лот без назви",
+        "description": (ml(proc.get("description")) or ml(it.get("description")) or "")[:900],
+        "seller": ml(dig(proc, "sellingEntity", "name")) or ml(dig(proc, "organizer", "name"))
+                  or ml(dig(proc, "procuringEntity", "name")) or "",
         "region": region,
         "locality": locality,
         "rawRegion": ml(addr.get("region")),
@@ -264,6 +280,7 @@ def fetch_updates(state: dict, now: datetime):
         cursor = (now - timedelta(days=FIRST_RUN_DAYS)).strftime("%Y-%m-%dT%H:%M:%S.000000Z")
     lots = state.setdefault("lots", {})
     seen = 0
+    methods = Counter()
     for page in range(MAX_PAGES):
         url = f"{API_BASE}/search/byDateModified/{urllib.parse.quote(cursor, safe='')}?limit=100"
         batch = extract_list(http_json(url))
@@ -278,6 +295,7 @@ def fetch_updates(state: dict, now: datetime):
             if dm and (last is None or dm > last):
                 last = dm
             pid = proc.get("_id") or proc.get("id")
+            methods[str(proc.get("sellingMethod") or "?").split("-")[0]] += 1
             rec = summarize(proc)
             if rec and still_for_sale(rec, now):
                 old = lots.get(pid)
@@ -301,6 +319,150 @@ def fetch_updates(state: dict, now: datetime):
         time.sleep(0.2)
     state["cursor"] = cursor
     log(f"Переглянуто процедур: {seen}; активних лотів у базі: {len(lots)}")
+    if methods:
+        log("  напрями в цьому запуску: " + ", ".join(f"{k}={v}" for k, v in methods.most_common()))
+
+
+# ---------------------------------------------------------------- ФГВФО з порталу
+class _Text(HTMLParser):
+    """HTML -> текст з переносами рядків на блокових тегах; збирає посилання на лоти."""
+    BLOCK = {"p", "div", "li", "br", "h1", "h2", "h3", "h4", "h5", "h6", "tr", "td", "section", "article", "a"}
+
+    def __init__(self):
+        super().__init__(convert_charrefs=True)
+        self.parts, self.skip = [], 0
+
+    def handle_starttag(self, tag, attrs):
+        if tag in ("script", "style", "noscript"):
+            self.skip += 1
+        elif tag in self.BLOCK:
+            self.parts.append("\n")
+
+    def handle_endtag(self, tag):
+        if tag in ("script", "style", "noscript") and self.skip:
+            self.skip -= 1
+        elif tag in self.BLOCK:
+            self.parts.append("\n")
+
+    def handle_data(self, data):
+        if not self.skip:
+            self.parts.append(data)
+
+    def text(self):
+        t = "".join(self.parts).replace("\xa0", " ")
+        return "\n".join(ln.strip() for ln in t.splitlines() if ln.strip())
+
+
+def _num(s: str):
+    s = re.sub(r"[\s\u202f]", "", s).replace(",", ".")
+    try:
+        return float(s)
+    except ValueError:
+        return None
+
+
+def parse_dgf_page(html: str) -> list[dict]:
+    """Розбирає сторінку переліку лотів порталу. Повертає записи у форматі summarize()."""
+    p = _Text()
+    p.feed(html)
+    text = p.text()
+    if "Прийняття заяв на участь" not in text and "Знайдено" not in text:
+        return []
+    # межі карток: кожна картка містить рядок "ID: <id>"
+    starts = [m for m in re.finditer(r"^ID:\s*(GF[DE]\d{3}-UA-\d{8}-\d{5})\s*$", text, flags=re.M)]
+    out = []
+    for i, m in enumerate(starts):
+        aid = m.group(1)
+        prev_end = starts[i - 1].end() if i else 0
+        lm = re.findall(r"№ лоту:\s*([^\n]+)", text[prev_end:m.start()])
+        lot_no = lm[-1].strip() if lm else ""
+        nxt = starts[i + 1].start() if i + 1 < len(starts) else len(text)
+        before = text[prev_end:m.start()]
+        after = text[m.end():nxt]
+        # назва: рядки після типу аукціону і до "№ лоту"/кінця блоку перед ID
+        head = re.split(r"(?:Англійський|Голландський)[^\n]*аукціон\s*\n", before)[-1]
+        head = re.split(r"\n№ лоту:", head)[0]
+        title = re.sub(r"\s+", " ", head).strip()
+        # у "before" для першої картки може бути шапка сторінки — беремо останні 2 рядки до "№ лоту"
+        if len(title) > 1500 or not title:
+            lines = [ln for ln in before.splitlines() if ln and not ln.startswith("№ лоту")]
+            title = lines[-1] if lines else "Лот ФГВФО"
+        stop = re.search(r"\n(?:Продаж активів банків-банкрутів|Реклама)\n", after)
+        body = after[:stop.start()] if stop else after
+        def grab(rx):
+            mm = re.search(rx, body, flags=re.I)
+            return mm.group(1).strip() if mm else ""
+        location = grab(r"Розташування:\s*([^\n]+)")
+        seller = grab(r"Організатор:\s*([^\n]+)")
+        price = grab(r"Стартова\s+ц[iі]на[^:\n]*:\s*\n?\s*([\d\s\u202f]+[.,]\d{2})")
+        vat = bool(re.search(r"Стартова\s+ц[iі]на,\s*з\s+ПДВ", body, flags=re.I))
+        dm = re.search(r"Початок\s+аукц[iі]ону\s*\n?\s*(\d{2})\.(\d{2})\.(\d{4})\s*\n?\s*(\d{2}):(\d{2})", body, flags=re.I) \
+            or re.search(r"прийому\s+заявок\s*\n?\s*(\d{2})\.(\d{2})\.(\d{4})\s*\n?\s*(\d{2}):(\d{2})", body, flags=re.I)
+        start = None
+        if dm:
+            d, mo, y, hh, mi = dm.groups()
+            # час на порталі — київський; зберігаємо як UTC з поправкою +03:00/+02:00 не потрібна для дати
+            start = f"{y}-{mo}-{d}T{hh}:{mi}:00+03:00"
+        desc = re.split(r"\nРозташування:|\nОрганізатор:", body)[0]
+        desc = re.sub(r"\s+", " ", desc).strip()
+        parts = [x.strip() for x in location.split(",") if x.strip() and x.strip().lower() not in ("україна", "ukraine")]
+        location = ", ".join(parts)
+        region, locality = detect_region({"region": ", ".join(parts[:-1]) or (parts[0] if parts else ""),
+                                          "locality": parts[-1] if parts else "", "streetAddress": location})
+        out.append({
+            "id": PORTAL_PREFIX + aid, "auctionId": aid, "lotId": lot_no, "status": "active_tendering",
+            "title": title[:600], "description": desc[:900], "seller": seller,
+            "region": region, "locality": locality, "rawRegion": location, "address": location,
+            "classification": "", "amount": _num(price) if price else None, "currency": "UAH",
+            "vat": vat, "sellingMethod": "dgf-" + ("dutch" if aid.startswith("GFD") else "english"),
+            "bankruptcy": False, "auctionStart": start, "coords": None, "precision": None,
+        })
+    return out
+
+
+def http_text(url: str, retries: int = 3) -> str:
+    req = urllib.request.Request(url, headers={"User-Agent": USER_AGENT, "Accept": "text/html"})
+    for i in range(retries):
+        try:
+            with urllib.request.urlopen(req, timeout=60) as r:
+                return r.read().decode("utf-8", "replace")
+        except (urllib.error.URLError, TimeoutError) as e:
+            log(f"  повтор {i + 1}: {e}")
+            time.sleep(3 * (i + 1))
+    return ""
+
+
+def fetch_dgf_portal(state: dict, now: datetime):
+    """Оновлює в state лоти ФГВФО з публічного переліку порталу (якщо API їх не віддає)."""
+    lots = state.setdefault("lots", {})
+    api_ids = {r.get("auctionId") for k, r in lots.items() if not k.startswith(PORTAL_PREFIX)}
+    found = {}
+    for page in range(1, DGF_MAX_PAGES + 1):
+        html = http_text(DGF_LIST_URL.format(page=page))
+        recs = parse_dgf_page(html) if html else []
+        new = [r for r in recs if r["auctionId"] not in found]
+        for r in new:
+            found[r["auctionId"]] = r
+        if len(recs) < 50 or not new:
+            break
+        time.sleep(1)
+    if not found:
+        log("ФГВФО з порталу: нічого не розібрано (перевірте розмітку сторінки); попередні записи залишено")
+        return
+    # перелік порталу — актуальний: старі записи з порталу замінюємо повністю
+    for k in [k for k in lots if k.startswith(PORTAL_PREFIX)]:
+        old = lots.pop(k)
+        nr = found.get(old.get("auctionId"))
+        if nr and not nr["coords"] and old.get("coords") and old.get("address") == nr["address"]:
+            nr["coords"], nr["precision"] = old["coords"], old.get("precision")
+    added = 0
+    for aid, r in found.items():
+        if aid in api_ids:  # API вже віддає цей лот — дубль не потрібен
+            continue
+        if still_for_sale(r, now):
+            lots[r["id"]] = r
+            added += 1
+    log(f"ФГВФО з порталу: розібрано {len(found)}, додано {added}")
 
 
 # ---------------------------------------------------------------- геокодування
@@ -455,6 +617,51 @@ def write_summary(gj: dict):
     }, compact=True)
 
 
+def is_dep(r: dict) -> bool:
+    aid = r.get("auctionId") or ""
+    return aid.startswith(DEP_PREFIXES) or "права вимоги" in (r.get("classification") or "").lower()
+
+
+def backfill_dep(active: list):
+    """Для лотів сторінки «Перевірка лота», записаних до появи цих полів, один раз дозавантажує
+    номер лоту, опис і організатора з API. Далі вони зберігаються в state і не запитуються повторно."""
+    todo = [r for r in active if is_dep(r) and "lotId" not in r and not str(r.get("id", "")).startswith(PORTAL_PREFIX)]
+    done = 0
+    for r in todo[:MAX_DEP_BACKFILL]:
+        try:
+            proc = http_json(f"{API_BASE}/procedures/{r['id']}")
+        except Exception as e:  # окремий лот не повинен зупиняти оновлення
+            log(f"  номер лоту {r.get('auctionId')}: {e!r}")
+            continue
+        full = summarize(proc) or {}
+        r["lotId"] = full.get("lotId", "")
+        if not r.get("description"):
+            r["description"] = full.get("description", "")
+        if not r.get("seller"):
+            r["seller"] = full.get("seller", "")
+        done += 1
+        time.sleep(0.1)
+    if todo:
+        log(f"Перевірка лота: дозавантажено даних для {done} з {len(todo)} лотів")
+
+
+def write_dep(active: list, now: datetime):
+    """Компактний перелік лотів для сторінки DEP: лише банкрутство, ФГВФО, держбанки та права вимоги."""
+    lots = []
+    for r in active:
+        if not is_dep(r):
+            continue
+        aid = r.get("auctionId") or ""
+        lots.append({
+            "id": aid, "ln": r.get("lotId") or "", "t": r.get("title") or "", "d": r.get("description") or "", "s": r.get("seller") or "",
+            "c": r.get("classification") or "", "a": r.get("amount"), "cur": r.get("currency") or "UAH",
+            "st": r.get("auctionStart"), "rg": r.get("region") or "", "lc": r.get("locality") or "",
+            "ad": r.get("address") or "", "bk": bool(r.get("bankruptcy")),
+        })
+    lots.sort(key=lambda x: x["st"] or "9999")
+    save_json(DEP_FILE, {"updated": now.strftime("%Y-%m-%dT%H:%M:%SZ"), "total": len(lots), "lots": lots}, compact=True)
+
+
 def touch_sitemap(now: datetime):
     """Оновлює <lastmod> сторінки мапи в sitemap.xml, щоб пошуковики бачили свіжі дані."""
     try:
@@ -475,6 +682,11 @@ def main():
 
     log(f"Старт: курсор = {state.get('cursor') or 'перший запуск'}")
     fetch_updates(state, now)
+    if DGF_PORTAL:
+        try:
+            fetch_dgf_portal(state, now)
+        except Exception as e:  # збій порталу не повинен зупиняти оновлення мапи
+            log(f"ФГВФО з порталу: помилка {e!r}")
 
     lots = state.get("lots", {})
     for pid in [p for p, r in lots.items() if not still_for_sale(r, now)]:
@@ -487,6 +699,8 @@ def main():
     gj = to_geojson(active, now)
     save_json(OUT_FILE, gj, compact=True)
     write_summary(gj)
+    backfill_dep(active)
+    write_dep(active, now)
     touch_sitemap(now)
     save_json(STATE_FILE, state, compact=True)
     save_json(GEOCACHE_FILE, cache)

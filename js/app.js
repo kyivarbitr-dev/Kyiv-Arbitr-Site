@@ -60,20 +60,32 @@
   var btn = f.querySelector('button[type="submit"]');
   function say(text, kind) { st.textContent = text; st.className = kind || ''; }
 
+  /* Ключ Web3Forms: із налаштувань сайту (js/config.js), інакше — той, що вписаний у форму */
+  var PH = 'YOUR-WEB3FORMS-ACCESS-KEY';
+  var keyEl = f.querySelector('[data-w3f-key]');
+  if (keyEl && C.WEB3FORMS_KEY && C.WEB3FORMS_KEY !== PH) keyEl.value = C.WEB3FORMS_KEY;
+
   f.addEventListener('submit', function (ev) {
     ev.preventDefault();
     if (!document.getElementById('n').value.trim() || !document.getElementById('p').value.trim()) { say(L.need, 'err'); return; }
     if (!document.getElementById('c').checked) { say(L.consent, 'err'); return; }
-    if (!window.fetch || !window.URLSearchParams || !window.FormData) { f.submit(); return; }
+    if (!keyEl || !keyEl.value || keyEl.value === PH) { say(L.fail, 'err'); return; }
+    if (!window.fetch || !window.FormData) { f.submit(); return; }
     btn.disabled = true; say(L.sending);
-    /* Netlify Forms: надсилання на кореневу адресу з полем form-name */
-    fetch('/', {
+    /* Web3Forms: заявка пересилається на пошту власника сайту */
+    var data = {};
+    new FormData(f).forEach(function (v, k) { if (k !== 'redirect') data[k] = v; });
+    fetch('https://api.web3forms.com/submit', {
       method: 'POST',
-      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-      body: new URLSearchParams(new FormData(f)).toString()
+      headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+      body: JSON.stringify(data)
     }).then(function (r) {
-      if (!r.ok) throw new Error('HTTP ' + r.status);
+      return r.json().catch(function () { return {}; }).then(function (j) {
+        if (!r.ok || !j.success) throw new Error(j.message || ('HTTP ' + r.status));
+      });
+    }).then(function () {
       f.reset();
+      if (keyEl && C.WEB3FORMS_KEY && C.WEB3FORMS_KEY !== PH) keyEl.value = C.WEB3FORMS_KEY;
       say(L.ok, 'ok');
       if (window.gtag) window.gtag('event', 'generate_lead', { form: f.getAttribute('name') });
     }).catch(function () {

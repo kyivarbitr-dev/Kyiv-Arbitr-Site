@@ -51,11 +51,11 @@
 <main>
 <section id="analytics" class="alt">
   <div class="wrap">
-    <nav class="a-tabs" aria-label="Розділи аналітики"><a href="analytics.html" aria-current="page">Матеріали та&nbsp;запитання</a><a href="prozorro-map.html">Мапа аукціонів Prozorro</a></nav>
+    <nav class="a-tabs" aria-label="Розділи аналітики"><a href="analytics.html" aria-current="page">Матеріали та&nbsp;запитання</a><a href="prozorro-map.html">Мапа аукціонів Prozorro</a><a href="lot-dep.html">Перевірка лота</a></nav>
     <div class="section-head scroll-reveal">
       <p class="eyebrow">Аналітика</p>
       <h1>Аналітика з&nbsp;питань банкрутства</h1>
-      <p class="lead">Роз'яснення порядку процедур банкрутства, прав кредиторів і&nbsp;наслідків для&nbsp;боржника. Матеріали мають загальний характер.</p>
+      <p class="lead">Роз'яснення процедур банкрутства, прав кредиторів і&nbsp;наслідків для&nbsp;боржника, мапа аукціонів Prozorro.Продажі та&nbsp;перевірка лотів перед торгами.</p>
     </div>
 
     <a class="pm-teaser-link" href="prozorro-map.html" style="text-decoration:none;display:block">
@@ -63,7 +63,7 @@
       <div>
         <p class="eyebrow">Нове · щоденне оновлення</p>
         <h2>Мапа аукціонів Prozorro.Продажі</h2>
-        <p>Активні лоти по&nbsp;всіх областях України, місто Київ окремо. Майно в&nbsp;процедурах банкрутства, пошук за&nbsp;адресою та&nbsp;фільтр за&nbsp;регіоном.</p>
+        <p>Активні лоти по&nbsp;всіх областях України. Майно в&nbsp;процедурах банкрутства, пошук за&nbsp;адресою та&nbsp;фільтр за&nbsp;регіоном.</p>
         <div class="pm-stats" id="pm-teaser-stats" hidden>
           <div><b id="pt-total">—</b>активних лотів</div>
           <div><b id="pt-kyiv">—</b>у місті Києві</div>
@@ -73,17 +73,9 @@
       <span class="btn btn-primary">Відкрити мапу</span>
     </div>
     </a>
-    <script>
-    (function(){
-      fetch('/data/prozorro-summary.json?v='+new Date().toISOString().slice(0,10)).then(function(r){return r.ok?r.json():null}).then(function(d){
-        if(!d||!d.total)return; var f=new Intl.NumberFormat('uk-UA');
-        document.getElementById('pt-total').textContent=f.format(d.total);
-        document.getElementById('pt-kyiv').textContent=f.format(d.kyiv||0);
-        document.getElementById('pt-bk').textContent=f.format(d.bankruptcy||0);
-        document.getElementById('pm-teaser-stats').hidden=false;
-      }).catch(function(){});
-    })();
-    </script>
+    <script src="js/teaser.js" defer></script>
+
+    <div class="svc-cta scroll-reveal" style="margin:0 0 48px"><p><b style="color:var(--heading)">Перевірка лота.</b> Безкоштовна картка ризиків для&nbsp;лотів банкрутів, держбанків і&nbsp;прав вимоги: застава, окуповані території, повторні торги, частки.</p><a class="btn btn-primary" href="lot-dep.html">Перевірити лот</a></div>
 
     <details class="art scroll-reveal">
       <summary><div><span class="eyebrow" style="margin:0">Матеріал</span><span class="t">Хто такий арбітражний керуючий і&nbsp;яку роль він виконує</span><span class="a">Що&nbsp;означає статус арбітражного керуючого й&nbsp;чим він відрізняється від&nbsp;інших учасників справи про&nbsp;банкрутство.</span></div></summary>

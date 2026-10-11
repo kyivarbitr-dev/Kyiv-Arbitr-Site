@@ -68,9 +68,12 @@
     <div>
       <h3 id="form" style="margin-bottom:8px">Залишити звернення</h3>
       <p class="note" style="margin-bottom:24px">Опишіть ситуацію коротко. Контакти для&nbsp;відповіді вказуйте ті, якими користуєтесь.</p>
-      <form id="f" name="zvernennya" method="POST" action="/thanks.html" data-netlify="true" netlify-honeypot="bot-field" novalidate>
-        <input type="hidden" name="form-name" value="zvernennya">
-        <p class="hp" aria-hidden="true"><label>Не&nbsp;заповнюйте це поле, якщо ви людина: <input name="bot-field" tabindex="-1" autocomplete="off"></label></p>
+      <form id="f" name="zvernennya" method="POST" action="https://api.web3forms.com/submit" novalidate>
+        <input type="hidden" name="access_key" value="97914465-ffad-405a-aa61-0914742c6408" data-w3f-key>
+        <input type="hidden" name="subject" value="Нове звернення з сайту kyivarbitr.com.ua">
+        <input type="hidden" name="from_name" value="kyivarbitr.com.ua">
+        <input type="hidden" name="redirect" value="https://kyivarbitr.com.ua/thanks.html">
+        <p class="hp" aria-hidden="true"><label>Не&nbsp;заповнюйте це поле, якщо ви людина: <input type="checkbox" name="botcheck" tabindex="-1" autocomplete="off"></label></p>
         <div><label for="n">Ім'я *</label><input id="n" name="name" required autocomplete="name"></div>
         <div><label for="p">Телефон *</label><input id="p" name="phone" type="tel" required autocomplete="tel"></div>
         <div><label for="e">Email</label><input id="e" name="email" type="email" autocomplete="email"></div>

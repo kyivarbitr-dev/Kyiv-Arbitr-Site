@@ -1,5 +1,8 @@
 [build]
   publish = "."
+  # Бот щодня змінює лише data/ і sitemap.xml: такі коміти не деплоїмо (сайт читає дані з GitHub).
+  # Деплой однаково відбувається, якщо змінено будь-який інший файл.
+  ignore = "git diff --quiet $CACHED_COMMIT_REF $COMMIT_REF -- . ':(exclude)data' ':(exclude)sitemap.xml'"
 
 [[headers]]
   for = "/*"
@@ -9,6 +12,10 @@
     X-Frame-Options = "SAMEORIGIN"
     Permissions-Policy = "camera=(), microphone=(), geolocation=(), payment=(), usb=()"
     Strict-Transport-Security = "max-age=31536000"
+    Cross-Origin-Opener-Policy = "same-origin"
+    # Політика безпеки вмісту. Якщо додаєте вбудований <script> або новий зовнішній сервіс,
+    # оновіть цей рядок (хеш обчислює: python scripts/csp_hashes.py)
+    Content-Security-Policy = "default-src 'self'; script-src 'self' 'sha256-Gs1V5LcvJF8TY9QDsGf7XWwkcCIr94AqkEo0/wknmsU=' https://www.googletagmanager.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https://tile.openstreetmap.org https://*.tile.openstreetmap.org https://www.googletagmanager.com https://*.google-analytics.com; connect-src 'self' https://api.web3forms.com https://raw.githubusercontent.com https://bank.gov.ua https://api.coingecko.com https://api.binance.com https://*.google-analytics.com https://*.analytics.google.com https://www.googletagmanager.com; frame-src https://www.google.com https://maps.google.com https://docs.google.com; form-action 'self' https://api.web3forms.com; base-uri 'self'; object-src 'none'; frame-ancestors 'self'; upgrade-insecure-requests"
 
 # Іконки та зображення кешуються довше
 [[headers]]
@@ -23,6 +30,14 @@
     Cache-Control = "public, max-age=3600"
     X-Robots-Tag = "noindex"
 
+# Дані для окремого сайту DEP: дозволяємо читати файл з іншого домену
+[[headers]]
+  for = "/data/dep-lots.json"
+  [headers.values]
+    Access-Control-Allow-Origin = "*"
+    Cache-Control = "public, max-age=3600"
+    X-Robots-Tag = "noindex"
+
 # Службові файли мапи не потрібні відвідувачам
 [[redirects]]
   from = "/data/prozorro-state.json"
@@ -32,6 +47,25 @@
 
 [[redirects]]
   from = "/data/geocache.json"
+  to = "/404.html"
+  status = 404
+  force = true
+
+# Службові файли репозиторію відвідувачам не потрібні
+[[redirects]]
+  from = "/scripts/*"
+  to = "/404.html"
+  status = 404
+  force = true
+
+[[redirects]]
+  from = "/*.md"
+  to = "/404.html"
+  status = 404
+  force = true
+
+[[redirects]]
+  from = "/.github/*"
   to = "/404.html"
   status = 404
   force = true

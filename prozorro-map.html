@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Мапа аукціонів Prozorro.Продажі по областях України · Раковський О. П.</title>
-<meta name="description" content="Інтерактивна мапа активних лотів Prozorro.Продажі: майно банкрутів та інші аукціони в усіх областях України, місто Київ окремо. Оновлюється щодня.">
+<meta name="description" content="Інтерактивна мапа активних лотів Prozorro.Продажі: майно банкрутів та інші аукціони в усіх областях України. Оновлюється щодня.">
 <meta name="robots" content="index, follow, max-image-preview:large">
 <meta name="theme-color" content="#0B1F3A">
 <link rel="icon" href="/favicon.ico" sizes="48x48">
@@ -30,9 +30,9 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Source+Serif+4:wght@600&display=swap" rel="stylesheet">
 <link rel="preconnect" href="https://tile.openstreetmap.org" crossorigin>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.5.3/MarkerCluster.min.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.5.3/MarkerCluster.Default.min.css">
+<link rel="stylesheet" href="vendor/leaflet/leaflet.css">
+<link rel="stylesheet" href="vendor/leaflet/MarkerCluster.css">
+<link rel="stylesheet" href="vendor/leaflet/MarkerCluster.Default.css">
 <link rel="stylesheet" href="css/style.css">
 <script type="application/ld+json">
 {
@@ -43,7 +43,7 @@
    "@id": "https://kyivarbitr.com.ua/prozorro-map#webpage",
    "url": "https://kyivarbitr.com.ua/prozorro-map",
    "name": "Мапа аукціонів Prozorro.Продажі по областях України",
-   "description": "Інтерактивна мапа активних лотів Prozorro.Продажі: майно банкрутів та інші аукціони в усіх областях України, місто Київ окремо. Оновлюється щодня.",
+   "description": "Інтерактивна мапа активних лотів Prozorro.Продажі: майно банкрутів та інші аукціони в усіх областях України. Оновлюється щодня.",
    "inLanguage": "uk",
    "isPartOf": {"@type": "WebSite", "@id": "https://kyivarbitr.com.ua/#website", "url": "https://kyivarbitr.com.ua/", "name": "Раковський О. П."},
    "author": {"@id": "https://kyivarbitr.com.ua/#person"},
@@ -70,7 +70,9 @@
    "inLanguage": "uk",
    "spatialCoverage": {"@type": "Place", "name": "Україна"},
    "isBasedOn": "https://prozorro.sale/opendata/",
-   "creator": {"@id": "https://kyivarbitr.com.ua/#person"},
+   "creator": {"@type": "Person", "@id": "https://kyivarbitr.com.ua/#person", "name": "Раковський Олексій Павлович", "url": "https://kyivarbitr.com.ua/"},
+   "license": "https://creativecommons.org/licenses/by/4.0/",
+   "creditText": "Джерело даних: Prozorro.Продажі (prozorro.sale), відкриті дані",
    "isAccessibleForFree": true,
    "distribution": [{"@type": "DataDownload", "encodingFormat": "application/geo+json", "contentUrl": "https://kyivarbitr.com.ua/data/prozorro-ua.geojson"}]
   }
@@ -81,8 +83,8 @@
 <script>(function(d){if('IntersectionObserver' in window&&!(window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches)){d.classList.add('reveal');setTimeout(function(){if(!window.__revealReady)d.classList.remove('reveal')},2500)}})(document.documentElement)</script>
 <script src="js/reveal.js" defer></script>
 <script src="js/app.js" defer></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js" defer></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.5.3/leaflet.markercluster.min.js" defer></script>
+<script src="vendor/leaflet/leaflet.js" defer></script>
+<script src="vendor/leaflet/leaflet.markercluster.js" defer></script>
 <script src="js/prozorro-map.js" defer></script>
 </head>
 <body>
@@ -100,11 +102,11 @@
 <section id="prozorro-map" class="alt">
   <div class="wrap">
     <p class="crumbs"><a href="analytics.html">← Аналітика</a></p>
-    <nav class="a-tabs" aria-label="Розділи аналітики"><a href="analytics.html">Матеріали та&nbsp;запитання</a><a href="prozorro-map.html" aria-current="page">Мапа аукціонів Prozorro</a></nav>
+    <nav class="a-tabs" aria-label="Розділи аналітики"><a href="analytics.html">Матеріали та&nbsp;запитання</a><a href="prozorro-map.html" aria-current="page">Мапа аукціонів Prozorro</a><a href="lot-dep.html">Перевірка лота</a></nav>
     <div class="section-head">
       <p class="eyebrow">Аналітика · Prozorro.Продажі</p>
       <h1>Мапа аукціонів Prozorro.Продажі</h1>
-      <p class="lead">Активні лоти з&nbsp;відкритих даних Prozorro.Продажі на&nbsp;мапі України: майно в&nbsp;процедурах банкрутства та&nbsp;інші продажі. Місто Київ показано окремо від&nbsp;Київської області. Дані оновлюються автоматично раз на&nbsp;добу.</p>
+      <p class="lead">Активні лоти з&nbsp;відкритих даних Prozorro.Продажі на&nbsp;мапі України: майно в&nbsp;процедурах банкрутства та&nbsp;інші продажі. Дані оновлюються автоматично раз на&nbsp;добу.</p>
       <div class="pm-stats" aria-live="polite">
         <div><b id="pm-s-total">—</b>активних лотів</div>
         <div><b id="pm-s-kyiv">—</b>у місті Києві</div>
@@ -150,7 +152,7 @@
     <details class="faq scroll-reveal"><summary>Що&nbsp;означає позначка «банкрутство»?</summary><div class="body"><p>Лот продається в&nbsp;межах процедури банкрутства, за&nbsp;типом процедури, зазначеним у&nbsp;даних Prozorro.Продажі. Порядок продажу майна боржника визначає Кодекс України з&nbsp;процедур банкрутства (перевіряйте актуальну редакцію).</p></div></details>
     <details class="faq scroll-reveal"><summary>Чи можна придбати лот через цей сайт?</summary><div class="body"><p>Ні. Мапа має довідковий характер. Заявка на&nbsp;участь в&nbsp;аукціоні подається через акредитований електронний майданчик Prozorro.Продажі.</p></div></details>
 
-    <div class="svc-cta scroll-reveal"><p>Знайшли цікавий лот? Перед сплатою гарантійного внеску варто перевірити обтяження, судові спори та&nbsp;ризики оскарження торгів.</p><a class="btn btn-primary" href="lot-check.html">Перевірка лота</a></div>
+    <div class="svc-cta scroll-reveal"><p>Знайшли цікавий лот? Перед сплатою гарантійного внеску варто перевірити обтяження, судові спори та&nbsp;ризики оскарження торгів.</p><a class="btn btn-primary" href="lot-dep.html">Перевірити лот</a></div>
   </div>
 </section>
 </main>

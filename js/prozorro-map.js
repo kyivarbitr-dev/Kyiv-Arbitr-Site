@@ -137,8 +137,7 @@
   qEl.addEventListener('input', function () { render(false); });
   bkEl.addEventListener('change', function () { render(false); });
 
-  fetch(DATA_URL + '?v=' + new Date().toISOString().slice(0, 10))
-    .then(function (r) { if (!r.ok) throw new Error(r.status); return r.json(); })
+  (window.loadSiteData ? window.loadSiteData('prozorro-ua.geojson') : fetch(DATA_URL).then(function (r) { if (!r.ok) throw new Error(r.status); return r.json(); }))
     .then(function (gj) {
       var md = gj.metadata || {};
       feats = gj.features || []; unplaced = md.unplaced || []; regions = md.regions || [];

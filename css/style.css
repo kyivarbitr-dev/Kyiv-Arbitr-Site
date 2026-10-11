@@ -538,3 +538,63 @@ button[disabled]{opacity:.6;cursor:progress}
   .pm-tools select{flex:1 1 100%}
 }
 .pm-stats[hidden]{display:none}
+
+/* ---------- Перевірка лота DEP ---------- */
+:root{--dep-high:#A3263A;--dep-high-bg:#FBEBED;--dep-mid:#8A5A00;--dep-mid-bg:#FBF1DD;--dep-info:#2B5A86;--dep-info-bg:#E8F0F8;--dep-ok:#2F6B3A}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--dep-high:#F0909D;--dep-high-bg:#3A1C22;--dep-mid:#E9BC6B;--dep-mid-bg:#352A14;--dep-info:#93BCE6;--dep-info-bg:#17283B;--dep-ok:#8CC995}}
+:root[data-theme="dark"]{--dep-high:#F0909D;--dep-high-bg:#3A1C22;--dep-mid:#E9BC6B;--dep-mid-bg:#352A14;--dep-info:#93BCE6;--dep-info-bg:#17283B;--dep-ok:#8CC995}
+.dep-layout{display:grid;grid-template-columns:360px minmax(0,1fr);gap:16px;align-items:start}
+.dep-list{height:auto;max-height:820px}
+.dep-lot{display:block;width:100%;text-align:left;background:none;border:0;border-bottom:1px solid var(--border);font:inherit;color:inherit;cursor:pointer}
+.dep-lot .pm-lot-m{display:block;margin-top:4px}
+.dep-lot:hover,.dep-lot:focus-visible{background:var(--surface);outline:none}
+.dep-lot.on{background:var(--surface);box-shadow:inset 3px 0 0 var(--accent)}
+.dep-card{background:var(--bg);border:1px solid var(--border);border-top:2px solid var(--accent);border-radius:2px;padding:28px;display:grid;gap:14px;min-width:0}
+.dep-card .eyebrow{margin:0}
+.dep-title{font-size:22px;line-height:30px;overflow-wrap:anywhere}
+.dep-id{font-size:13px;color:var(--accent-text);text-decoration:none;font-variant-numeric:tabular-nums;word-break:break-all}
+.dep-id:hover{text-decoration:underline}
+.dep-verdict{display:flex;gap:12px;align-items:center;padding:12px 16px;background:var(--surface);border-radius:2px}
+.dep-verdict b{display:block;color:var(--heading)}
+.dep-verdict span:not(.dep-dot){font-size:14px;color:var(--muted)}
+.dep-dot{width:12px;height:12px;border-radius:50%;flex:none;background:var(--dep-ok)}
+.dep-verdict.high .dep-dot{background:var(--dep-high)}
+.dep-verdict.mid .dep-dot{background:var(--dep-mid)}
+.dep-h{font:600 12px/16px var(--sans);letter-spacing:1.5px;text-transform:uppercase;color:var(--muted);margin:8px 0 0}
+.dep-flags{list-style:none;margin:0;padding:0;display:grid;gap:6px}
+.dep-flags li{display:grid;grid-template-columns:auto 1fr;gap:12px;align-items:start;padding:10px 14px;border-radius:2px;font-size:15px;line-height:23px}
+.dep-flags .lv{font-size:11px;line-height:16px;font-weight:600;letter-spacing:.5px;text-transform:uppercase;padding:2px 8px;border-radius:2px;margin-top:3px;white-space:nowrap}
+.dep-flags .high{background:var(--dep-high-bg)} .dep-flags .high .lv{background:var(--dep-high);color:var(--bg)}
+.dep-flags .mid{background:var(--dep-mid-bg)} .dep-flags .mid .lv{background:var(--dep-mid);color:var(--bg)}
+.dep-flags .info{background:var(--dep-info-bg)} .dep-flags .info .lv{background:var(--dep-info);color:var(--bg)}
+.dep-facts{width:100%;border-collapse:collapse;font-size:15px;line-height:23px}
+.dep-facts th,.dep-facts td{text-align:left;vertical-align:top;padding:8px 0;border-bottom:1px solid var(--border)}
+.dep-facts th{font-weight:400;color:var(--muted);width:34%;padding-right:16px}
+.dep-facts td{overflow-wrap:anywhere;font-variant-numeric:tabular-nums}
+.dep-todo{margin:0;padding-left:20px;font-size:15px;line-height:24px}
+.dep-card .btn{justify-self:start}
+.dep-tiers{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-bottom:32px}
+.dep-tier{border:1px solid var(--border);border-top:2px solid var(--border);padding:20px;display:grid;gap:8px;align-content:start;background:var(--bg);border-radius:2px}
+.dep-tier.free{border-top-color:var(--accent)}
+.dep-tier b{color:var(--heading);font-size:17px}
+.dep-tier p{margin:0;font-size:14px;line-height:22px;color:var(--muted)}
+.dep-tier span{font-size:14px;font-weight:600;color:var(--accent-text)}
+.dep-order{max-width:820px}
+.dep-order-lot{margin:0 0 16px;color:var(--muted)}
+.dep-order-lot a{color:var(--heading);font-variant-numeric:tabular-nums}
+.dep-two{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+@media (max-width:1199px){.dep-tiers{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:1023px){.dep-layout{grid-template-columns:1fr}.dep-list{max-height:420px}}
+@media (max-width:767px){.dep-card{padding:20px}.dep-tiers,.dep-two{grid-template-columns:1fr}.dep-facts th{width:40%}}
+.dep-title.long{font-size:18px;line-height:26px}
+
+/* ---------- Підвал на телефоні: без порожнього місця праворуч ---------- */
+@media (max-width:767px){
+  .f-grid{grid-template-columns:1fr 1fr;gap:28px 20px}
+  .f-grid > div:first-child{grid-column:1 / -1}
+  .sched-f{max-width:none}
+  footer ul{display:grid;gap:6px}
+  footer ul li{line-height:22px}
+  .f-grid > div:last-child p{font-size:14px;line-height:22px}
+}
+@media (max-width:359px){.f-grid{grid-template-columns:1fr}}

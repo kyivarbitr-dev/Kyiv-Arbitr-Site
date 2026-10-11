@@ -65,9 +65,12 @@
     <div>
       <h3 id="form" style="margin-bottom:8px">Send an&nbsp;enquiry</h3>
       <p class="note" style="margin-bottom:24px">Describe your situation briefly. Please give contact details you actually use.</p>
-      <form id="f" name="enquiry-en" method="POST" action="/en/thanks.html" data-netlify="true" netlify-honeypot="bot-field" novalidate>
-        <input type="hidden" name="form-name" value="enquiry-en">
-        <p class="hp" aria-hidden="true"><label>Do not fill in&nbsp;this field if you are a&nbsp;person: <input name="bot-field" tabindex="-1" autocomplete="off"></label></p>
+      <form id="f" name="enquiry-en" method="POST" action="https://api.web3forms.com/submit" novalidate>
+        <input type="hidden" name="access_key" value="97914465-ffad-405a-aa61-0914742c6408" data-w3f-key>
+        <input type="hidden" name="subject" value="New enquiry from kyivarbitr.com.ua (EN)">
+        <input type="hidden" name="from_name" value="kyivarbitr.com.ua">
+        <input type="hidden" name="redirect" value="https://kyivarbitr.com.ua/en/thanks.html">
+        <p class="hp" aria-hidden="true"><label>Do not fill in&nbsp;this field if you are a&nbsp;person: <input type="checkbox" name="botcheck" tabindex="-1" autocomplete="off"></label></p>
         <div><label for="n">Name *</label><input id="n" name="name" required autocomplete="name"></div>
         <div><label for="p">Phone *</label><input id="p" name="phone" type="tel" required autocomplete="tel"></div>
         <div><label for="e">Email</label><input id="e" name="email" type="email" autocomplete="email"></div>
