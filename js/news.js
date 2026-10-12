@@ -60,7 +60,11 @@
     meta.appendChild(t);
     if (f(n, 'tag')) meta.appendChild(el('span', 'news-tag', f(n, 'tag')));
     wrap.appendChild(meta);
-    wrap.appendChild(el('h3', null, f(n, 'title')));
+    var h3 = el('h3');
+    if (!EN && n.id && /^[\w\-]+$/.test(n.id)) { /* окрема сторінка новини (створює scripts/build_news.py) */
+      var ta = el('a', null, f(n, 'title')); ta.href = BASE + n.id + '.html'; h3.appendChild(ta);
+    } else h3.textContent = f(n, 'title');
+    wrap.appendChild(h3);
     if (f(n, 'summary')) wrap.appendChild(el('p', null, f(n, 'summary')));
 
     if (f(n, 'text')) {

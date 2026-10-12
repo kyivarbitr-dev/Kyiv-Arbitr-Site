@@ -65,6 +65,21 @@
   var keyEl = f.querySelector('[data-w3f-key]');
   if (keyEl && C.WEB3FORMS_KEY && C.WEB3FORMS_KEY !== PH) keyEl.value = C.WEB3FORMS_KEY;
 
+  /* Джерело заявки: мітки utm_* і gclid з адреси (реклама Google) потрапляють у лист разом із заявкою */
+  (function () {
+    var KEYS = ['utm_source', 'utm_medium', 'utm_campaign', 'utm_term', 'gclid'], saved = {};
+    try { saved = JSON.parse(sessionStorage.getItem('kv_src') || '{}'); } catch (e) {}
+    var q = new URLSearchParams(location.search), got = false;
+    KEYS.forEach(function (k) { if (q.get(k)) { saved[k] = q.get(k).slice(0, 200); got = true; } });
+    if (got) { try { sessionStorage.setItem('kv_src', JSON.stringify(saved)); } catch (e) {} }
+    KEYS.forEach(function (k) {
+      var el = f.querySelector('input[name="' + k + '"]');
+      if (el && saved[k]) el.setAttribute('value', saved[k]);
+    });
+    var pg = f.querySelector('input[name="page"]');
+    if (pg) pg.setAttribute('value', location.pathname);
+  })();
+
   f.addEventListener('submit', function (ev) {
     ev.preventDefault();
     if (!document.getElementById('n').value.trim() || !document.getElementById('p').value.trim()) { say(L.need, 'err'); return; }

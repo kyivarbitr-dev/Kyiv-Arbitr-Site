@@ -46,7 +46,7 @@ def short(s: str, n: int) -> str:
 
 
 def build(n: dict) -> tuple[str, str | None]:
-    url = f"{SITE}/news.html#n-{urllib.parse.quote(str(n['id']))}"
+    url = f"{SITE}/news/{urllib.parse.quote(str(n['id']))}"  # окрема сторінка новини (scripts/build_news.py)
     head = f"<b>{html.escape(n.get('title') or '')}</b>"
     tail = f'\n\n<a href="{url}">Читати на сайті</a>'
     src = n.get("link")
