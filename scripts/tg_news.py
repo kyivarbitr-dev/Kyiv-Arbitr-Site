@@ -29,7 +29,7 @@ TOKEN = os.environ.get("TELEGRAM_BOT_TOKEN", "").strip()
 CHAT = os.environ.get("TELEGRAM_CHAT_ID", "").strip()
 SITE = os.environ.get("SITE_URL", "").strip().rstrip("/") or "https://kyivarbitr.com.ua"
 DRY = os.environ.get("TG_DRY_RUN") == "1"
-MAX_PER_RUN = 3                      # не більше трьох новин за раз, решта — наступного запуску
+MAX_PER_RUN = int(os.environ.get("TG_NEWS_PER_RUN", "2"))  # скільки новин за один запуск (щогодини), решта — наступної години
 KYIV = timezone(timedelta(hours=3))  # дата «сьогодні» за Києвом (з точністю до години не критично)
 CAPTION_MAX = 1024                   # межа підпису до фото в Telegram
 

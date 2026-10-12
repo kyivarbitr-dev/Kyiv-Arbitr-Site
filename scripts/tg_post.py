@@ -37,7 +37,11 @@ FIRST_RUN_LOTS = 5          # перший запуск: коротка добі
 PER_MESSAGE = 5             # пунктів в одному повідомленні
 MIN_DAYS = 3                # не пропонувати лоти, до аукціону яких менше 3 днів
 DRY = os.environ.get("TG_DRY_RUN") == "1"
-KYIV = timezone(timedelta(hours=3))  # для підпису дати достатньо; точний час не показуємо
+from zoneinfo import ZoneInfo
+KYIV = ZoneInfo("Europe/Kyiv")  # київський час з урахуванням переходу на літній/зимовий
+# Вікно публікації за Києвом: розклад запускає скрипт двічі (літо/зима), публікує лише перший запуск у вікні.
+WINDOW = os.environ.get("TG_KYIV_WINDOW", "")  # напр. "09:00-11:00"; порожньо — без обмеження
+FORCE = os.environ.get("GITHUB_EVENT_NAME") == "workflow_dispatch"  # ручний запуск — без перевірки часу
 
 OCCUPIED = {"Донецька", "Луганська", "АР Крим", "м. Севастополь"}
 FRONT = ["Херсон", "Ізюм", "Краматорськ", "Дружківка", "Білозерське", "Куп'янськ", "Куп’янськ",
@@ -194,11 +198,21 @@ def main():
     if not DRY and not (TOKEN and CHAT):
         print("Telegram: токен або канал не задано — пропускаю")
         return 0
+    now = datetime.now(timezone.utc)
+    local = now.astimezone(KYIV)
+    first = not POSTED_FILE.exists()
+    state = {} if first else json.loads(POSTED_FILE.read_text(encoding="utf-8"))
+    posted = state.get("ids", {})
+    if WINDOW and not FORCE:
+        a, b = WINDOW.split("-")
+        if not (a <= local.strftime("%H:%M") < b):
+            print(f"Telegram: зараз {local:%H:%M} за Києвом — поза вікном {WINDOW}, пропускаю")
+            return 0
+        if state.get("lastRun") == local.strftime("%Y-%m-%d"):
+            print("Telegram: сьогодні добірку вже опубліковано — пропускаю")
+            return 0
     dep = json.loads(DEP_FILE.read_text(encoding="utf-8"))
     lots = [l for l in dep.get("lots", []) if l.get("id")]
-    now = datetime.now(timezone.utc)
-    first = not POSTED_FILE.exists()
-    posted = {} if first else json.loads(POSTED_FILE.read_text(encoding="utf-8")).get("ids", {})
 
     def upcoming(l):
         # інвесторові потрібен час на подання заявки: показуємо лоти з аукціоном не раніше ніж за 3 дні
@@ -231,7 +245,8 @@ def main():
     cutoff = (now - timedelta(days=60)).strftime("%Y-%m-%d")
     posted = {k: v for k, v in posted.items() if k in live or v >= cutoff}
     if not DRY:
-        POSTED_FILE.write_text(json.dumps({"updated": stamp, "ids": posted}, ensure_ascii=False, separators=(",", ":")),
+        POSTED_FILE.write_text(json.dumps({"updated": stamp, "lastRun": local.strftime("%Y-%m-%d"), "ids": posted},
+                                          ensure_ascii=False, separators=(",", ":")),
                                encoding="utf-8")
     print(f"Telegram: опубліковано пунктів {len(gpick)} (лотів {len(pick)}) у {len(msgs)} повідомленнях; "
           f"нових залишилось {len(fresh) - len(pick)}")

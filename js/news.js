@@ -68,7 +68,13 @@
       det.appendChild(el('summary', null, T.more));
       var body = el('div', 'body');
       String(f(n, 'text')).split(/\n{2,}/).forEach(function (par) {
-        if (par.trim()) body.appendChild(el('p', null, par.trim()));
+        if (!par.trim()) return;
+        var pe = el('p');
+        par.trim().split('\n').forEach(function (line, i) { /* переноси рядків (списки з «•») зберігаємо */
+          if (i) pe.appendChild(document.createElement('br'));
+          pe.appendChild(document.createTextNode(line));
+        });
+        body.appendChild(pe);
       });
       det.appendChild(body);
       wrap.appendChild(det);

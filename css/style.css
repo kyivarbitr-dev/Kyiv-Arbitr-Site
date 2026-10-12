@@ -146,7 +146,8 @@ input:focus,select:focus,textarea:focus{outline:none;border-color:var(--accent);
 #status{font-size:14px;color:var(--muted);min-height:20px}
 
 footer{background:var(--dark-bg);color:var(--on-dark);border-top:1px solid var(--accent);padding:64px 0 32px}
-.f-grid{display:grid;grid-template-columns:1.2fr 1fr 1.4fr;gap:48px}
+.f-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:48px}
+footer h5.f-h2{margin-top:28px}
 footer h5{font-size:12px;letter-spacing:1.5px;text-transform:uppercase;color:var(--accent);margin:0 0 16px;font-weight:600}
 footer p,footer li{font-size:15px;line-height:24px;color:rgba(243,244,247,.82)}
 footer ul{list-style:none;padding:0;margin:0}
@@ -584,20 +585,19 @@ button[disabled]{opacity:.6;cursor:progress}
 .dep-order-lot a{color:var(--heading);font-variant-numeric:tabular-nums}
 .dep-two{display:grid;grid-template-columns:1fr 1fr;gap:20px}
 @media (max-width:1199px){.dep-tiers{grid-template-columns:repeat(2,1fr)}}
+@media (min-width:1024px){.dep-layout{align-items:stretch}.dep-list{max-height:none;min-height:560px;contain:size}}
 @media (max-width:1023px){.dep-layout{grid-template-columns:1fr}.dep-list{max-height:420px}}
 @media (max-width:767px){.dep-card{padding:20px}.dep-tiers,.dep-two{grid-template-columns:1fr}.dep-facts th{width:40%}}
 .dep-title.long{font-size:18px;line-height:26px}
 
 /* ---------- Підвал на телефоні: без порожнього місця праворуч ---------- */
 @media (max-width:767px){
-  .f-grid{grid-template-columns:1fr 1fr;gap:28px 20px}
-  .f-grid > div:first-child{grid-column:1 / -1}
+  .f-grid{grid-template-columns:1fr;gap:28px}
   .sched-f{max-width:none}
-  footer ul{display:grid;gap:6px}
+  footer ul{display:grid;grid-template-columns:1fr 1fr;gap:6px 20px}
   footer ul li{line-height:22px}
   .f-grid > div:last-child p{font-size:14px;line-height:22px}
 }
-@media (max-width:359px){.f-grid{grid-template-columns:1fr}}
 
 /* ---------- Telegram-канал на сторінці перевірки ---------- */
 .dep-tg{margin:16px 0 0}
