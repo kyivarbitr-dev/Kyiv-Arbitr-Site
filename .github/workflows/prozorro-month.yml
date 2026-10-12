@@ -1,0 +1,48 @@
+name: Аналітика Prozorro — підсумки місяця
+
+on:
+  schedule:
+    # 2-го числа кожного місяця, 05:40 UTC — підсумки попереднього місяця
+    - cron: "40 5 2 * *"
+  workflow_dispatch:
+    inputs:
+      month:
+        description: "Місяць у форматі РРРР-ММ (порожньо — попередній місяць)"
+        required: false
+        default: ""
+
+permissions:
+  contents: write
+
+concurrency:
+  group: prozorro-map
+  cancel-in-progress: false
+
+jobs:
+  month:
+    runs-on: ubuntu-latest
+    timeout-minutes: 300
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Зібрати підсумки місяця
+        env:
+          MONTH: ${{ github.event.inputs.month }}
+        run: python scripts/prozorro_month.py
+
+      - name: Зберегти звіт у репозиторій
+        run: |
+          git config user.name  "prozorro-map-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git pull --rebase --autostash
+          git add data/analytics
+          if git diff --cached --quiet; then
+            echo "Змін немає"
+          else
+            git commit -m "Аналітика Prozorro: підсумки місяця"
+            git push
+          fi
