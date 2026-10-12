@@ -27,11 +27,19 @@ jobs:
       - name: Зібрати лоти та оновити GeoJSON
         run: python scripts/prozorro_ua.py
 
+      - name: Опублікувати нові лоти в Telegram
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+          SITE_URL: https://kyivarbitr.com.ua
+        run: python scripts/tg_post.py
+
       - name: Зберегти зміни в репозиторій
         run: |
           git config user.name  "prozorro-map-bot"
           git config user.email "actions@users.noreply.github.com"
           git add data/prozorro-ua.geojson data/prozorro-summary.json data/dep-lots.json data/prozorro-state.json data/geocache.json sitemap.xml
+          if [ -f data/tg-posted.json ]; then git add data/tg-posted.json; fi
           if git diff --cached --quiet; then
             echo "Змін немає"
           else
