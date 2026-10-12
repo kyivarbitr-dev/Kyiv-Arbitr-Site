@@ -1,0 +1,51 @@
+name: Новини сайту → Telegram
+
+on:
+  push:
+    branches: [main]
+    paths: ["news/news.json"]
+  schedule:
+    # щодня 06:30 UTC — для новин, запланованих на майбутню дату
+    - cron: "30 6 * * *"
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+concurrency:
+  group: telegram-news
+  cancel-in-progress: false
+
+jobs:
+  post:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Зачекати, поки Cloudflare опублікує нову версію сайту
+        if: github.event_name == 'push'
+        run: sleep 150
+
+      - name: Опублікувати нові новини в Telegram
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+          SITE_URL: https://kyivarbitr.com.ua
+        run: python scripts/tg_news.py
+
+      - name: Зберегти перелік опублікованих новин
+        run: |
+          git config user.name  "prozorro-map-bot"
+          git config user.email "actions@users.noreply.github.com"
+          if [ -f data/tg-news-posted.json ]; then git add data/tg-news-posted.json; fi
+          if git diff --cached --quiet; then
+            echo "Змін немає"
+          else
+            git commit -m "Telegram: опубліковані новини"
+            for i in 1 2 3; do git pull --rebase && git push && break; sleep 10; done
+          fi
