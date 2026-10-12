@@ -26,14 +26,6 @@ jobs:
 
       - name: Зібрати лоти та оновити GeoJSON
         run: python scripts/prozorro_ua.py
-
-      - name: Опублікувати нові лоти в Telegram
-        env:
-          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
-          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
-          SITE_URL: https://kyivarbitr.com.ua
-        run: python scripts/tg_post.py
-
       - name: Зберегти зміни в репозиторій
         run: |
           git config user.name  "prozorro-map-bot"
