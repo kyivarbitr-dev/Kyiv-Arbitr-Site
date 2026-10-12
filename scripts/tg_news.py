@@ -49,9 +49,7 @@ def build(n: dict) -> tuple[str, str | None]:
     url = f"{SITE}/news/{urllib.parse.quote(str(n['id']))}"  # окрема сторінка новини (scripts/build_news.py)
     head = f"<b>{html.escape(n.get('title') or '')}</b>"
     tail = f'\n\n<a href="{url}">Читати на сайті</a>'
-    src = n.get("link")
-    if isinstance(src, str) and src.startswith(("http://", "https://")):
-        tail += f' · <a href="{html.escape(src)}">{html.escape(n.get("linkLabel") or "Джерело")}</a>'
+    # лише посилання на сайт: джерело читач знайде на сторінці новини
     tag = hashtag(n.get("tag") or "")
     if tag:
         tail += f"\n{html.escape(tag)}"
