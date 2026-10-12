@@ -39,6 +39,7 @@
 
   function card(n) {
     var a = el('article', 'news-card scroll-reveal');
+    if (n.id && /^[\w\-]+$/.test(n.id)) a.id = 'n-' + n.id; /* якір для посилань з Telegram: news.html#n-<id> */
     var wrap = a;
     /* Картинка до новини: поле image (шлях відносно папки news/), image_alt / image_alt_en */
     if (n.image && /^[\w\-\/.]+\.(jpe?g|png|webp)$/i.test(n.image)) {
@@ -109,8 +110,26 @@
       while (box.firstChild) box.removeChild(box.firstChild);
       if (!items.length) { box.appendChild(el('p', 'w-loading', T.none)); return; }
       renderMore();
+      openFromHash();
     })
     .catch(function () { fail(T.fail); });
+
+  /* Посилання виду news.html#n-<id>: догортаємо список до потрібної новини, розгортаємо її й прокручуємо */
+  function openFromHash() {
+    var m = /^#n-([\w\-]+)$/.exec(location.hash || '');
+    if (!m) return;
+    var idx = -1;
+    for (var i = 0; i < items.length; i++) if (String(items[i].id) === m[1]) { idx = i; break; }
+    if (idx < 0) return;
+    while (shown <= idx) renderMore();
+    var a = document.getElementById('n-' + m[1]);
+    if (!a) return;
+    a.classList.add('visible', 'is-visible', 'revealed');
+    var d = a.querySelector('details');
+    if (d) d.open = true;
+    a.scrollIntoView({ block: 'start' });
+  }
+  window.addEventListener('hashchange', openFromHash);
 
   if (moreBtn) moreBtn.addEventListener('click', renderMore);
 })();
