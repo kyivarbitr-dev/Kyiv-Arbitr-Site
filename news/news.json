@@ -1,5 +1,23 @@
 [
   {
+    "id": "2026-10-12-8",
+    "date": "2026-10-12",
+    "tag": "Аналітика",
+    "tag_en": "Analytics",
+    "title": "Огляд Prozorro.Продажі за вересень: 72% торгів без переможця, банкрутні лоти — за 37% стартової ціни",
+    "title_en": "Prozorro.Sale in September: 72% of auctions without a winner, bankruptcy lots sold at 37% of the starting price",
+    "summary": "У вересні 2026 року на Prozorro.Продажі оголосили 12 353 процедури. У справах про банкрутство переможця визначено лише в кожних четвертих торгах, а медіанна ціна продажу — 37% від стартової.",
+    "summary_en": "In September 2026, 12,353 procedures were announced on Prozorro.Sale. In bankruptcy cases only one auction in four found a winner, and the median sale price was 37% of the starting price.",
+    "text": "Ми проаналізували всі аукціони Prozorro.Продажі, оголошені у вересні 2026 року (дані Prozorro.Продажі, статуси на 12 жовтня).\n\nГоловне:\n• 12 353 процедури, майже половина з них (47%) — земельні аукціони;\n• з 6 739 торгів, що вже відбулися, 72% завершилися без переможця;\n• у справах про банкрутство — 647 аукціонів, третина з них голландські, понад чверть повторні;\n• з 492 банкрутних торгів, що відбулися, переможець є лише в 132;\n• медіанна ціна продажу банкрутних лотів — 37% від стартової.\n\nУ повному огляді — графіки, регіони, висновки для кредиторів, покупців і боржників та методика підрахунку.",
+    "text_en": "We analysed all Prozorro.Sale auctions announced in September 2026 (Prozorro.Sale data, statuses as of 12 October).\n\nKey points:\n• 12,353 procedures, almost half (47%) of them land auctions;\n• of 6,739 auctions already held, 72% ended without a winner;\n• 647 auctions in bankruptcy cases, a third of them Dutch and over a quarter repeat auctions;\n• of 492 bankruptcy auctions held, only 132 found a winner;\n• the median sale price of bankruptcy lots was 37% of the starting price.\n\nThe full review (in Ukrainian) has charts, regions, takeaways for creditors, buyers and debtors, and the methodology.",
+    "image": "img/2026-10-12-8.jpg",
+    "image_alt": "Ілюстрація: графік і мітка на карті",
+    "image_alt_en": "Illustration: a chart and a map pin",
+    "link": "https://kyivarbitr.com.ua/prozorro-2026-09",
+    "linkLabel": "Повний огляд",
+    "linkLabel_en": "Full review (in Ukrainian)"
+  },
+  {
     "id": "2026-10-12-1",
     "date": "2026-10-12",
     "tag": "Мораторії",
