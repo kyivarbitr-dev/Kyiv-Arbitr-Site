@@ -1,0 +1,46 @@
+name: Лоти → Telegram (щоранку о 9:35)
+
+on:
+  schedule:
+    # 9:35 за Києвом: 06:35 UTC влітку, 07:35 UTC взимку. Скрипт сам публікує лише раз на день у вікні 09:00–11:00.
+    - cron: "35 6 * * *"
+    - cron: "35 7 * * *"
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+concurrency:
+  group: telegram-lots
+  cancel-in-progress: false
+
+jobs:
+  post:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Опублікувати добірку лотів у Telegram
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+          SITE_URL: https://kyivarbitr.com.ua
+          TG_KYIV_WINDOW: "09:00-11:00"
+        run: python scripts/tg_post.py
+
+      - name: Зберегти перелік опублікованих лотів
+        run: |
+          git config user.name  "prozorro-map-bot"
+          git config user.email "actions@users.noreply.github.com"
+          if [ -f data/tg-posted.json ]; then git add data/tg-posted.json; fi
+          if git diff --cached --quiet; then
+            echo "Змін немає"
+          else
+            git commit -m "Telegram: опубліковані лоти"
+            for i in 1 2 3; do git pull --rebase && git push && break; sleep 10; done
+          fi
