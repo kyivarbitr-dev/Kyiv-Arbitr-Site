@@ -5,8 +5,8 @@ on:
     branches: [main]
     paths: ["news/news.json"]
   schedule:
-    # щодня 06:30 UTC — для новин, запланованих на майбутню дату
-    - cron: "30 6 * * *"
+    # щогодини: публікує по 2 нові новини, доки черга не спорожніє
+    - cron: "17 * * * *"
   workflow_dispatch: {}
 
 permissions:
