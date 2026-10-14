@@ -664,3 +664,19 @@ button[disabled]{opacity:.6;cursor:progress}
 .lp-form > p{margin:0 0 20px;color:var(--muted)}
 .lp-two{display:grid;grid-template-columns:1fr 1fr;gap:20px}
 @media (max-width:767px){.lp-two{grid-template-columns:1fr}}
+
+/* ---------- Відео ---------- */
+.vtopics{display:flex;flex-wrap:wrap;gap:8px 10px;margin:8px 0 8px}
+.vtopics a{font-size:14px;line-height:20px;padding:6px 12px;border:1px solid var(--border);border-radius:999px;color:var(--heading);text-decoration:none}
+.vtopics a:hover{border-color:var(--accent);color:var(--accent)}
+.vtopic{margin:48px 0 18px;scroll-margin-top:90px}
+.vgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:22px}
+.vcard{margin:0;display:flex;flex-direction:column;gap:10px}
+.vcard video{display:block;width:100%;height:auto;aspect-ratio:9/16;border-radius:16px;background:#0B1F3A;box-shadow:0 14px 30px -18px rgba(11,31,58,.55);border:1px solid rgba(156,122,60,.35)}
+.vcard figcaption{display:flex;flex-direction:column;gap:4px}
+.vcard figcaption b{font-family:var(--serif);font-weight:600;font-size:17px;line-height:23px;color:var(--heading)}
+.vcard figcaption span{font-size:14px;line-height:21px;color:var(--muted)}
+.vblock{padding:24px 0 56px}
+.vblock .sub-h{margin-bottom:18px}
+.vblock .vgrid{grid-template-columns:repeat(auto-fill,minmax(200px,240px))}
+@media (max-width:560px){.vgrid,.vblock .vgrid{grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}.vcard figcaption b{font-size:15px;line-height:20px}.vcard figcaption span{display:none}}
