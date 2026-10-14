@@ -383,6 +383,9 @@ h1,h2,h3,h4,.t{text-wrap:balance}
 .msgr .ic-linkedin{fill:#0A66C2}
 .msgr-f .ic-linkedin{fill:#fff}
 .msgr-in{margin-top:0}
+.msgr .ic-youtube{fill:#FF0000}
+.msgr .ic-instagram{fill:#E4405F}
+.msgr-f .ic-youtube,.msgr-f .ic-instagram{fill:#fff}
 .msgr .m:hover .ic{transform:scale(1.08)}
 .msgr .ic{transition:transform .2s}
 .msgr-f{margin:4px 0 12px}
