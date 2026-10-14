@@ -1,5 +1,197 @@
 [
   {
+    "id": "2026-10-14-1",
+    "date": "2026-10-14",
+    "tag": "Судова практика",
+    "tag_en": "Case law",
+    "title": "Велика Палата ВС вирішить, що має пріоритет при розподілі коштів від торгів: арешт за забезпеченням позову чи застава",
+    "title_en": "Grand Chamber to decide what ranks first when auction proceeds are distributed: an interim-measure attachment or a pledge",
+    "summary": "Велика Палата Верховного Суду прийняла до розгляду справу № 465/1701/21: чи враховується пріоритет арешту, накладеного ухвалою про забезпечення позову, коли кошти від продажу майна боржника розподіляють між стягувачами, зокрема порівняно із заставою того самого майна.",
+    "summary_en": "The Supreme Court's Grand Chamber has taken case No. 465/1701/21: whether an attachment imposed as an interim measure gives priority when proceeds from the sale of a debtor's property are distributed among creditors, including against a pledge over the same property.",
+    "text": "Спір виник у виконавчому провадженні. Стягувач оскаржив дії приватного виконавця, бо вважав, що має пріоритет при розподілі коштів від продажу нежитлового приміщення боржника: арешт на це приміщення раніше наклав суд, забезпечуючи саме його позов. Суди попередніх інстанцій дійшли різних висновків.\n\nОб'єднана палата Касаційного цивільного суду 7 вересня 2026 року передала справу до Великої Палати, і 30 вересня ВП ВС прийняла її до розгляду. Питання для вирішення:\n• чи враховується пріоритет обтяження (арешту), накладеного ухвалою про забезпечення позову, при розподілі коштів від реалізації майна на торгах — зокрема порівняно з обтяженням заставою цього ж майна;\n• чи потрібно тут застосовувати аналогію закону.\n\nКолегія пропонує відступити від висновків Великої Палати у справі № 922/3537/17 (постанова від 23.10.2019) та КГС ВС у справі № 910/11305/18 (постанова від 10.02.2021).\n\nЩо це означає на практиці:\n• для кредиторів, які отримали арешт майна боржника ще під час розгляду спору, рішення ВП ВС визначить, чи дає такий арешт перевагу при розподілі коштів;\n• для заставодержателів — чи може арешт за чужим позовом конкурувати із заставою;\n• для покупців лотів і арбітражних керуючих — як розподілятимуться кошти, якщо на майно є кілька обтяжень різної природи.\n\nДо рішення Великої Палати суди можуть по-різному вирішувати такі спори, тож кредиторам варто фіксувати дати й підстави всіх обтяжень майна боржника.",
+    "text_en": "The dispute arose in enforcement proceedings. A creditor challenged a private enforcement officer's actions, arguing he had priority in distributing proceeds from the sale of the debtor's non-residential premises because a court had earlier attached that property to secure his own claim. The lower courts reached different conclusions.\n\nThe Joint Chamber of the Civil Cassation Court referred the case to the Grand Chamber on 7 September 2026, which accepted it on 30 September. The questions are:\n• whether an encumbrance (attachment) imposed by an interim-measure ruling gives priority when proceeds from an auction sale are distributed — including against a pledge over the same property;\n• whether an analogy of law should be applied.\n\nThe panel proposes departing from the Grand Chamber's conclusions in case No. 922/3537/17 (ruling of 23.10.2019) and the Commercial Cassation Court's in case No. 910/11305/18 (ruling of 10.02.2021).\n\nWhat it means in practice:\n• for creditors who obtained an attachment of the debtor's property during litigation, the Grand Chamber will decide whether it gives an advantage in distribution;\n• for pledgees — whether an attachment obtained in someone else's case can compete with a pledge;\n• for lot buyers and insolvency practitioners — how proceeds are shared when property carries several encumbrances of different kinds.\n\nUntil the Grand Chamber rules, courts may decide such disputes differently, so creditors should record the dates and grounds of all encumbrances on the debtor's property.",
+    "image": "img/2026-10-14-1.jpg",
+    "image_alt": "Ілюстрація: ваги із замком і суддівським молотком, монети",
+    "image_alt_en": "Illustration: scales with a padlock and a gavel, coins",
+    "link": "https://supreme.court.gov.ua/supreme/pres-centr/news/2113084/",
+    "linkLabel": "Джерело: Верховний Суд",
+    "linkLabel_en": "Source: Supreme Court (in Ukrainian)",
+    "links": [
+      {
+        "url": "https://supreme.court.gov.ua/supreme/pres-centr/news/2113084/",
+        "label": "Джерело: Верховний Суд",
+        "label_en": "Source: Supreme Court (in Ukrainian)"
+      },
+      {
+        "url": "https://reyestr.court.gov.ua/Review/140231219",
+        "label": "Ухвала в ЄДРСР",
+        "label_en": "Ruling in the court register (in Ukrainian)"
+      }
+    ]
+  },
+  {
+    "id": "2026-10-14-2",
+    "date": "2026-10-14",
+    "tag": "Судова практика",
+    "tag_en": "Case law",
+    "title": "ВП ВС розгляне, чи можна вчинити виконавчий напис за нотаріальним договором застави, якщо кредитний договір не посвідчений нотаріально",
+    "title_en": "Grand Chamber to rule on notarial enforcement orders under a notarised pledge when the loan agreement itself is not notarised",
+    "summary": "Велика Палата Верховного Суду прийняла справу № 911/3400/24 і призначила розгляд на 4 листопада. Від її рішення залежить, чи зможуть кредитори звертати стягнення на заставу за виконавчим написом, коли кредитний договір укладено в простій письмовій формі.",
+    "summary_en": "The Supreme Court's Grand Chamber has taken case No. 911/3400/24 and set a hearing for 4 November. Its ruling will decide whether lenders can enforce a pledge by notarial order when the loan agreement is in simple written form.",
+    "text": "Компанія-позичальник просить визнати таким, що не підлягає виконанню, виконавчий напис нотаріуса від 26 квітня 2024 року. Ним звернуто стягнення на заставлений автомобіль. Договір застави посвідчено нотаріально, а кредитний договір, який він забезпечує, укладено в простій письмовій формі. Суди першої та апеляційної інстанцій позов задовольнили; банк подав касаційну скаргу.\n\nКасаційний господарський суд 3 вересня 2026 року передав справу до Великої Палати, а 7 жовтня ВП ВС прийняла її й призначила засідання на 4 листопада 2026 року. Головне питання: чи зобов'язаний кредитор для виконавчого напису про звернення стягнення на заставу надати нотаріально посвідчений кредитний договір — і чи є відсутність такого посвідчення підставою визнати напис таким, що не підлягає виконанню.\n\nКолегія пропонує відступити від висновку Касаційного цивільного суду у справі № 758/3725/21 (постанова від 28.06.2023).\n\nЩо це означає на практиці:\n• для банків і кредиторів — рішення визначить, чи працює позасудове звернення стягнення на заставу, якщо кредитний договір не посвідчувався у нотаріуса;\n• для позичальників і поручителів — чи є підстава оскаржувати вже вчинені виконавчі написи;\n• для бізнесу, що постраждав від війни й має заставні кредити, — від висновку залежить, наскільки швидко кредитор може забрати заставне майно без суду.\n\nДо 4 листопада практика залишається неоднаковою. Після рішення ВП ВС варто переглянути позиції в спорах щодо виконавчих написів.",
+    "text_en": "A borrower company asks the court to declare a notarial enforcement order of 26 April 2024 unenforceable. The order allowed enforcement against a pledged car. The pledge agreement was notarised, but the loan agreement it secures was in simple written form. The first-instance and appeal courts upheld the claim; the bank appealed.\n\nThe Commercial Cassation Court referred the case to the Grand Chamber on 3 September 2026; on 7 October the Grand Chamber accepted it and set a hearing for 4 November 2026. The key question is whether a creditor seeking a notarial order to enforce a pledge must provide a notarised loan agreement — and whether the absence of notarisation is grounds to declare the order unenforceable.\n\nThe panel proposes departing from the Civil Cassation Court's conclusion in case No. 758/3725/21 (ruling of 28.06.2023).\n\nWhat it means in practice:\n• for banks and lenders — the ruling will decide whether out-of-court enforcement against a pledge works when the loan agreement was not notarised;\n• for borrowers and guarantors — whether there are grounds to challenge orders already issued;\n• for war-affected businesses with secured loans — how quickly a lender can take pledged property without going to court.\n\nUntil 4 November practice remains inconsistent. After the Grand Chamber rules, positions in disputes over notarial orders should be reviewed.",
+    "image": "img/2026-10-14-2.jpg",
+    "image_alt": "Ілюстрація: нотаріальна печатка над документом",
+    "image_alt_en": "Illustration: a notary stamp above a document",
+    "link": "https://supreme.court.gov.ua/supreme/pres-centr/news/2113084/",
+    "linkLabel": "Джерело: Верховний Суд",
+    "linkLabel_en": "Source: Supreme Court (in Ukrainian)",
+    "links": [
+      {
+        "url": "https://supreme.court.gov.ua/supreme/pres-centr/news/2113084/",
+        "label": "Джерело: Верховний Суд",
+        "label_en": "Source: Supreme Court (in Ukrainian)"
+      },
+      {
+        "url": "https://reyestr.court.gov.ua/Review/140452232",
+        "label": "Ухвала в ЄДРСР",
+        "label_en": "Ruling in the court register (in Ukrainian)"
+      }
+    ]
+  },
+  {
+    "id": "2026-10-14-3",
+    "date": "2026-10-14",
+    "tag": "Судова практика",
+    "tag_en": "Case law",
+    "title": "КГС ВС: спадкоємець учасника ТОВ може оскаржити рішення зборів, ухвалені ще до його вступу в товариство",
+    "title_en": "Supreme Court: the heir of an LLC member may challenge meeting decisions adopted before joining the company",
+    "summary": "Касаційний господарський суд підтвердив: майнове право на частку переходить до спадкоємця з відкриття спадщини, тож він може оскаржувати рішення загальних зборів, які порушують його законний інтерес, ще до вступу в ТОВ.",
+    "summary_en": "The Commercial Cassation Court confirmed that the property right to a share passes to the heir when the inheritance opens, so the heir may challenge general meeting decisions that harm their legitimate interest even before joining the LLC.",
+    "text": "У товаристві було два учасники з частками по 50%. Після смерті одного з них другий одноособово звільнив директора, призначив виконувачем обов'язків себе і вніс зміни до ЄДР. Статут вимагав для таких рішень понад 60% голосів. Спадкоємиця померлого учасника оскаржила ці рішення, і суди першої та апеляційної інстанцій позов задовольнили.\n\nКГС ВС залишив рішення без змін (постанова від 3 вересня 2026 року у справі № 908/2470/21). Суд пояснив:\n• майнове право на частку переходить до спадкоємця з моменту відкриття спадщини, а корпоративні права — лише після вступу до товариства;\n• до вступу спадкоємець уже має охоронюваний законом інтерес у тому, щоб рішення ухвалювалися відповідно до закону та статуту, і може їх оскаржувати;\n• рішення, ухвалені одноособово учасником, частки якого не вистачає для кворуму чи потрібної кількості голосів, недійсні; голоси померлого учасника враховуються при визначенні такої кількості, крім випадків, передбачених законом (ст. 23 Закону «Про товариства з обмеженою та додатковою відповідальністю»).\n\nЩо це означає на практиці:\n• спадкоємці частки можуть захищати вартість бізнесу ще до оформлення спадщини;\n• рішення, ухвалені «в паузі» після смерті учасника, ризиковані для тих, хто їх ухвалює, і для контрагентів;\n• для кредиторів і арбітражних керуючих — зміни керівника чи активів у такий період варто перевіряти на дотримання статуту.",
+    "text_en": "The company had two members with 50% shares each. After one died, the other alone dismissed the director, appointed himself acting director and registered the changes. The charter required more than 60% of votes for such decisions. The deceased member's heir challenged them, and the first-instance and appeal courts upheld her claim.\n\nThe Commercial Cassation Court left the rulings unchanged (ruling of 3 September 2026, case No. 908/2470/21). The court explained:\n• the property right to a share passes to the heir when the inheritance opens, while corporate rights arise only on joining the company;\n• before joining, the heir already has a legally protected interest in decisions being made in line with the law and the charter, and may challenge them;\n• decisions taken alone by a member whose share does not give the required number of votes are invalid; the deceased member's votes count when determining that number, except as provided by law (Article 23 of the Law on Limited and Additional Liability Companies).\n\nWhat it means in practice:\n• heirs to a share can protect the value of the business even before the inheritance is formalised;\n• decisions taken in the 'gap' after a member's death are risky for those who take them and for counterparties;\n• creditors and insolvency practitioners should check changes of management or assets during such periods against the charter.",
+    "image": "img/2026-10-14-3.jpg",
+    "image_alt": "Ілюстрація: частки 50/50 і ключ, що переходить до спадкоємця",
+    "image_alt_en": "Illustration: 50/50 shares and a key passing to an heir",
+    "link": "https://supreme.court.gov.ua/supreme/pres-centr/news/2114299/",
+    "linkLabel": "Джерело: Верховний Суд",
+    "linkLabel_en": "Source: Supreme Court (in Ukrainian)",
+    "links": [
+      {
+        "url": "https://supreme.court.gov.ua/supreme/pres-centr/news/2114299/",
+        "label": "Джерело: Верховний Суд",
+        "label_en": "Source: Supreme Court (in Ukrainian)"
+      },
+      {
+        "url": "https://reyestr.court.gov.ua/Review/139505871",
+        "label": "Постанова в ЄДРСР",
+        "label_en": "Ruling in the court register (in Ukrainian)"
+      }
+    ]
+  },
+  {
+    "id": "2026-10-14-4",
+    "date": "2026-10-14",
+    "tag": "Законодавство",
+    "tag_en": "Legislation",
+    "title": "Рада в першому читанні обмежила доступ судів до даних, які НБУ отримує від іноземних регуляторів",
+    "title_en": "Parliament backs at first reading a limit on courts' access to data the NBU receives from foreign regulators",
+    "summary": "13 жовтня 284 депутати підтримали законопроєкт №15555. Суди не зможуть витребувати банківську таємницю, яку Нацбанк отримав від іноземних органів банківського нагляду, — розкривати її можна буде лише за згодою відправника.",
+    "summary_en": "On 13 October, 284 MPs backed bill No. 15555. Courts will be unable to demand bank-secrecy data the National Bank received from foreign banking supervisors; it may be disclosed only with the sender's consent.",
+    "text": "Законопроєкт №15555 зареєстровано 24 серпня 2026 року. 10 вересня фінансовий комітет Ради рекомендував його ухвалити за основу, і 13 жовтня парламент підтримав документ у першому читанні — 284 голоси «за».\n\nЩо пропонується:\n• зміни до Цивільного процесуального, Господарського процесуального кодексів і Закону «Про банки і банківську діяльність»;\n• у цивільних і господарських справах суд не зможе витребувати інформацію, яка є банківською таємницею й отримана НБУ від іноземного органу банківського нагляду; клопотання про витребування чи забезпечення таких доказів залишатимуть без задоволення;\n• Нацбанк зможе розкривати такі дані лише за згодою органу, який їх надав, і лише для погоджених між регуляторами цілей.\n\nМета — захистити міжнародний обмін наглядовою інформацією та наблизити правила до стандартів ЄС. Обмеження стосується лише даних від іноземних регуляторів; доступ до іншої банківської таємниці регулюють чинні норми.\n\nЩо це означає на практиці:\n• для кредиторів і сторін спорів — витребувати через суд дані з іноземних наглядових джерел стане неможливо, тож розшук активів за кордоном потребуватиме інших інструментів;\n• для арбітражних керуючих — основні джерела інформації про рахунки боржника в українських банках не змінюються;\n• законопроєкт ще має пройти друге читання й підписання; станом на 14 жовтня ці обмеження не діють.",
+    "text_en": "Bill No. 15555 was registered on 24 August 2026. On 10 September Parliament's finance committee recommended it as a basis, and on 13 October Parliament backed it at first reading with 284 votes.\n\nWhat it proposes:\n• amendments to the Civil Procedure and Commercial Procedure Codes and the Law on Banks and Banking;\n• in civil and commercial cases, a court will be unable to demand information that is bank secrecy and was received by the NBU from a foreign banking supervisor; motions to demand or secure such evidence will be refused;\n• the National Bank may disclose such data only with the consent of the authority that provided it and only for purposes agreed between regulators.\n\nThe aim is to protect the international exchange of supervisory information and align the rules with EU standards. The restriction covers only data from foreign regulators; access to other bank secrecy is governed by existing rules.\n\nWhat it means in practice:\n• for creditors and litigants — obtaining data from foreign supervisory sources through the courts will become impossible, so tracing assets abroad will need other tools;\n• for insolvency practitioners — the main sources of information on a debtor's accounts in Ukrainian banks do not change;\n• the bill still needs a second reading and signature; as of 14 October these restrictions are not in force.",
+    "image": "img/2026-10-14-4.jpg",
+    "image_alt": "Ілюстрація: банківський сейф, глобус і щит",
+    "image_alt_en": "Illustration: a bank vault, a globe and a shield",
+    "link": "https://borgexpert.com/news/rada-pidtrymala-obmezhennia-dostupu-sudiv-do-bankivskoi-taiemnytsi-nbu-shcho-peredbachaie-zakonoproiekt-15555",
+    "linkLabel": "Джерело: BorgExpert",
+    "linkLabel_en": "Source: BorgExpert (in Ukrainian)"
+  },
+  {
+    "id": "2026-10-14-5",
+    "date": "2026-10-14",
+    "tag": "Аналітика",
+    "tag_en": "Analytics",
+    "title": "Превентивна реструктуризація майже не працює: близько 15 компаній проти 780 банкрутств за рік",
+    "title_en": "Preventive restructuring barely used: about 15 companies versus 780 bankruptcies in a year",
+    "summary": "Процедура превентивної реструктуризації діє з 1 січня 2025 року, але нею скористалися лише близько 15 компаній. Тим часом лише за 2025 рік у банкрутство увійшли 780 компаній, і тільки 48 із них обрали санацію.",
+    "summary_en": "Preventive restructuring has been available since 1 January 2025, but only about 15 companies have used it. Meanwhile 780 companies entered bankruptcy in 2025 alone, and only 48 chose rehabilitation.",
+    "text": "Закон № 3985-IX доповнив Кодекс з процедур банкрутства окремою книгою «Превентивна реструктуризація», що діє з 1 січня 2025 року. Вона дає змогу домовитися з кредиторами про план до того, як компанія стане банкрутом.\n\nСтатистику проаналізував у колонці для Mind (14 жовтня) керуючий партнер GOLAW Валентин Гвоздій:\n• з 2025 року процедурою скористалися близько 15 компаній;\n• за 2025 рік — 8 справ щодо 6 компаній (дані Опендатабот);\n• у липні 2026 року, за даними Мін'юсту, у процедурі перебували 9 підприємств, ще для 6 плани затверджено;\n• для порівняння: у 2025 році в банкрутство увійшли 780 компаній, і лише 48 із них (близько 6%) обрали санацію.\n\nКлючові строки процедури: захисні заходи — не довше 6 місяців без продовження; підсумкове засідання — через 2–6 місяців після відкриття; якщо план не затверджено за 12 місяців, провадження закривають. План не може дати жодному кредитору менше, ніж він отримав би при ліквідації.\n\nАвтор пояснює низький попит тим, що бізнес звертається до кредиторів уже після дефолту, а підготовка плану для середньої компанії займає 6–12 місяців.\n\nЩо це означає на практиці:\n• для власників бізнесу з кредитами — до реструктуризації варто готуватися заздалегідь, поки компанія ще обслуговує борги;\n• для кредиторів — процедура дає прогнозований результат, не гірший за ліквідацію;\n• банкрутство більше не «купує час»: спори в справах про банкрутство розглядають у скорочені строки.",
+    "text_en": "Law No. 3985-IX added a separate book, 'Preventive Restructuring', to the Bankruptcy Code, in force since 1 January 2025. It lets a company agree a plan with creditors before becoming insolvent.\n\nThe statistics were analysed in a column for Mind (14 October) by GOLAW managing partner Valentyn Hvozdii:\n• since 2025, about 15 companies have used the procedure;\n• in 2025 — 8 cases concerning 6 companies (Opendatabot data);\n• in July 2026, according to the Ministry of Justice, 9 enterprises were in the procedure and plans had been approved for 6 more;\n• by comparison: 780 companies entered bankruptcy in 2025, and only 48 (about 6%) chose rehabilitation.\n\nKey timelines: protective measures last no more than 6 months with no extension; the final hearing comes 2–6 months after opening; if no plan is approved within 12 months, the proceedings close. A plan may not give any creditor less than it would receive in liquidation.\n\nThe author explains the low uptake by businesses approaching creditors only after default, while preparing a plan for a mid-sized company takes 6–12 months.\n\nWhat it means in practice:\n• for business owners with loans — prepare for restructuring early, while the company is still servicing its debts;\n• for creditors — the procedure gives a predictable result no worse than liquidation;\n• bankruptcy no longer 'buys time': disputes within bankruptcy cases are heard on shortened timelines.",
+    "image": "img/2026-10-14-5.jpg",
+    "image_alt": "Ілюстрація: рятувальне коло на графіку відновлення",
+    "image_alt_en": "Illustration: a lifebuoy on a recovery chart",
+    "link": "https://mind.ua/openmind/20310925-preventivna-restrukturizaciya-vs-bankrutstvo-yak-chi-pracyuyut-novi-pravila-gri",
+    "linkLabel": "Джерело: Mind",
+    "linkLabel_en": "Source: Mind (in Ukrainian)"
+  },
+  {
+    "id": "2026-10-14-6",
+    "date": "2026-10-14",
+    "tag": "Банки",
+    "tag_en": "Banks",
+    "title": "Перекази в ЄС можуть подешевшати: Рада готує закон про SEPA і центральний реєстр рахунків",
+    "title_en": "Transfers to the EU may get cheaper: Parliament prepares a law on SEPA and a central register of accounts",
+    "summary": "Законопроєкт №14327-д має підготувати Україну до приєднання до зони єдиних платежів у євро (SEPA). Він також створює центральний реєстр банківських рахунків і сейфів — без залишків і руху коштів, але з даними про власників.",
+    "summary_en": "Bill No. 14327-d would prepare Ukraine to join the Single Euro Payments Area (SEPA). It also creates a central register of bank accounts and safe deposit boxes — without balances or transactions, but with holder data.",
+    "text": "Законопроєкт №14327-д зареєстровано у Верховній Раді 6 квітня 2026 року. Станом на 13 жовтня профільний комітет рекомендує ухвалити його в першому читанні з доопрацюванням.\n\nSEPA — єдина зона платежів у євро, де діють спільні правила безготівкових переказів між рахунками. Приєднання може зробити перекази в євро до країн ЄС дешевшими й простішими, але остаточна вартість залежатиме від тарифів банків. SEPA стосується лише платежів у євро. Для приєднання потрібні ухвалення закону, відповідність критеріям і окрема процедура погодження з європейськими органами; дати набрання чинності поки немає.\n\nДругий важливий блок — центральний реєстр банківських рахунків і сейфів. У ньому зазначатимуть, хто є власником рахунку чи сейфа і в якій установі він відкритий, без історії операцій, залишків і вмісту сейфів. Доступ отримають уповноважені органи в установленому порядку. НБУ виступає проти необмеженого позасудового доступу до даних клієнтів, і щодо цього між Мінфіном і НБУ є розбіжності.\n\nЩо це означає на практиці:\n• для бізнесу, що працює з контрагентами в ЄС, — потенційно простіші й дешевші розрахунки в євро;\n• для розшуку активів — реєстр рахунків може стати інструментом, який швидко показує, у яких банках боржник має рахунки;\n• коло тих, хто матиме доступ до реєстру, ще визначатиметься під час розгляду законопроєкту.\n\nІнформація загальна, не є фінансовою чи інвестиційною порадою.",
+    "text_en": "Bill No. 14327-d was registered in Parliament on 6 April 2026. As of 13 October, the relevant committee recommends adopting it at first reading with revisions.\n\nSEPA is the single area for euro payments with common rules for cashless transfers between accounts. Joining could make euro transfers to EU countries cheaper and simpler, though final costs will depend on banks' tariffs. SEPA covers only euro payments. Joining requires the law, meeting the criteria and a separate approval procedure with European bodies; there is no effective date yet.\n\nThe second key block is a central register of bank accounts and safe deposit boxes. It will show who holds an account or box and at which institution — without transaction history, balances or box contents. Authorised bodies will have access under set procedures. The NBU opposes unlimited out-of-court access to client data, and the Finance Ministry and the NBU disagree on this point.\n\nWhat it means in practice:\n• for businesses working with EU counterparties — potentially simpler and cheaper euro settlements;\n• for asset tracing — the account register could quickly show which banks a debtor holds accounts with;\n• who will have access to the register is still to be settled as the bill moves forward.\n\nGeneral information, not financial or investment advice.",
+    "image": "img/2026-10-14-6.jpg",
+    "image_alt": "Ілюстрація: два банки й переказ у євро між ними",
+    "image_alt_en": "Illustration: two banks and a euro transfer between them",
+    "link": "https://borgexpert.com/news/perekazy-mizh-ukrainoiu-ta-ies-mozhut-podeshevshaty-rada-hotuie-zakon-dlia-pryiednannia-do-sepa",
+    "linkLabel": "Джерело: BorgExpert",
+    "linkLabel_en": "Source: BorgExpert (in Ukrainian)"
+  },
+  {
+    "id": "2026-10-14-7",
+    "date": "2026-10-14",
+    "tag": "Світова економіка",
+    "tag_en": "World economy",
+    "title": "МВФ підвищив прогноз зростання світової економіки на 2026 рік до 3,1%",
+    "title_en": "IMF raises its 2026 global growth forecast to 3.1%",
+    "summary": "13 жовтня МВФ оприлюднив осінній World Economic Outlook: світова економіка зросте на 3,1% у 2026 році та на 3,4% у 2027-му. Водночас фонд прогнозує глобальну інфляцію 4,7% і попереджає про ризики корекції на ринку ШІ та високого боргу.",
+    "summary_en": "On 13 October the IMF published its autumn World Economic Outlook: the global economy will grow 3.1% in 2026 and 3.4% in 2027. The Fund also projects global inflation of 4.7% and warns of risks from an AI-market correction and high debt.",
+    "text": "Звіт МВФ вийшов напередодні щорічних зборів МВФ і Світового банку. Основні цифри:\n• світове зростання — 3,1% у 2026 році (у липневому прогнозі було 3,0%) і 3,4% у 2027-му;\n• США — 2,3% у 2026 і 2027 роках;\n• єврозона — 1,1% у 2026 році та 1,2% у 2027-му;\n• Китай — 4,5% у 2026 році;\n• глобальна інфляція — 4,7% у 2026 році та 4,1% у 2027-му, за припущення середньої ціни нафти близько 96 доларів за барель.\n\nСеред головних ризиків фонд називає можливу корекцію акцій компаній, пов'язаних зі штучним інтелектом, зростання дохідності облігацій, високий рівень державного й корпоративного боргу, кіберзагрози та перебої з постачанням нафти й газу.\n\nЩо це означає для України:\n• повільне зростання єврозони, головного торговельного партнера, стримує попит на український експорт;\n• висока світова інфляція і дорожча нафта тиснуть на ціни й ставки, зокрема на вартість кредитів для бізнесу;\n• високі світові ставки ускладнюють рефінансування боргів, тож для позичальників важливо заздалегідь оцінювати навантаження й можливість реструктуризації.\n\nОкремий прогноз МВФ для України в оглянутих джерелах не наводився.\n\nІнформація загальна, не є фінансовою чи інвестиційною порадою.",
+    "text_en": "The IMF report was released ahead of the IMF and World Bank annual meetings. Key figures:\n• global growth — 3.1% in 2026 (3.0% in the July forecast) and 3.4% in 2027;\n• United States — 2.3% in 2026 and 2027;\n• euro area — 1.1% in 2026 and 1.2% in 2027;\n• China — 4.5% in 2026;\n• global inflation — 4.7% in 2026 and 4.1% in 2027, assuming an average oil price of about USD 96 per barrel.\n\nAmong the main risks the Fund lists a possible correction in AI-related stocks, rising bond yields, high public and corporate debt, cyber threats and disruptions to oil and gas supplies.\n\nWhat it means for Ukraine:\n• slow growth in the euro area, Ukraine's main trading partner, holds back demand for Ukrainian exports;\n• high global inflation and costlier oil push up prices and rates, including the cost of business loans;\n• high global rates make refinancing harder, so borrowers should assess their debt load and restructuring options early.\n\nThe sources reviewed did not give a separate IMF forecast for Ukraine.\n\nGeneral information, not financial or investment advice.",
+    "image": "img/2026-10-14-7.jpg",
+    "image_alt": "Ілюстрація: глобус і стовпчиковий графік зростання",
+    "image_alt_en": "Illustration: a globe and a growth bar chart",
+    "link": "https://fortune.com/2026/10/13/imf-global-growth-forecast-2026-ai-economic-divide/",
+    "linkLabel": "Джерело: Fortune (англ.)",
+    "linkLabel_en": "Source: Fortune",
+    "links": [
+      {
+        "url": "https://fortune.com/2026/10/13/imf-global-growth-forecast-2026-ai-economic-divide/",
+        "label": "Джерело: Fortune (англ.)",
+        "label_en": "Source: Fortune"
+      },
+      {
+        "url": "https://www.imf.org/en/publications/weo",
+        "label": "Звіти МВФ World Economic Outlook (англ.)",
+        "label_en": "IMF World Economic Outlook reports"
+      }
+    ]
+  },
+  {
+    "id": "2026-10-14-8",
+    "date": "2026-10-14",
+    "tag": "Криптовалюти",
+    "tag_en": "Crypto",
+    "title": "ЄС зобов'язав криптопровайдерів припинити послуги з неавторизованими за MiCA стейблкоїнами",
+    "title_en": "EU tells crypto providers to stop services involving stablecoins not authorised under MiCA",
+    "summary": "Європейський регулятор ESMA 8 жовтня визначив: ліцензовані за MiCA провайдери мають припинити для клієнтів у ЄС усі послуги з неавторизованими стейблкоїнами, а наявні позиції клієнтів урегулювати не пізніше ніж за три місяці.",
+    "summary_en": "On 8 October the European regulator ESMA said MiCA-licensed providers must stop all services involving unauthorised stablecoins for EU clients and resolve existing client positions within three months.",
+    "text": "ESMA (Європейський орган з цінних паперів і ринків) оприлюднив висновок щодо стейблкоїнів, які не відповідають регламенту MiCA. Йдеться про токени, прив'язані до активів, і токени електронних грошей без авторизації в ЄС.\n\nОсновні вимоги:\n• провайдери криптопослуг із ліцензією MiCA мають припинити для клієнтів у ЄС усі послуги з такими токенами: торгівлю, виконання й передавання ордерів, поради, перекази, зберігання, управління портфелем;\n• клієнтам не можна давати змогу купувати такі токени чи збільшувати позиції;\n• наявні позиції потрібно врегулювати якомога швидше, але не пізніше ніж за три місяці після публікації висновку, тобто орієнтовно до початку січня 2027 року;\n• до того дозволені лише ліквідація, конвертація, виведення, переказ або зберігання — обмежено в часі й під наглядом національних регуляторів.\n\nВимоги стосуються ліцензованих провайдерів і не забороняють тримати такі токени в приватних гаманцях. Переліку конкретних стейблкоїнів, яких це стосується, висновок не містить.\n\nЩо це означає для України:\n• українці й компанії, які користуються європейськими криптосервісами, можуть зіткнутися з обмеженнями щодо окремих стейблкоїнів;\n• Україна готує власне регулювання віртуальних активів з орієнтиром на MiCA, тож подібні вимоги можуть з'явитися й тут;\n• якщо криптоактиви є в майновому стані боржника, обмеження на біржах ЄС можуть вплинути на можливість їх реалізації чи конвертації.\n\nІнформація загальна, не є фінансовою чи інвестиційною порадою.",
+    "text_en": "ESMA (the European Securities and Markets Authority) published an opinion on stablecoins that do not comply with the MiCA regulation — asset-referenced and e-money tokens without EU authorisation.\n\nKey requirements:\n• MiCA-licensed crypto-asset service providers must stop all services involving such tokens for EU clients: trading, executing and transmitting orders, advice, transfers, custody and portfolio management;\n• clients must not be able to buy such tokens or increase positions;\n• existing positions must be resolved as soon as possible and no later than three months after the opinion's publication, i.e. by about early January 2027;\n• until then only liquidation, conversion, withdrawal, transfer or custody are allowed — time-limited and supervised by national regulators.\n\nThe requirements apply to licensed providers and do not ban holding such tokens in private wallets. The opinion does not list the specific stablecoins affected.\n\nWhat it means for Ukraine:\n• Ukrainians and companies using European crypto services may face restrictions on certain stablecoins;\n• Ukraine is preparing its own virtual-assets regulation modelled on MiCA, so similar rules may appear here;\n• where crypto assets form part of a debtor's estate, EU exchange restrictions may affect the ability to sell or convert them.\n\nGeneral information, not financial or investment advice.",
+    "image": "img/2026-10-14-8.jpg",
+    "image_alt": "Ілюстрація: монети-стейблкоїни перед шлагбаумом і коло зірок",
+    "image_alt_en": "Illustration: stablecoin coins before a barrier and a circle of stars",
+    "link": "https://www.esma.europa.eu/press-news/esma-news/esma-sets-out-supervisory-expectations-services-related-unauthorised",
+    "linkLabel": "Джерело: ESMA (англ.)",
+    "linkLabel_en": "Source: ESMA"
+  },
+  {
     "id": "2026-10-13-1",
     "date": "2026-10-13",
     "tag": "Судова практика",
