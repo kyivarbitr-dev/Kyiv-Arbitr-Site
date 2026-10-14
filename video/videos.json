@@ -9,6 +9,9 @@
  ],
  "videos": [
   {"id":"bankrutstvo-zakhyst","topic":"bankrutstvo","dur":15,"title":"Банкрутство як законний захист від тиску кредиторів","desc":"Мораторій, зупинення нарахування санкцій і стягнень, реструктуризація боргів за планом, який затверджує суд."},
+  {"id":"bankrutstvo-restrukturyzatsiia","topic":"bankrutstvo","dur":22,"title":"Реструктуризація боргів фізичної особи","desc":"Як фізична особа може погашати борги за планом, затвердженим судом: від заяви боржника до мораторію і плану реструктуризації."},
+  {"id":"bankrutstvo-koly-zvertatysia","topic":"bankrutstvo","dur":22,"title":"Коли варто звертатися","desc":"Ознаки, за яких варто звернутися по супровід, і чому раннє звернення дає більше законних варіантів."},
+  {"id":"bankrutstvo-kompaniia","topic":"bankrutstvo","dur":22,"title":"Банкрутство компанії: етапи","desc":"Етапи банкрутства юридичної особи: розпорядження майном, санація, ліквідація і розрахунки з кредиторами в порядку черговості за КУзПБ."},
   {"id":"kredytory-initsiatyva","topic":"kredytory","dur":22,"title":"Боржник не платить роками? Банкрутство як інструмент кредитора","desc":"Заява кредитора до господарського суду, незалежний арбітражний керуючий, усі вимоги — в одному реєстрі."},
   {"id":"kredytory-rozshuk-maina","topic":"kredytory","dur":22,"title":"Майно боржника «зникло»? Як банкрутство допомагає його знайти","desc":"Розшук активів, аналіз угод боржника, повернення майна до ліквідаційної маси."},
   {"id":"kredytory-torgy-rozrakhunky","topic":"kredytory","dur":22,"title":"Як майно боржника перетворюється на розрахунки з кредиторами","desc":"Інвентаризація й оцінка, відкриті торги на Prozorro.Продажі, розрахунки за черговістю закону."},
@@ -28,7 +31,7 @@
   {"id":"zniattia-areshtiv","topic":"aresht","dur":18,"title":"Арешт на рахунку чи майні? Як діяти законно","desc":"Перевірка реєстрів, встановлення підстави, законний шлях і супровід зняття арештів."}
  ],
  "pages": {
-  "services.html":["bankrutstvo-zakhyst","kredytory-initsiatyva","rozshuk-start","rozshuk-oskarzhennia"],
+  "services.html":["bankrutstvo-zakhyst","bankrutstvo-restrukturyzatsiia","kredytory-initsiatyva","rozshuk-start","rozshuk-oskarzhennia"],
   "liquidation.html":["likvidatsiya-chy-bankrutstvo","likvidatsiya-etapy","likvidatsiya-zapytannia"],
   "arrests.html":["zniattia-areshtiv"],
   "lot-check.html":["prozorro-yak-kupyty","prozorro-obiekt","prozorro-aukcion","perevirka-aktyviv"],
