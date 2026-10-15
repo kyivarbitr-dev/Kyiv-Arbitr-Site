@@ -1,5 +1,420 @@
 [
   {
+    "id": "2026-10-16-1",
+    "date": "2026-10-16",
+    "tag": "Судова практика",
+    "tag_en": "Case law",
+    "title": "КСУ: відмову слідчого судді скасувати арешт майна не можна оскаржити в апеляції",
+    "title_en": "Constitutional Court: a refusal by an investigating judge to lift an asset seizure cannot be appealed",
+    "summary": "Конституційний Суд 14 жовтня визнав конституційними положення статті 309 КПК, за якими ухвала слідчого судді про відмову скасувати арешт майна не оскаржується в апеляційному порядку. Заперечити її можна буде лише під час підготовчого провадження в суді.",
+    "summary_en": "On 14 October the Constitutional Court upheld the provisions of Article 309 of the Criminal Procedure Code under which an investigating judge's refusal to lift a seizure of property cannot be appealed. Objections can only be raised at the preparatory stage of the trial.",
+    "text": "Рішення № 12-р(ІІ)/2026 ухвалив Другий сенат Конституційного Суду 14 жовтня 2026 року за конституційними скаргами Катерини Черниш, Альони та Володимира Карасів.\n\nПеревірялися пункт 9 частини першої та частина третя статті 309 КПК. Перший дозволяє апеляційне оскарження ухвали про арешт майна або про відмову в ньому. Частина третя передбачає, що інші ухвали слідчого судді в апеляційному порядку не оскаржуються, а заперечення проти них подаються під час підготовчого провадження в суді. КСУ визнав це обмеження конституційним.\n\nЩо це означає на практиці:\n• власник майна, арештованого на стадії досудового розслідування, не зможе оскаржити в апеляції відмову скасувати арешт;\n• залишається можливість знову звертатися до слідчого судді з клопотанням про скасування арешту за статтею 174 КПК, обґрунтовуючи, що потреба в ньому відпала;\n• для покупців активів і кредиторів це ще один аргумент перевіряти наявність арештів у кримінальних провадженнях до угоди: такий арешт може діяти тривалий час.\n\nНорми КПК варто перевіряти в актуальній редакції.",
+    "text_en": "Decision No. 12-r(II)/2026 was adopted by the Second Senate of the Constitutional Court on 14 October 2026 on constitutional complaints by Kateryna Chernysh and Alona and Volodymyr Karas.\n\nThe Court reviewed item 9 of part one and part three of Article 309 of the Criminal Procedure Code. The former allows an appeal against a ruling to seize property or to refuse a seizure. Part three provides that other rulings of an investigating judge cannot be appealed, and objections to them are raised at the preparatory stage of the trial. The Court found this restriction constitutional.\n\nWhat it means in practice:\n• an owner whose property was seized during a pre-trial investigation cannot appeal a refusal to lift the seizure;\n• the owner can still apply to the investigating judge again under Article 174 of the Code, arguing that the seizure is no longer needed;\n• buyers of assets and creditors should check for seizures in criminal proceedings before a deal: such a seizure can last a long time.\n\nCheck the current version of the Code.",
+    "link": "https://www.slovoidilo.ua/2026/10/15/novyna/pravo/ksu-vidmovu-skasuvaty-aresht-majna-ne-mozhna-oskarzhyty-apelyacziyi-sudu",
+    "linkLabel": "Слово і Діло: рішення КСУ № 12-р(ІІ)/2026",
+    "linkLabel_en": "Slovo i Dilo: Constitutional Court decision No. 12-r(II)/2026 (in Ukrainian)",
+    "links": [
+      {
+        "label": "Слово і Діло: рішення КСУ № 12-р(ІІ)/2026",
+        "label_en": "Slovo i Dilo: Constitutional Court decision No. 12-r(II)/2026 (in Ukrainian)",
+        "url": "https://www.slovoidilo.ua/2026/10/15/novyna/pravo/ksu-vidmovu-skasuvaty-aresht-majna-ne-mozhna-oskarzhyty-apelyacziyi-sudu"
+      },
+      {
+        "label": "Конституційний Суд України: новина про рішення",
+        "label_en": "Constitutional Court of Ukraine: news on the decision (in Ukrainian)",
+        "url": "https://ccu.gov.ua/novyna/sud-uhvalyv-rishennya-u-spravi-shchodo-oskarzhennya-uhvaly-slidchogo-suddi-pro-vidmovu-u"
+      }
+    ],
+    "image": "img/2026-10-16-1.jpg",
+    "image_alt": "Ілюстрація: будинок під печаткою арешту та молоток судді",
+    "image_alt_en": "Illustration: a house under a seizure seal and a judge's gavel"
+  },
+  {
+    "id": "2026-10-16-2",
+    "date": "2026-10-16",
+    "tag": "Судова практика",
+    "tag_en": "Case law",
+    "title": "ВС: тримісячний строк для позовів про зарплату не діє, але для розрахунку при звільненні важить дата письмового повідомлення",
+    "title_en": "Supreme Court: the three-month limit on wage claims no longer applies, but for final pay the date of written notice matters",
+    "summary": "Верховний Суд у справі № 373/1381/25 нагадав: після рішення КСУ від 11 грудня 2025 року тримісячний строк для вимог про стягнення зарплати не застосовується. Для сум, належних при звільненні, суд має з'ясувати, чи отримав працівник письмове повідомлення про нараховані суми і коли.",
+    "summary_en": "In case No. 373/1381/25 the Supreme Court confirmed that after the Constitutional Court ruling of 11 December 2025 the three-month limit on wage claims no longer applies. For amounts due on dismissal, the court must establish whether and when the employee received written notice of the sums accrued.",
+    "text": "Працівниця звільнилася в серпні 2024 року і вимагала стягнути 200 798,20 грн невиплаченої зарплати. Перша інстанція задовольнила позов повністю, апеляційний суд зменшив суму до 24 609,48 грн через пропуск строку звернення.\n\nВерховний Суд постановою від 16 вересня 2026 року скасував рішення апеляції і направив справу на новий розгляд. Суд виходив з такого:\n• рішенням КСУ від 11.12.2025 № 1-р/2025 положення частини першої статті 233 КЗпП про тримісячний строк для вимог про стягнення зарплати визнано неконституційним;\n• окреме правило частини другої статті 233 КЗпП щодо сум, належних при звільненні, не скасоване: три місяці відлічуються від дня, коли працівник отримав письмове повідомлення про нараховані суми;\n• суд має встановити, чи вручалося таке повідомлення і коли, а не лише формально рахувати строк.\n\nЩо це означає на практиці:\n• для звичайних вимог про зарплату тримісячний строк більше не є перешкодою;\n• роботодавцям варто документувати вручення повідомлення про остаточний розрахунок;\n• у справах про банкрутство роботодавця ці висновки важливі для визнання вимог працівників.\n\nНорми КЗпП варто перевіряти в актуальній редакції.",
+    "text_en": "An employee left her job in August 2024 and claimed UAH 200,798.20 in unpaid wages. The first-instance court granted the claim in full; the appeal court cut it to UAH 24,609.48, citing a missed deadline.\n\nBy a ruling of 16 September 2026 the Supreme Court quashed the appeal decision and sent the case back. The Court reasoned that:\n• Constitutional Court decision No. 1-r/2025 of 11 December 2025 declared unconstitutional the three-month limit on wage claims in part one of Article 233 of the Labour Code;\n• the separate rule in part two of Article 233 on amounts due on dismissal still applies: three months run from the day the employee receives written notice of the sums accrued;\n• the court must establish whether and when that notice was delivered, not just count the time formally.\n\nWhat it means in practice:\n• the three-month limit is no longer a bar to ordinary wage claims;\n• employers should keep proof of delivering the final-pay notice;\n• in an employer's bankruptcy these conclusions matter when employees' claims are admitted.\n\nCheck the current version of the Labour Code.",
+    "link": "https://prokadry.com.ua/news/129058-strok-zvernennia-do-sudu-za-nevyplachenoiu-zarplatoiu-verkhovnyi-sud-roziasnyv-niuansy",
+    "linkLabel": "ПроКадри: огляд постанови у справі № 373/1381/25",
+    "linkLabel_en": "ProKadry: summary of the ruling in case No. 373/1381/25 (in Ukrainian)",
+    "links": [
+      {
+        "label": "ПроКадри: огляд постанови у справі № 373/1381/25",
+        "label_en": "ProKadry: summary of the ruling in case No. 373/1381/25 (in Ukrainian)",
+        "url": "https://prokadry.com.ua/news/129058-strok-zvernennia-do-sudu-za-nevyplachenoiu-zarplatoiu-verkhovnyi-sud-roziasnyv-niuansy"
+      }
+    ],
+    "image": "img/2026-10-16-2.jpg",
+    "image_alt": "Ілюстрація: календар, трудовий документ і монети",
+    "image_alt_en": "Illustration: a calendar, an employment document and coins"
+  },
+  {
+    "id": "2026-10-16-3",
+    "date": "2026-10-16",
+    "tag": "Виконавче провадження",
+    "tag_en": "Enforcement",
+    "title": "З 23 жовтня всі банки підключають до системи виконавчого провадження: рахунки боржників шукатимуть і арештовуватимуть автоматично",
+    "title_en": "From 23 October all banks join the enforcement system: debtors' accounts will be found and frozen automatically",
+    "summary": "За законом № 4833-IX з 23 жовтня банки, небанківські платіжні провайдери та емітенти електронних грошей працюватимуть з Автоматизованою системою виконавчого провадження. Про новий рахунок боржника банк повідомлятиме виконавця в день відкриття, а після погашення боргу арешт зніматиметься не пізніше наступного дня.",
+    "summary_en": "Under Law No. 4833-IX, from 23 October banks, non-bank payment providers and e-money issuers will work with the Automated Enforcement Proceedings System. Banks will report a debtor's new account to the enforcement officer on the day it is opened, and once the debt is paid the freeze will be lifted no later than the next day.",
+    "text": "Закон № 4833-IX Верховна Рада ухвалила 7 квітня, Президент підписав 21 квітня 2026 року. Основні зміни, що запрацюють 23 жовтня:\n• усі банки підключаються до АСВП; взаємодія поширюється також на інші фінустанови, небанківських платіжних провайдерів і емітентів електронних грошей;\n• банк повідомляє виконавця про новий рахунок боржника в день його відкриття;\n• виконавці перевіряють рахунки боржника не рідше ніж раз на два тижні, а нерухомість і транспорт — не рідше ніж раз на три місяці;\n• після повного погашення боргу обмеження знімаються автоматично, не пізніше наступного дня, а боржника виключають з Єдиного реєстру боржників;\n• навіть під арештом боржник зможе користуватися коштами в межах двох мінімальних зарплат на місяць (за даними видання — 17 294 грн);\n• поріг для звернення стягнення на єдине житло, за повідомленнями ЗМІ, зростає з 20 до 50 мінімальних зарплат.\n\nМіністр юстиції Денис Маслов заявляв, що підключення всіх банків планують завершити в жовтні. Рішення про арешт і списання, як і раніше, ухвалюють державні та приватні виконавці.\n\nЩо це означає на практиці:\n• боржникам у відкритих виконавчих провадженнях не вдасться «сховати» гроші на новому рахунку чи в електронному гаманці;\n• стягувачі отримають швидше виконання рішень;\n• якщо боргів кілька і погасити їх неможливо, варто заздалегідь оцінити позасудове врегулювання, реструктуризацію або процедуру неплатоспроможності.\n\nТекст закону варто перевіряти в актуальній редакції.",
+    "text_en": "The Verkhovna Rada passed Law No. 4833-IX on 7 April and the President signed it on 21 April 2026. Key changes taking effect on 23 October:\n• all banks connect to the enforcement system, as do other financial institutions, non-bank payment providers and e-money issuers;\n• a bank reports a debtor's new account to the enforcement officer on the day it is opened;\n• officers check a debtor's accounts at least every two weeks, and real estate and vehicles at least every three months;\n• once the debt is paid in full, restrictions are lifted automatically no later than the next day and the debtor is removed from the Unified Register of Debtors;\n• even with a freeze, a debtor can use up to two minimum monthly wages (UAH 17,294, according to the publication);\n• the debt threshold for enforcing against a sole home reportedly rises from 20 to 50 minimum wages.\n\nJustice Minister Denys Maslov said all banks are to be connected in October. Decisions on freezes and write-offs still rest with state and private enforcement officers.\n\nWhat it means in practice:\n• debtors in open enforcement proceedings will not be able to hide money in a new account or e-wallet;\n• creditors will get faster enforcement;\n• anyone with several debts they cannot repay should assess out-of-court settlement, restructuring or personal insolvency in advance.\n\nCheck the current version of the law.",
+    "link": "https://mc.today/uk/z-23-zhovtnya-banki-styaguvatimut-borgi-po-novomu",
+    "linkLabel": "MC.today: що зміниться з 23 жовтня",
+    "linkLabel_en": "MC.today: what changes on 23 October (in Ukrainian)",
+    "links": [
+      {
+        "label": "MC.today: що зміниться з 23 жовтня",
+        "label_en": "MC.today: what changes on 23 October (in Ukrainian)",
+        "url": "https://mc.today/uk/z-23-zhovtnya-banki-styaguvatimut-borgi-po-novomu"
+      },
+      {
+        "label": "Мінфін: банки автоматично шукатимуть гроші боржників",
+        "label_en": "Minfin: banks will search for debtors' money automatically (in Ukrainian)",
+        "url": "https://minfin.com.ua/ua/2026/09/23/182226234/"
+      }
+    ],
+    "image": "img/2026-10-16-3.jpg",
+    "image_alt": "Ілюстрація: банківська картка із замком і шестерні системи",
+    "image_alt_en": "Illustration: a bank card with a padlock and system gears"
+  },
+  {
+    "id": "2026-10-16-4",
+    "date": "2026-10-16",
+    "tag": "Економіка України",
+    "tag_en": "Ukraine's economy",
+    "title": "ICU погіршила прогноз: ВВП України у 2026 році скоротиться на 0,6%, інфляція сягне 12%",
+    "title_en": "ICU cuts its forecast: Ukraine's GDP to shrink 0.6% in 2026, inflation to reach 12%",
+    "summary": "Інвестиційна група ICU замість зростання тепер очікує падіння реального ВВП на 0,6% у 2026 році та ще на 1,9% у 2027-му. Прогноз інфляції на кінець 2026 року підвищено до 12%, курсу — до 45,8 грн/$.",
+    "summary_en": "Investment group ICU now expects real GDP to fall 0.6% in 2026 and a further 1.9% in 2027 instead of growth. Its year-end 2026 inflation forecast is raised to 12% and the exchange rate to UAH 45.8 per dollar.",
+    "text": "Оновлений макропрогноз ICU (15 жовтня 2026 року):\n• реальний ВВП: −0,6% у 2026 році (у червні прогнозували +0,8%) і −1,9% у 2027 році;\n• інфляція: 12% на кінець 2026 року (раніше 9–10%) і 8,2% на кінець 2027 року;\n• облікова ставка НБУ: можливе підвищення на 0,5 п. п. до 16,5% до кінця 2026 року з утриманням до кінця першого півріччя 2027 року;\n• курс: близько 45,8 грн/$ наприкінці 2026 року і близько 49,2 грн/$ наприкінці 2027 року;\n• дефіцит торгівлі: $87,4 млрд у 2026 році проти $55,8 млрд у 2025-му.\n\nПричини погіршення — масовані атаки на промислові підприємства, склади й транспортну інфраструктуру, втрати бізнес-активів, зупинка чорноморських транспортних шляхів. Інфляцію підживлює здорожчання логістики та пального. Базовий сценарій ICU не передбачає мирної угоди, але й суттєвого просування російських військ.\n\nЩо це означає на практиці:\n• дорожчі кредити й вища інфляція збільшують боргове навантаження бізнесу та громадян;\n• у договорах варто передбачати індексацію або валютні застереження;\n• компаніям з проблемною заборгованістю краще завчасно оцінити реструктуризацію, поки є варіанти.\n\nЦе прогноз однієї інвестиційної групи, а не офіційні дані; інформація не є фінансовою порадою.",
+    "text_en": "ICU's updated macro forecast (15 October 2026):\n• real GDP: −0.6% in 2026 (June forecast: +0.8%) and −1.9% in 2027;\n• inflation: 12% at end-2026 (previously 9–10%) and 8.2% at end-2027;\n• NBU key rate: a possible 0.5 pp hike to 16.5% by end-2026, held until the end of H1 2027;\n• exchange rate: about UAH 45.8/$ at end-2026 and about UAH 49.2/$ at end-2027;\n• trade deficit: $87.4bn in 2026 vs $55.8bn in 2025.\n\nThe downgrade reflects massive attacks on industrial plants, warehouses and transport infrastructure, lost business assets and the halt of Black Sea shipping routes. Pricier logistics and fuel are driving inflation. ICU's base case assumes no peace deal but no major Russian advance either.\n\nWhat it means in practice:\n• costlier loans and higher inflation raise the debt burden of businesses and households;\n• contracts should provide for indexation or currency clauses;\n• companies with problem debt should assess restructuring early while options remain.\n\nThis is one investment group's forecast, not official data, and not financial advice.",
+    "link": "https://minfin.com.ua/ua/2026/10/15/183603866/",
+    "linkLabel": "Мінфін: ICU різко погіршила прогноз на 2026–2027 роки",
+    "linkLabel_en": "Minfin: ICU sharply cuts its 2026–2027 forecast (in Ukrainian)",
+    "links": [
+      {
+        "label": "Мінфін: ICU різко погіршила прогноз на 2026–2027 роки",
+        "label_en": "Minfin: ICU sharply cuts its 2026–2027 forecast (in Ukrainian)",
+        "url": "https://minfin.com.ua/ua/2026/10/15/183603866/"
+      }
+    ],
+    "image": "img/2026-10-16-4.jpg",
+    "image_alt": "Ілюстрація: графік прогнозу ВВП і монета гривні",
+    "image_alt_en": "Illustration: a GDP forecast chart and a hryvnia coin"
+  },
+  {
+    "id": "2026-10-16-5",
+    "date": "2026-10-16",
+    "tag": "Податки",
+    "tag_en": "Taxes",
+    "title": "Рада скасувала пільгу з ПДВ для посилок до €150: податок сплачуватимуть маркетплейси, але не раніше 1 липня 2027 року",
+    "title_en": "Rada scraps the VAT exemption for parcels under €150: marketplaces will pay the tax, but not before 1 July 2027",
+    "summary": "Верховна Рада 15 жовтня ухвалила в цілому законопроєкт № 16051-1. Нараховувати й сплачувати ПДВ з покупок на іноземних маркетплейсах мають оператори електронних інтерфейсів або їхні посередники. Некомерційні відправлення між фізичними особами до €45 залишаються без ПДВ.",
+    "summary_en": "On 15 October the Verkhovna Rada passed bill No. 16051-1. VAT on purchases from foreign marketplaces is to be charged and paid by the platforms or their intermediaries. Non-commercial parcels between individuals worth up to €45 remain VAT-free.",
+    "text": "За законопроєкт № 16051-1 у другому читанні та в цілому проголосували 252 народні депутати. Супровідний законопроєкт про митні зміни, який скасовує звільнення від ПДВ для відправлень до €150, отримав 294 голоси.\n\nОсновне:\n• пільга з ПДВ для міжнародних відправлень вартістю до €150 скасовується;\n• податок нараховують і сплачують підприємства електронного інтерфейсу (маркетплейси) або їхні посередники; для покупця податок має бути врахований під час оплати;\n• залишаються звільнення для некомерційних відправлень між фізичними особами до €45, товарів у несупроводжуваному багажі до €150 та товарів для безпеки й оборони;\n• за словами міністра фінансів Сергія Марченка, нові правила застосовуватимуть з 1 липня 2027 року; до того діє чинний порядок.\n\nЗміни належать до зобов'язань перед міжнародними партнерами, від яких залежить фінансова допомога Україні. До цього ж законопроєкту Рада ухвалила правки щодо фінмоніторингу політично значущих осіб.\n\nЩо це означає на практиці:\n• для українських продавців і імпортерів зменшиться цінова перевага іноземних маркетплейсів;\n• для покупців товари з іноземних платформ подорожчають на суму ПДВ;\n• до набрання чинності закон має підписати Президент.\n\nТекст закону варто перевіряти в актуальній редакції після підписання.",
+    "text_en": "Bill No. 16051-1 passed its second reading and as a whole with 252 votes. A companion customs bill removing the VAT exemption for shipments under €150 received 294 votes.\n\nKey points:\n• the VAT exemption for international shipments worth up to €150 is abolished;\n• the tax is charged and paid by electronic interfaces (marketplaces) or their intermediaries; for buyers it should be included at checkout;\n• exemptions remain for non-commercial parcels between individuals up to €45, goods in unaccompanied baggage up to €150, and security and defence goods;\n• according to Finance Minister Serhiy Marchenko, the new rules will apply from 1 July 2027; until then the current regime stays.\n\nThe changes are among Ukraine's commitments to international partners on which financial aid depends. The Rada also adopted amendments on monitoring politically exposed persons in the same bill.\n\nWhat it means in practice:\n• Ukrainian sellers and importers will face less price pressure from foreign marketplaces;\n• goods from foreign platforms will become more expensive by the amount of VAT;\n• the law still needs the President's signature.\n\nCheck the final text once signed.",
+    "link": "https://finance.liga.net/ua/state-finance/news/ne-ranishe-1-lypnia-2027-roku-rada-skasuvala-pilhu-na-pdv-dlia-posylok-do-150-ievro",
+    "linkLabel": "LIGA.net: Рада скасувала пільгу на ПДВ для посилок до €150",
+    "linkLabel_en": "LIGA.net: Rada scraps VAT exemption for parcels under €150 (in Ukrainian)",
+    "links": [
+      {
+        "label": "LIGA.net: Рада скасувала пільгу на ПДВ для посилок до €150",
+        "label_en": "LIGA.net: Rada scraps VAT exemption for parcels under €150 (in Ukrainian)",
+        "url": "https://finance.liga.net/ua/state-finance/news/ne-ranishe-1-lypnia-2027-roku-rada-skasuvala-pilhu-na-pdv-dlia-posylok-do-150-ievro"
+      },
+      {
+        "label": "LB.ua: голосування за законопроєкти",
+        "label_en": "LB.ua: the votes on the bills (in Ukrainian)",
+        "url": "https://lb.ua/economics/2026/10/15/773552_verhovna_rada_uhvalila_zakon_pro.html"
+      }
+    ],
+    "image": "img/2026-10-16-5.jpg",
+    "image_alt": "Ілюстрація: міжнародна посилка і знак відсотка",
+    "image_alt_en": "Illustration: an international parcel and a percent sign"
+  },
+  {
+    "id": "2026-10-16-6",
+    "date": "2026-10-16",
+    "tag": "Фінмоніторинг",
+    "tag_en": "Financial monitoring",
+    "title": "PEP-статус залишається довічним, посилений фінмоніторинг — щонайменше рік після звільнення: Рада ухвалила компромісні правки",
+    "title_en": "PEP status stays for life, enhanced monitoring for at least a year after leaving office: Rada adopts compromise amendments",
+    "summary": "Правки, ухвалені 15 жовтня у складі законопроєкту № 16051-1, мають розблокувати підписання закону № 15111-д про оподаткування доходів з цифрових платформ. Посилені заходи до колишніх посадовців діятимуть щонайменше 12 місяців, далі — за результатами оцінки ризику.",
+    "summary_en": "Amendments adopted on 15 October as part of bill No. 16051-1 are meant to unblock the signing of Law No. 15111-d on taxing income from digital platforms. Enhanced measures for former officials will last at least 12 months and then depend on a risk assessment.",
+    "text": "Закон № 15111-д, ухвалений у червні 2026 року, очікує на підпис Президента з 12 червня. Причиною стала правка другого читання, яка фактично скасовувала довічний статус політично значущих осіб (PEP) і послаблювала фінмоніторинг колишніх посадовців через рік після звільнення. МВФ і Європейська комісія критикували її як таку, що суперечить стандартам FATF і євроінтеграційним зобов'язанням.\n\nКомпромісні правки до законопроєкту № 16051-1 передбачають:\n• статус PEP зберігається довічно;\n• посилений фінмоніторинг триває щонайменше 12 місяців після звільнення;\n• далі банк чи інший суб'єкт фінмоніторингу проводить індивідуальну оцінку ризику: якщо ризики зникли, посилені заходи припиняються, якщо залишилися — тривають, а оцінку повторюють не рідше ніж раз на рік;\n• колишній посадовець може вимагати письмову інформацію про застосування до нього посилених заходів.\n\nЩо це означає на практиці:\n• банкам і іншим суб'єктам первинного фінмоніторингу доведеться оновити процедури оцінки ризиків;\n• для колишніх посадовців з'являється зрозумілий механізм перегляду посилених заходів;\n• у великих угодах з активами перевірка PEP-зв'язків контрагентів залишається обов'язковою частиною due diligence.\n\nЗакон набуде чинності після підписання; редакцію варто перевіряти на сайті Верховної Ради.",
+    "text_en": "Law No. 15111-d, passed in June 2026, has awaited the President's signature since 12 June. The reason was a second-reading amendment that effectively ended the lifelong status of politically exposed persons (PEPs) and relaxed monitoring of former officials a year after they left office. The IMF and the European Commission criticised it as contrary to FATF standards and Ukraine's EU commitments.\n\nThe compromise amendments to bill No. 16051-1 provide that:\n• PEP status remains for life;\n• enhanced monitoring lasts at least 12 months after leaving office;\n• after that a bank or other reporting entity makes an individual risk assessment: if the risks are gone, enhanced measures stop; if not, they continue and the assessment is repeated at least once a year;\n• a former official can request written information on enhanced measures applied to them.\n\nWhat it means in practice:\n• banks and other reporting entities will need to update their risk-assessment procedures;\n• former officials get a clear way to have enhanced measures reviewed;\n• in large asset deals, checking counterparties' PEP links remains a required part of due diligence.\n\nThe law takes effect once signed; check the text on the Rada website.",
+    "link": "https://news.dtkt.ua/taxation/pdfo/115291-zakonoprojekt-15111-d-pro-podatki-z-cifrovix-platform-pravki-dlia-rozblokuvannia-vze-v-komiteti",
+    "linkLabel": "ДТКТ: правки для розблокування закону № 15111-д",
+    "linkLabel_en": "DTKT: amendments to unblock Law No. 15111-d (in Ukrainian)",
+    "links": [
+      {
+        "label": "ДТКТ: правки для розблокування закону № 15111-д",
+        "label_en": "DTKT: amendments to unblock Law No. 15111-d (in Ukrainian)",
+        "url": "https://news.dtkt.ua/taxation/pdfo/115291-zakonoprojekt-15111-d-pro-podatki-z-cifrovix-platform-pravki-dlia-rozblokuvannia-vze-v-komiteti"
+      },
+      {
+        "label": "Інше ТБ: що ще ухвалила Рада 15 жовтня",
+        "label_en": "Inshe TV: what else the Rada passed on 15 October (in Ukrainian)",
+        "url": "https://inshe.tv/economics/2026-10-15/1023114/"
+      }
+    ],
+    "image": "img/2026-10-16-6.jpg",
+    "image_alt": "Ілюстрація: лупа над профілем особи і щит",
+    "image_alt_en": "Illustration: a magnifying glass over a person's profile and a shield"
+  },
+  {
+    "id": "2026-10-16-7",
+    "date": "2026-10-16",
+    "tag": "Страхування",
+    "tag_en": "Insurance",
+    "title": "ЄБРР, ЄС і Aon збільшили програму страхування воєнних ризиків для українського бізнесу до €150 млн",
+    "title_en": "EBRD, EU and Aon raise the war-risk insurance programme for Ukrainian business to €150m",
+    "summary": "Ліміт гарантійного механізму для перестрахування воєнних ризиків зріс зі €110 млн до €150 млн: початковий обсяг українські страховики вже повністю використали. До програми приєдналися ще два страховики, а покриття поширено на товари на складах і газові активи.",
+    "summary_en": "The limit of the guarantee facility for reinsuring war risks rose from €110m to €150m after Ukrainian insurers fully used the original amount. Two more insurers joined, and cover now extends to goods in warehouses and gas assets.",
+    "text": "Механізм гарантування відновлення та відбудови України (Ukraine Recovery and Reconstruction Guarantee Facility) працює так: ЄБРР гарантує збитки перестраховика MS Amlin, який бере на себе воєнні ризики українських страховиків. Завдяки цьому страховики можуть пропонувати бізнесу більше покриття.\n\nЩо змінилося:\n• ліміт зріс зі €110 млн до €150 млн; додаткові €40 млн забезпечує гарантія ЄС у межах Інвестиційної рамки для України;\n• до програми, крім ІНГО, Colonnade та UNIQA, приєдналися УСГ (Vienna Insurance Group) і «Універсальна» (Fairfax Financial Group);\n• до перевезень вантажів по Україні, пошкодження автомобілів і залізничного рухомого складу додано товари, що тимчасово зберігаються на складах, і газові активи, пов'язані з транспортуванням і зберіганням газу.\n\nПочатковий ліміт, сформований за участі Франції, Норвегії, Швейцарії, Великої Британії та Тайванського фонду технічної співпраці з ЄБРР, підтримав понад €500 млн перестрахувального покриття майже за 10 000 полісів. Наразі премії за цими полісами перевищують виплати, і MS Amlin ще не зверталася до гарантії ЄБРР.\n\nЩо це означає на практиці:\n• бізнес може застрахувати від воєнних ризиків вантажі, транспорт і тепер — товарні запаси на складах;\n• застраховані активи легше використовувати як заставу в банку;\n• умови полісів і перелік ризиків варто уточнювати безпосередньо у страховиків-учасників програми.",
+    "text_en": "The Ukraine Recovery and Reconstruction Guarantee Facility works like this: the EBRD guarantees losses of reinsurer MS Amlin, which takes on the war risks of Ukrainian insurers. This lets insurers offer businesses more cover.\n\nWhat has changed:\n• the limit rose from €110m to €150m; the extra €40m comes from an EU guarantee under the Ukraine Investment Framework;\n• besides INGO, Colonnade and UNIQA, the programme now includes USG (Vienna Insurance Group) and Universalna (Fairfax Financial Group);\n• in addition to domestic cargo, car damage and railway rolling stock, cover now includes goods temporarily stored in warehouses and gas assets used for gas transport and storage.\n\nThe original limit, funded with France, Norway, Switzerland, the UK and the TaiwanBusiness-EBRD Technical Cooperation Fund, supported more than €500m of reinsurance cover under almost 10,000 policies. Premiums currently exceed claims, and MS Amlin has not yet called on the EBRD guarantee.\n\nWhat it means in practice:\n• businesses can insure cargo, vehicles and now warehouse stock against war risks;\n• insured assets are easier to use as bank collateral;\n• policy terms and covered risks should be checked directly with participating insurers.",
+    "link": "https://forbes.ua/news/jebrr-rozsiriv-vojenne-straxuvannia-dlia-ukrayinskogo-biznesu-ta-zbilsiv-limit-programi-do-eur150-mln-13102026-42911",
+    "linkLabel": "Forbes Україна: ЄБРР розширив воєнне страхування для бізнесу",
+    "linkLabel_en": "Forbes Ukraine: EBRD expands war-risk insurance for business (in Ukrainian)",
+    "links": [
+      {
+        "label": "Forbes Україна: ЄБРР розширив воєнне страхування для бізнесу",
+        "label_en": "Forbes Ukraine: EBRD expands war-risk insurance for business (in Ukrainian)",
+        "url": "https://forbes.ua/news/jebrr-rozsiriv-vojenne-straxuvannia-dlia-ukrayinskogo-biznesu-ta-zbilsiv-limit-programi-do-eur150-mln-13102026-42911"
+      }
+    ],
+    "image": "img/2026-10-16-7.jpg",
+    "image_alt": "Ілюстрація: щит, вантаж і вантажівка",
+    "image_alt_en": "Illustration: a shield, cargo and a truck"
+  },
+  {
+    "id": "2026-10-16-8",
+    "date": "2026-10-16",
+    "tag": "Банки",
+    "tag_en": "Banks",
+    "title": "НБУ ухвалив третій пакет кредитної підтримки: легше кредитувати ОПК, енергетику і бізнес, чиє майно пошкоджене",
+    "title_en": "NBU adopts a third credit-support package: easier lending to defence, energy and businesses with damaged assets",
+    "summary": "Постанова правління НБУ № 118 від 11 жовтня 2026 року набрала чинності 14 жовтня. Вона підвищує цінність застави виручки за оборонними й енергетичними контрактами та дозволяє банкам оцінювати пошкоджений бізнес за прогнозними показниками по всій країні.",
+    "summary_en": "NBU Board Resolution No. 118 of 11 October 2026 took effect on 14 October. It raises the value of collateral in revenue from defence and energy contracts and lets banks assess businesses with damaged assets on forecast figures nationwide.",
+    "text": "Це третій пакет заходів за три місяці, ухвалений через посилення атак на економіку. Основні зміни:\n• коефіцієнт ліквідності застави майнових прав на виручку за контрактами із сектором безпеки й оборони, гарантованим покупцем електроенергії та оператором системи передачі підвищено з 0,3 до 0,75;\n• за кредитами строком до 18 місяців банки можуть враховувати вартість товарів в обороті чи переробці у фактичному залишку на дату оцінки кредитного ризику — до 1 вересня 2027 року;\n• якщо майно компанії значно пошкоджене, знищене або заміноване, банк може оцінювати достатність операційного результату для обслуговування боргу на основі прогнозів; раніше це стосувалося лише підприємств поблизу фронту;\n• за кредитами програми «5-7-9%» банки не зобов'язані припиняти групову оцінку ризику чи спрощений підхід і передавати кредит у роботу з проблемними активами, якщо прострочення сталося лише через затримку часткової компенсації відсотків Національною установою розвитку.\n\nЩо це означає на практиці:\n• бізнес, що постраждав від ударів, отримує аргумент у переговорах з банком про рефінансування чи реструктуризацію;\n• позичальникам «5-7-9%» затримка компенсації не має автоматично погіршувати статус кредиту;\n• постачальникам ОПК та енергетики простіше залучати кредити під виручку за контрактами.\n\nУмови варто перевіряти в тексті постанови на сайті НБУ.",
+    "text_en": "This is the third package in three months, adopted in response to intensified attacks on the economy. Main changes:\n• the liquidity ratio for collateral in revenue rights under contracts with the defence sector, the guaranteed electricity buyer and the transmission system operator rises from 0.3 to 0.75;\n• for loans of up to 18 months, banks may count goods in circulation or processing at the actual balance on the date of credit-risk assessment, until 1 September 2027;\n• if a company's assets are significantly damaged, destroyed or mined, a bank may assess debt-service capacity on forecast figures; previously this applied only to companies near the front line;\n• for loans under the 5-7-9% programme, banks need not stop group or simplified risk assessment or move the loan to problem-asset management if the arrears arose solely from a delayed interest subsidy from the National Development Institution.\n\nWhat it means in practice:\n• businesses hit by strikes gain an argument in talks with their bank on refinancing or restructuring;\n• for 5-7-9% borrowers a delayed subsidy should not automatically downgrade the loan;\n• suppliers to defence and energy can more easily borrow against contract revenue.\n\nCheck the terms in the resolution on the NBU website.",
+    "link": "https://interfax.com.ua/news/general/1219838.html",
+    "linkLabel": "Інтерфакс-Україна: НБУ розширив можливості кредитування ОПК та енергетики",
+    "linkLabel_en": "Interfax-Ukraine: NBU expands lending options for defence and energy (in Ukrainian)",
+    "links": [
+      {
+        "label": "Інтерфакс-Україна: НБУ розширив можливості кредитування ОПК та енергетики",
+        "label_en": "Interfax-Ukraine: NBU expands lending options for defence and energy (in Ukrainian)",
+        "url": "https://interfax.com.ua/news/general/1219838.html"
+      },
+      {
+        "label": "Укрінформ: третій пакет заходів НБУ",
+        "label_en": "Ukrinform: NBU's third package of measures (in Ukrainian)",
+        "url": "https://www.ukrinform.ua/rubric-economy/4174297-fokus-na-opk-ta-energetiku-nacbank-uhvaliv-tretij-paket-zahodiv-dla-kreditnoi-pidtrimki-ekonomiki.html"
+      }
+    ],
+    "image": "img/2026-10-16-8.jpg",
+    "image_alt": "Ілюстрація: будівля банку, щит і стрілка зростання",
+    "image_alt_en": "Illustration: a bank building, a shield and an upward arrow"
+  },
+  {
+    "id": "2026-10-16-9",
+    "date": "2026-10-16",
+    "tag": "Продаж активів",
+    "tag_en": "Asset sales",
+    "title": "Фонд гарантування продає 35 земельних ділянок РВС Банку на Київщині та активи п'яти банків на 150,8 млн грн",
+    "title_en": "Deposit Guarantee Fund sells 35 land plots of RVS Bank in Kyiv region and assets of five banks worth UAH 150.8m",
+    "summary": "Фонд гарантування вкладів виставив на Prozorro.Продажі 35 земельних ділянок РВС Банку загальною площею близько 35 га. Цього тижня тривають також торги активами п'яти банків, що ліквідуються, із загальною стартовою ціною 150,8 млн грн.",
+    "summary_en": "The Deposit Guarantee Fund has listed 35 land plots of RVS Bank, about 35 ha in total, on Prozorro.Sale. Auctions of assets of five banks in liquidation, with a total starting price of UAH 150.8m, are also running this week.",
+    "text": "Ділянки розташовані в кількох районах Київської області, найбільше — 20 ділянок площею 4,3 га — у Броварському районі. Цільове призначення: сільськогосподарське використання, а також будівництво й обслуговування житлових будинків. Стартові ціни та дати торгів наведено в паспортах активів на сайті Фонду й на Prozorro.Продажі.\n\nНа тижні 12–16 жовтня Фонд також продає активи РВС Банку, Промінвестбанку, Айбокс Банку, Укрстройінвестбанку та Мегабанку загальною стартовою вартістю 150,8 млн грн:\n• права вимоги за кредитами — близько 97,2 млн грн;\n• нерухомість, земля, транспорт та інші основні засоби — близько 49 млн грн;\n• дебіторська заборгованість — 4,6 млн грн.\n\nЩо це означає на практиці:\n• для інвесторів це можливість купити землю й нерухомість з дисконтом, але потрібна перевірка цільового призначення, обтяжень і судових спорів;\n• купуючи права вимоги, варто оцінити стан боржника, забезпечення й перспективи стягнення;\n• для боржників банків, що ліквідуються, новий власник права вимоги може активніше стягувати борг.\n\nПеред купівлею лота варто перевірити його документи й реєстри.",
+    "text_en": "The plots are in several districts of Kyiv region, most of them — 20 plots totalling 4.3 ha — in Brovary district. Permitted use: agriculture and construction and maintenance of houses. Starting prices and auction dates are in the asset passports on the Fund's website and on Prozorro.Sale.\n\nIn the week of 12–16 October the Fund is also selling assets of RVS Bank, Prominvestbank, Ibox Bank, Ukrstroyinvestbank and Megabank with a total starting value of UAH 150.8m:\n• loan claims — about UAH 97.2m;\n• real estate, land, vehicles and other fixed assets — about UAH 49m;\n• receivables — UAH 4.6m.\n\nWhat it means in practice:\n• investors can buy land and property at a discount, but should check permitted use, encumbrances and litigation;\n• when buying loan claims, assess the debtor's condition, collateral and recovery prospects;\n• for borrowers of liquidated banks, a new owner of the claim may pursue the debt more actively.\n\nCheck a lot's documents and registers before buying.",
+    "link": "https://www.finclub.net/news/fond-harantuvannia-vkladiv-prodaie-35-zemelnykh-dilianok-rvs-banku-na-kyivshchyni.html",
+    "linkLabel": "Фінансовий клуб: Фонд продає 35 ділянок РВС Банку",
+    "linkLabel_en": "Finclub: the Fund sells 35 plots of RVS Bank (in Ukrainian)",
+    "links": [
+      {
+        "label": "Фінансовий клуб: Фонд продає 35 ділянок РВС Банку",
+        "label_en": "Finclub: the Fund sells 35 plots of RVS Bank (in Ukrainian)",
+        "url": "https://www.finclub.net/news/fond-harantuvannia-vkladiv-prodaie-35-zemelnykh-dilianok-rvs-banku-na-kyivshchyni.html"
+      },
+      {
+        "label": "Обозреватель: активи п'яти банків на 150,8 млн грн",
+        "label_en": "Obozrevatel: assets of five banks for UAH 150.8m (in Ukrainian)",
+        "url": "https://www.obozrevatel.com/ukr/section-ekonomika-glavnaya/economy/news-v-ukrayini-vystavyly-na-prodazh-aktyvy-odrazu-5-bankiv-spysok-nazv-14-10-2026.html"
+      }
+    ],
+    "image": "img/2026-10-16-9.jpg",
+    "image_alt": "Ілюстрація: земельні ділянки на мапі та аукціонний молоток",
+    "image_alt_en": "Illustration: land plots on a map and an auction gavel"
+  },
+  {
+    "id": "2026-10-16-10",
+    "date": "2026-10-16",
+    "tag": "Приватизація",
+    "tag_en": "Privatisation",
+    "title": "Приватизація «Сумихімпрому» за 1 млрд грн не відбулася: наступні великі аукціони — 19 і 20 жовтня",
+    "title_en": "Sumykhimprom privatisation at UAH 1bn fails: the next large auctions are on 19 and 20 October",
+    "summary": "На аукціон з продажу пакета акцій ПАТ «Сумихімпром» зі стартовою ціною 1 млрд грн не надійшло жодної заявки. Наступними на Prozorro.Продажі виставлено Одеський припортовий завод, Демурінський ГЗК і «Мотордеталь-Конотоп».",
+    "summary_en": "No bids were received at the auction for a stake in Sumykhimprom with a starting price of UAH 1bn. Next on Prozorro.Sale are the Odesa Port Plant, the Demurinsky mining plant and Motordetal-Konotop.",
+    "text": "Аукціон з продажу пакета з 1,739 млрд акцій хімічного комбінату «Сумихімпром» (фосфорні добрива, діоксид титану, пігменти) був запланований на 13 жовтня. За даними Prozorro.Продажі, учасники торгів були відсутні. Організатор — Фонд державного майна. Дату повторних торгів для цього лоту поки не оголошено.\n\nЗа рішенням уряду, у жовтні через Prozorro.Продажі також продаються:\n• 19 жовтня — АТ «Одеський припортовий завод», хімічне підприємство і вузол перевалки аміаку та карбаміду;\n• 20 жовтня — ТОВ «Демурінський гірничо-збагачувальний комбінат» (санкційний актив), видобуток титано-цирконієвих руд;\n• 20 жовтня — ТОВ «Мотордеталь-Конотоп» (санкційний актив), виробництво втулок циліндрів.\n\nЩо це означає на практиці:\n• провал першого аукціону зазвичай означає повторні торги на інших умовах, тож інвесторам варто стежити за оголошеннями ФДМУ;\n• для великих лотів ключовими є умови продажу: інвестиційні зобов'язання, борги підприємства, збереження робочих місць;\n• перед участю потрібна перевірка фінансового стану, судових справ і обтяжень активу.\n\nУмови кожного лота варто перевіряти на Prozorro.Продажі.",
+    "text_en": "The auction for a package of 1.739bn shares in the Sumykhimprom chemical plant (phosphate fertilisers, titanium dioxide, pigments) was set for 13 October. According to Prozorro.Sale, there were no bidders. The organiser was the State Property Fund. No date for a repeat auction has been announced yet.\n\nUnder a government decision, the following are also on sale on Prozorro.Sale in October:\n• 19 October — Odesa Port Plant, a chemical producer and ammonia and urea transshipment hub;\n• 20 October — Demurinsky Mining and Processing Plant (sanctioned asset), titanium-zirconium ore;\n• 20 October — Motordetal-Konotop (sanctioned asset), cylinder liners.\n\nWhat it means in practice:\n• a failed first auction usually leads to a repeat sale on different terms, so investors should watch State Property Fund announcements;\n• for large lots the sale terms are key: investment obligations, the company's debts, job retention;\n• due diligence on finances, litigation and encumbrances is needed before bidding.\n\nCheck each lot's terms on Prozorro.Sale.",
+    "link": "https://glavcom.ua/economics/business/privatizatsija-sumikhimpromu-za-1-mlrd-hrn-provalilasja-na-auktsion-nikhto-ne-prijshov-1148870.html",
+    "linkLabel": "Главком: приватизація «Сумихімпрому» провалилася",
+    "linkLabel_en": "Glavcom: Sumykhimprom privatisation fails (in Ukrainian)",
+    "links": [
+      {
+        "label": "Главком: приватизація «Сумихімпрому» провалилася",
+        "label_en": "Glavcom: Sumykhimprom privatisation fails (in Ukrainian)",
+        "url": "https://glavcom.ua/economics/business/privatizatsija-sumikhimpromu-za-1-mlrd-hrn-provalilasja-na-auktsion-nikhto-ne-prijshov-1148870.html"
+      },
+      {
+        "label": "Уряд: умови приватизації чотирьох великих підприємств",
+        "label_en": "Government of Ukraine: terms of privatising four large companies (in Ukrainian)",
+        "url": "https://www.kmu.gov.ua/news/uriad-zatverdyv-umovy-pryvatyzatsii-chotyrokh-velykykh-pidpryiemstv-u-zhovtni-vidbudutsia-auktsiony-derzhavnykh-i-sanktsiinykh-aktyviv"
+      }
+    ],
+    "image": "img/2026-10-16-10.jpg",
+    "image_alt": "Ілюстрація: хімічний завод і аукціонний молоток",
+    "image_alt_en": "Illustration: a chemical plant and an auction gavel"
+  },
+  {
+    "id": "2026-10-16-11",
+    "date": "2026-10-16",
+    "tag": "Фінансування",
+    "tag_en": "Funding",
+    "title": "Круглий стіл у Бангкоку: ЄС надав Україні €228 млрд з 2022 року, на 2027 рік не підтверджено $32,6 млрд зовнішнього фінансування",
+    "title_en": "Bangkok roundtable: EU has provided €228bn to Ukraine since 2022, while $32.6bn of 2027 external financing is still unconfirmed",
+    "summary": "На 10-му міністерському круглому столі щодо підтримки України на полях річних зборів МВФ і Світового банку партнери підтвердили готовність допомагати, але нових конкретних зобов'язань не обговорювали. Потреба у зовнішньому фінансуванні бюджету-2027 — $52,6 млрд.",
+    "summary_en": "At the 10th ministerial roundtable on Ukraine, held alongside the IMF and World Bank annual meetings, partners confirmed their readiness to help but did not discuss new specific pledges. Ukraine's external financing need for the 2027 budget is $52.6bn.",
+    "text": "Круглий стіл відбувся 14 жовтня в Бангкоку, де 12–18 жовтня тривають річні збори МВФ і Групи Світового банку. Зустріч була закритою для преси. Єврокомісар з економіки Валдіс Домбровскіс написав, що підтримка ЄС з 2022 року сягнула €228 млрд, і закликав інших партнерів долучатися.\n\nЗа даними міністра фінансів Сергія Марченка:\n• потреба у зовнішньому фінансуванні бюджету на 2027 рік — $52,6 млрд, з них близько $32,6 млрд ще потребують підтвердження;\n• ЄС, як очікується, знову покриє дві третини потреби — близько $17,5 млрд додатково;\n• решту, близько $15 млрд, планують отримати від двосторонніх партнерів, через гарантії та програми міжнародних фінустанов.\n\nМВФ має намір об'єднати другий і третій перегляди програми EFF і подати їх раді директорів до грудня; разом це близько $1,65 млрд. Умова — достатні й надійні гарантії фінансування. Місія МВФ очікується в листопаді, а 16 жовтня Домбровскіс зустрінеться з Координаційною групою з фінансування України.\n\nЩо це означає на практиці:\n• від підтвердження фінансування на 2027 рік залежать наступні транші МВФ і стабільність бюджетних виплат;\n• для бізнесу це фактор курсу гривні та ставок за державними облігаціями.",
+    "text_en": "The roundtable took place on 14 October in Bangkok, where the IMF and World Bank Group annual meetings run on 12–18 October. It was closed to the press. EU Economy Commissioner Valdis Dombrovskis wrote that EU support since 2022 has reached €228bn and urged other partners to join.\n\nAccording to Finance Minister Serhiy Marchenko:\n• external financing needed for the 2027 budget is $52.6bn, of which about $32.6bn still needs confirmation;\n• the EU is again expected to cover two-thirds of the need — about $17.5bn more;\n• the remaining roughly $15bn is expected from bilateral partners, guarantees and international financial institution programmes.\n\nThe IMF intends to combine the second and third reviews of the EFF programme and submit them to the Board by December, together worth about $1.65bn, subject to sufficient and reliable financing assurances. An IMF mission is expected in November, and on 16 October Dombrovskis will meet the Ukraine Financial Coordination Group.\n\nWhat it means in practice:\n• the next IMF tranches and stable budget payments depend on confirming 2027 financing;\n• for business it affects the hryvnia exchange rate and government bond yields.",
+    "link": "https://en.interfax.com.ua/news/economic/1220132.html",
+    "linkLabel": "Interfax-Ukraine: EU provides EUR 228 bln to Ukraine since 2022",
+    "linkLabel_en": "Interfax-Ukraine: EU provides EUR 228 bln to Ukraine since 2022",
+    "links": [
+      {
+        "label": "Interfax-Ukraine: EU provides EUR 228 bln to Ukraine since 2022",
+        "label_en": "Interfax-Ukraine: EU provides EUR 228 bln to Ukraine since 2022",
+        "url": "https://en.interfax.com.ua/news/economic/1220132.html"
+      }
+    ],
+    "image": "img/2026-10-16-11.jpg",
+    "image_alt": "Ілюстрація: глобус, монети та документ",
+    "image_alt_en": "Illustration: a globe, coins and a document"
+  },
+  {
+    "id": "2026-10-16-12",
+    "date": "2026-10-16",
+    "tag": "Світова економіка",
+    "tag_en": "World economy",
+    "title": "Інфляція в США у вересні прискорилася до 3,7%: фондові індекси впали на побоюваннях жорсткої політики ФРС",
+    "title_en": "US inflation accelerated to 3.7% in September: stock indices fell on fears of tight Fed policy",
+    "summary": "Споживчі ціни в США у вересні зросли на 0,6% за місяць і на 3,7% за рік, що вище за прогноз 3,6%. Після публікації даних 14 жовтня Nasdaq знизився на 1,9%, S&P 500 — на 1,1%.",
+    "summary_en": "US consumer prices rose 0.6% in September and 3.7% year on year, above the 3.6% forecast. After the release on 14 October the Nasdaq fell 1.9% and the S&P 500 1.1%.",
+    "text": "Дані про індекс споживчих цін (CPI) за вересень:\n• загальна інфляція — +0,6% за місяць (у серпні +0,4%) і 3,7% за рік при прогнозі 3,6%;\n• базова інфляція без продуктів і енергоносіїв — +0,3% за місяць і 2,6% за рік при прогнозі 2,5%.\n\nРеакція ринків 14 жовтня:\n• S&P 500 — −1,1%, до 7 718,94 пункту;\n• Nasdaq Composite — −1,9%, до 26 692,87 пункту;\n• Dow Jones — −0,1%, до 51 621,48 пункту.\n\nДохідність казначейських облігацій зросла: інвестори побоюються, що стійка інфляція змусить ФРС довше тримати жорстку політику. Найбільше втратили технологічні компанії. Наступний орієнтир для ринків — індекс цін виробників (PPI).\n\nЩо це означає на практиці:\n• дорожчі долари для світу зазвичай тиснуть на валюти країн, що розвиваються, і на вартість запозичень;\n• для України це опосередкований фактор курсу та умов зовнішнього фінансування.",
+    "text_en": "September consumer price index (CPI) data:\n• headline inflation: +0.6% month on month (August +0.4%) and 3.7% year on year vs a 3.6% forecast;\n• core inflation excluding food and energy: +0.3% month on month and 2.6% year on year vs a 2.5% forecast.\n\nMarket reaction on 14 October:\n• S&P 500: −1.1% to 7,718.94;\n• Nasdaq Composite: −1.9% to 26,692.87;\n• Dow Jones: −0.1% to 51,621.48.\n\nTreasury yields rose as investors feared persistent inflation would keep the Fed's policy tight for longer. Tech stocks led the losses. The next market marker is the producer price index (PPI).\n\nWhat it means in practice:\n• a dearer dollar usually weighs on emerging-market currencies and borrowing costs;\n• for Ukraine it is an indirect factor for the exchange rate and external financing terms.",
+    "link": "https://finance.yahoo.com/markets/stocks/articles/stock-market-news-oct-15-123000001.html",
+    "linkLabel": "Yahoo Finance: Stock Market News for Oct 15, 2026",
+    "linkLabel_en": "Yahoo Finance: Stock Market News for Oct 15, 2026",
+    "links": [
+      {
+        "label": "Yahoo Finance: Stock Market News for Oct 15, 2026",
+        "label_en": "Yahoo Finance: Stock Market News for Oct 15, 2026",
+        "url": "https://finance.yahoo.com/markets/stocks/articles/stock-market-news-oct-15-123000001.html"
+      }
+    ],
+    "image": "img/2026-10-16-12.jpg",
+    "image_alt": "Ілюстрація: графік зі спадною стрілкою і символ долара",
+    "image_alt_en": "Illustration: a chart with a falling arrow and a dollar sign"
+  },
+  {
+    "id": "2026-10-16-13",
+    "date": "2026-10-16",
+    "tag": "Енергетика",
+    "tag_en": "Energy",
+    "title": "Brent тримається понад $106 за барель: хусити атакували штаб-квартиру Saudi Aramco",
+    "title_en": "Brent holds above $106 a barrel after Houthis attack Saudi Aramco headquarters",
+    "summary": "14 жовтня ф'ючерси на Brent зросли на 0,35%, до $106,06 за барель, WTI — на 1,01%, до $95,09, максимуму за три тижні. Міністерство енергетики Саудівської Аравії повідомило про атаку на адмінбудівлю штаб-квартири Aramco в Дахрані.",
+    "summary_en": "On 14 October Brent futures rose 0.35% to $106.06 a barrel and WTI 1.01% to $95.09, a three-week high. Saudi Arabia's energy ministry reported an attack on an administrative building at Aramco's headquarters in Dhahran.",
+    "text": "За повідомленням саудівського Міненерго, атака хуситів влучила в адміністративну будівлю штаб-квартири Saudi Aramco у Дахрані й спричинила обмежену пожежу. Протягом тижня хусити запускали по Саудівській Аравії балістичні ракети й дрони.\n\nМіжнародне енергетичне агентство у звіті від 14 жовтня зазначило, що у вересні експорт нафти з країн Перської затоки зріс на 4,4 млн барелів на добу і досяг близько 75% рівня до війни на Близькому Сході. Аналітик Saxo Bank Оле Гансен застерігає: більше нафти на ринку не обов'язково означає більший видобуток, частина обсягів перенаправлена з регіональних НПЗ.\n\nНа річних зборах МВФ і Світового банку директорка-розпорядниця МВФ Кристаліна Георгієва назвала стабільно високі ціни на енергоносії одним із ключових викликів для світової економіки.\n\nЩо це означає на практиці:\n• дорога нафта підтримує високі ціни на пальне, зокрема в Україні;\n• для бізнесу зростають логістичні витрати, що варто враховувати в контрактах і бюджетах.",
+    "text_en": "According to the Saudi energy ministry, a Houthi attack hit an administrative building at Saudi Aramco's headquarters in Dhahran, causing a limited fire. Over the past week the Houthis have fired ballistic missiles and drones at Saudi Arabia.\n\nIn its 14 October report the International Energy Agency said Gulf crude exports rose by 4.4m barrels a day in September to about 75% of their level before the Middle East war. Saxo Bank analyst Ole Hansen cautioned that more crude on the market does not necessarily mean more output, as some volumes are diverted from regional refineries.\n\nAt the IMF and World Bank annual meetings, IMF Managing Director Kristalina Georgieva named persistently high energy prices as one of the key challenges for the world economy.\n\nWhat it means in practice:\n• expensive oil keeps fuel prices high, including in Ukraine;\n• logistics costs rise for business, which should be reflected in contracts and budgets.",
+    "link": "https://www.nationthailand.com/news/world/40072291",
+    "linkLabel": "Nation Thailand: Brent rises 0.35% on October 14 after Saudi Aramco attack",
+    "linkLabel_en": "Nation Thailand: Brent rises 0.35% on October 14 after Saudi Aramco attack",
+    "links": [
+      {
+        "label": "Nation Thailand: Brent rises 0.35% on October 14 after Saudi Aramco attack",
+        "label_en": "Nation Thailand: Brent rises 0.35% on October 14 after Saudi Aramco attack",
+        "url": "https://www.nationthailand.com/news/world/40072291"
+      },
+      {
+        "label": "Interfax-Ukraine: NBU delegation heads to IMF, World Bank Annual Meetings",
+        "label_en": "Interfax-Ukraine: NBU delegation heads to IMF, World Bank Annual Meetings",
+        "url": "https://en.interfax.com.ua/news/economic/1217635.html"
+      }
+    ],
+    "image": "img/2026-10-16-13.jpg",
+    "image_alt": "Ілюстрація: нафтова бочка і стрілка зростання",
+    "image_alt_en": "Illustration: an oil barrel and an upward arrow"
+  },
+  {
+    "id": "2026-10-16-14",
+    "date": "2026-10-16",
+    "tag": "Криптовалюти",
+    "tag_en": "Crypto",
+    "title": "Таїланд з 16 жовтня дозволяє локальні ETF на біткоїн та ефір",
+    "title_en": "Thailand allows local bitcoin and ether ETFs from 16 October",
+    "summary": "Комісія з цінних паперів Таїланду затвердила правила для біржових фондів на криптоактиви, які набирають чинності 16 жовтня. На першому етапі дозволено лише біткоїн та ефір, а торгівля можлива тільки на Фондовій біржі Таїланду.",
+    "summary_en": "Thailand's Securities and Exchange Commission has approved rules for crypto exchange-traded funds that take effect on 16 October. Initially only bitcoin and ether are allowed, and trading is limited to the Stock Exchange of Thailand.",
+    "text": "Основні вимоги нових правил:\n• фонди мають відстежувати ціну криптоактиву й утримувати середню чисту експозицію щонайменше 80% чистих активів протягом звітного року;\n• зберігання — лише в ліцензованих SEC кастодіанів, торгівля — тільки на Фондовій біржі Таїланду;\n• інвестори мають підтвердити, що розуміють ризики крипто-ETF;\n• брокерам заборонено надавати маржинальні позики на купівлю таких ETF;\n• тайські пайові та приватні фонди зможуть купувати локальні крипто-ETF (раніше — лише іноземні) з дотриманням чинних лімітів.\n\nНа початковому етапі заборонено випускати депозитарні розписки на іноземні крипто-ETF, а брокерам — організовувати інвестиції в іноземні крипто-ETF для клієнтів, які не є інституційними або надзаможними інвесторами.\n\nЩо це означає на практиці:\n• ще одна велика юрисдикція переводить криптоінвестиції в регульований біржовий формат;\n• для України це орієнтир для майбутнього регулювання ринку віртуальних активів.\n\nІнформація загальна, не є фінансовою чи інвестиційною порадою.",
+    "text_en": "Key requirements of the new rules:\n• funds must track the crypto asset's price and keep average net exposure of at least 80% of net assets over each accounting year;\n• custody only with SEC-licensed custodians, trading only on the Stock Exchange of Thailand;\n• investors must acknowledge the risks of crypto ETFs;\n• brokers may not offer margin loans to buy such ETFs;\n• Thai mutual and private funds may buy local crypto ETFs (previously only foreign ones) within existing limits.\n\nIn the initial phase, depositary receipts on foreign crypto ETFs are banned, and brokers may not arrange foreign crypto ETF investments for clients other than institutional or ultra-high-net-worth investors.\n\nWhat it means in practice:\n• another major jurisdiction is moving crypto investment into a regulated exchange format;\n• for Ukraine it is a reference point for future virtual-asset regulation.\n\nGeneral information, not financial or investment advice.",
+    "link": "https://www.theblock.co/news/regulation/2026-10-09-thailand-sec-issues-bitcoin-and-ether-etf-rules-set-to-take-effect-oct-16-418132",
+    "linkLabel": "The Block: Thailand SEC issues bitcoin and ether ETF rules",
+    "linkLabel_en": "The Block: Thailand SEC issues bitcoin and ether ETF rules",
+    "links": [
+      {
+        "label": "The Block: Thailand SEC issues bitcoin and ether ETF rules",
+        "label_en": "The Block: Thailand SEC issues bitcoin and ether ETF rules",
+        "url": "https://www.theblock.co/news/regulation/2026-10-09-thailand-sec-issues-bitcoin-and-ether-etf-rules-set-to-take-effect-oct-16-418132"
+      }
+    ],
+    "image": "img/2026-10-16-14.jpg",
+    "image_alt": "Ілюстрація: біржовий фонд і монета біткоїна",
+    "image_alt_en": "Illustration: an exchange-traded fund and a bitcoin coin"
+  },
+  {
+    "id": "2026-10-16-15",
+    "date": "2026-10-16",
+    "tag": "Криптовалюти",
+    "tag_en": "Crypto",
+    "title": "Біткоїн близько $81 тис., ефір — нижче $2,4 тис.: криптоактиви знижуються після даних про інфляцію в США",
+    "title_en": "Bitcoin near $81k, ether below $2.4k: crypto slides after US inflation data",
+    "summary": "15 жовтня біткоїн відкрився на рівні $81 573 (−1,8% до середи), ефір — $2 418 (−3,1%). За рік біткоїн подешевшав на 27,9%, ефір — на 41,4%.",
+    "summary_en": "On 15 October bitcoin opened at $81,573 (−1.8% from Wednesday) and ether at $2,418 (−3.1%). Over the year bitcoin is down 27.9% and ether 41.4%.",
+    "text": "Дані на 15 жовтня 2026 року:\n• біткоїн: відкриття $81 573,10; о 7:25 за нью-йоркським часом — $80 935,07; за тиждень −2,1%, за місяць +4,4%, за рік −27,9%;\n• ефір: відкриття $2 418,43; о 7:25 — $2 360,28; за тиждень −6%, за місяць −3,8%, за рік −41,4%.\n\nТиск на ринок посилили вищі за очікування дані про інфляцію в США: інвестори побоюються тривалої жорсткої політики ФРС. Ринок чекає на індекс цін виробників (PPI). Від минулої п'ятниці біткоїн щодня відкривався в діапазоні $81–83 тис., ефір — близько $2,4 тис.\n\nЩо це означає на практиці:\n• криптоактиви залишаються чутливими до макроданих США;\n• у справах про банкрутство й розшук активів криптовалюту варто оцінювати на конкретну дату: за тиждень вартість може змінитися на кілька відсотків.\n\nІнформація загальна, не є фінансовою чи інвестиційною порадою.",
+    "text_en": "Data for 15 October 2026:\n• bitcoin: open $81,573.10; $80,935.07 at 7:25 a.m. New York time; −2.1% over a week, +4.4% over a month, −27.9% over a year;\n• ether: open $2,418.43; $2,360.28 at 7:25; −6% over a week, −3.8% over a month, −41.4% over a year.\n\nHotter-than-expected US inflation data added pressure as investors fear a prolonged tight Fed policy. The market awaits the producer price index (PPI). Since last Friday bitcoin has opened between $81,000 and $83,000 each day and ether near $2,400.\n\nWhat it means in practice:\n• crypto assets remain sensitive to US macro data;\n• in bankruptcy and asset-tracing cases crypto should be valued as of a specific date: its value can move several percent in a week.\n\nGeneral information, not financial or investment advice.",
+    "link": "https://finance.yahoo.com/personal-finance/investing/article/bitcoin-and-ethereum-prices-today-thursday-october-15-2026-crypto-prices-falling-into-a-familiar-pattern-113540042.html",
+    "linkLabel": "Yahoo Finance: Bitcoin and ethereum prices today, October 15, 2026",
+    "linkLabel_en": "Yahoo Finance: Bitcoin and ethereum prices today, October 15, 2026",
+    "links": [
+      {
+        "label": "Yahoo Finance: Bitcoin and ethereum prices today, October 15, 2026",
+        "label_en": "Yahoo Finance: Bitcoin and ethereum prices today, October 15, 2026",
+        "url": "https://finance.yahoo.com/personal-finance/investing/article/bitcoin-and-ethereum-prices-today-thursday-october-15-2026-crypto-prices-falling-into-a-familiar-pattern-113540042.html"
+      }
+    ],
+    "image": "img/2026-10-16-15.jpg",
+    "image_alt": "Ілюстрація: монета ефіру і спадний графік",
+    "image_alt_en": "Illustration: an ether coin and a falling chart"
+  },
+  {
     "id": "2026-10-15-1",
     "date": "2026-10-15",
     "tag": "Судова практика",
