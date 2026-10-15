@@ -1,10 +1,14 @@
-name: Лоти → Telegram (щоранку о 9:35)
+name: Лоти → Telegram (щоранку ~8:50)
 
 on:
   schedule:
-    # 9:35 за Києвом: 06:35 UTC влітку, 07:35 UTC взимку. Скрипт сам публікує лише раз на день у вікні 09:00–11:00.
-    - cron: "35 6 * * *"
-    - cron: "35 7 * * *"
+    # 8:50 і 9:20 за Києвом (влітку UTC+3: 05:50 і 06:20; взимку UTC+2: 06:50 і 07:20).
+    # GitHub часто запускає розклад із запізненням до години, тому кілька спроб і вікно 08:30–12:00.
+    # Скрипт публікує лише раз на день: наступні запуски того ж дня бачать lastRun і пропускають.
+    - cron: "50 5 * * *"
+    - cron: "20 6 * * *"
+    - cron: "50 6 * * *"
+    - cron: "20 7 * * *"
   workflow_dispatch: {}
 
 permissions:
@@ -30,7 +34,7 @@ jobs:
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
           SITE_URL: https://kyivarbitr.com.ua
-          TG_KYIV_WINDOW: "09:00-11:00"
+          TG_KYIV_WINDOW: "08:30-12:00"
         run: python scripts/tg_post.py
 
       - name: Зберегти перелік опублікованих лотів
