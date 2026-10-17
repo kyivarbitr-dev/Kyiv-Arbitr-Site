@@ -680,3 +680,15 @@ button[disabled]{opacity:.6;cursor:progress}
 .vblock .sub-h{margin-bottom:18px}
 .vblock .vgrid{grid-template-columns:repeat(auto-fill,minmax(200px,240px))}
 @media (max-width:560px){.vgrid,.vblock .vgrid{grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}.vcard figcaption b{font-size:15px;line-height:20px}.vcard figcaption span{display:none}}
+
+/* ---------- Публікації та статті «Позиція» ---------- */
+a.pub-a{display:flex;flex-direction:column;text-decoration:none;color:inherit}
+a.pub-a h3{margin-bottom:12px}
+a.pub-a p{color:var(--muted);flex:1;margin-bottom:12px}
+a.pub-a .news-link{align-self:flex-start}
+a.pub-a:hover h3{text-decoration:underline;text-underline-offset:4px;text-decoration-thickness:1px}
+.news-text h2{font-size:26px;line-height:34px;margin:36px 0 12px}
+.news-text ul,.news-text ol{margin:0 0 16px;padding-left:22px}
+.news-text li{font-size:17px;line-height:28px;margin-bottom:8px}
+.art-acts{margin:24px 0 8px;gap:12px 16px}
+@media (max-width:767px){.news-text h2{font-size:22px;line-height:30px}}
