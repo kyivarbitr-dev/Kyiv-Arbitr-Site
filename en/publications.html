@@ -29,7 +29,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Source+Serif+4:wght@600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="../css/style.css?v=20261018">
+<link rel="stylesheet" href="../css/style.css?v=20261024">
 <script src="../js/config.js"></script>
 <script>(function(d){if('IntersectionObserver' in window&&!(window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches)){d.classList.add('reveal');setTimeout(function(){if(!window.__revealReady)d.classList.remove('reveal')},2500)}})(document.documentElement)</script>
 <script src="../js/reveal.js" defer></script>
@@ -59,7 +59,8 @@
     <nav class="a-tabs" aria-label="Publication sections"><a href="#position">Position</a><a href="#video">Video</a><a href="#news">News</a></nav>
 
     <h2 class="sub-h" id="position">Position</h2>
-    <div class="grid g3">
+    <input class="pub-toggle" type="checkbox" id="pos-all" aria-controls="pos-grid">
+    <div class="grid g3 pub-grid" id="pos-grid">
       <a class="card pub-a scroll-reveal" href="posytsiia-sudovyi-zbir-bankruta.html"><span class="badge">Position · 23.10.2026</span><h3>Court fee for&nbsp;a&nbsp;bankrupt: how to&nbsp;prove inability to&nbsp;pay</h3><p>What the Supreme Court says about deferral of the fee and which evidence of financial position to&nbsp;submit.</p><span class="news-link">Read →</span></a>
       <a class="card pub-a scroll-reveal" href="posytsiia-shtuchni-borhy.html"><span class="badge">Position · 22.10.2026</span><h3>Artificial debts before bankruptcy: how a&nbsp;creditor can challenge 'friendly' claims</h3><p>How to&nbsp;spot an&nbsp;artificial debt and a&nbsp;related creditor, and what tools a&nbsp;genuine creditor has.</p><span class="news-link">Read →</span></a>
       <a class="card pub-a scroll-reveal" href="posytsiia-avtomatychni-areshty-23-zhovtnia.html"><span class="badge">Position · 21.10.2026</span><h3>Automatic attachments from 23 October: what debtors and businesses should check before launch</h3><p>What changes in&nbsp;enforcement proceedings from 23 October and what debtors and businesses should check in&nbsp;advance.</p><span class="news-link">Read →</span></a>
@@ -69,6 +70,7 @@
       <a class="card pub-a scroll-reveal" href="posytsiia-maino-bankruta.html"><span class="badge">Position · 17.10.2026</span><h3>Bankrupt's property at&nbsp;auction: what to&nbsp;check before you bid</h3><p>Seven points to&nbsp;check on&nbsp;a&nbsp;lot before paying the guarantee deposit.</p><span class="news-link">Read →</span></a>
       <a class="card pub-a scroll-reveal" href="posytsiia-biznes-kredyty.html"><span class="badge">Position · 16.10.2026</span><h3>Businesses with loans after 2022: bankruptcy as&nbsp;a&nbsp;tool, not a&nbsp;verdict</h3><p>The duty to&nbsp;apply to&nbsp;court, the director's liability and what martial law has changed.</p><span class="news-link">Read →</span></a>
     </div>
+    <div class="pub-more"><label class="btn btn-line" for="pos-all"><span class="t-open">Show all positions</span><span class="t-close">Collapse</span></label></div>
 
     <h2 class="sub-h" id="video">Video <span style="font-family:var(--sans);font-size:15px;font-weight:400;color:var(--muted)">(in&nbsp;Ukrainian)</span></h2>
     <div class="vgrid">
