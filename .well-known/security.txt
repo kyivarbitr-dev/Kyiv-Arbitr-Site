@@ -1,0 +1,4 @@
+Contact: mailto:kyivarbitr@gmail.com
+Expires: 2027-10-28T00:00:00.000Z
+Preferred-Languages: uk, en
+Canonical: https://kyivarbitr.com.ua/.well-known/security.txt
