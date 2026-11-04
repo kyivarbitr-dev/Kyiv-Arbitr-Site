@@ -36,5 +36,9 @@ jobs:
             echo "Змін немає"
           else
             git commit -m "Мапа Prozorro: оновлення $(date -u +%Y-%m-%d)"
-            git push
+            for i in 1 2 3; do
+              git pull --rebase origin main && git push origin HEAD:main && exit 0
+              echo "Повтор збереження через 15 с ($i)"; sleep 15
+            done
+            exit 1
           fi

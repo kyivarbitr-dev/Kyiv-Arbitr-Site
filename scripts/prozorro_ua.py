@@ -122,7 +122,7 @@ def save_json(path: Path, data, compact=False):
     path.write_text(txt, encoding="utf-8")
 
 
-def http_json(url: str, retries: int = 4):
+def http_json(url: str, retries: int = 6):
     req = urllib.request.Request(url, headers={"User-Agent": USER_AGENT, "Accept": "application/json"})
     for attempt in range(retries):
         try:
@@ -283,13 +283,25 @@ def fetch_updates(state: dict, now: datetime):
     methods = Counter()
     for page in range(MAX_PAGES):
         url = f"{API_BASE}/search/byDateModified/{urllib.parse.quote(cursor, safe='')}?limit=100"
-        batch = extract_list(http_json(url))
+        try:
+            batch = extract_list(http_json(url))
+        except RuntimeError as e:
+            # Prozorro недоступний: зберігаємо зібране, наступний запуск продовжить з цього курсора
+            log(f"  ! Prozorro не відповідає, зупинка на сторінці {page}: {e}")
+            break
         if not batch:
             break
         last = None
+        stop = False
         for proc in batch:
             if "items" not in proc and (proc.get("_id") or proc.get("id")):
-                proc = http_json(f"{API_BASE}/procedures/{proc.get('_id') or proc.get('id')}")
+                try:
+                    proc = http_json(f"{API_BASE}/procedures/{proc.get('_id') or proc.get('id')}")
+                except RuntimeError as e:
+                    # сторінку не дочитано: курсор не зсуваємо, наступний запуск перечитає її
+                    log(f"  ! Prozorro не відповідає, зупинка на сторінці {page}: {e}")
+                    stop = True
+                    break
             seen += 1
             dm = proc.get("dateModified")
             if dm and (last is None or dm > last):
@@ -306,7 +318,7 @@ def fetch_updates(state: dict, now: datetime):
                 lots[pid] = rec
             else:
                 lots.pop(pid, None)  # завершений/скасований лот — прибираємо
-        if not last:
+        if stop or not last:
             break
         nxt = (parse_dt(last) + timedelta(milliseconds=1)).strftime("%Y-%m-%dT%H:%M:%S.%fZ")
         if nxt <= cursor:
