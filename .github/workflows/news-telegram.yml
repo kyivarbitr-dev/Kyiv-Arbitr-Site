@@ -4,9 +4,10 @@ on:
   push:
     branches: [main]
     paths: ["news/news.json"]
-  schedule:
-    # щогодини: публікує по 2 нові новини, доки черга не спорожніє
-    - cron: "17 * * * *"
+  # Публікацію в Telegram запускає Cloudflare Worker (workers/tg-scheduler) кожні 2 години
+  # о 08, 10, 12, 14, 16, 18 і 20 за Києвом — по одній новині за раз.
+  # Розклад GitHub (schedule) не використовуємо: він затримує запуски на години.
+  # Push у news.json лише оновлює сторінки новин, RSS і sitemap, у Telegram нічого не надсилає.
   workflow_dispatch: {}
 
 permissions:
@@ -43,10 +44,11 @@ jobs:
           fi
 
       - name: Зачекати, поки Cloudflare опублікує нову версію сайту
-        if: github.event_name == 'push' || steps.build.outputs.changed == 'true'
+        if: github.event_name != 'push' && steps.build.outputs.changed == 'true'
         run: sleep 150
 
       - name: Опублікувати нові новини в Telegram
+        if: github.event_name != 'push'
         env:
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
@@ -54,6 +56,7 @@ jobs:
         run: python scripts/tg_news.py
 
       - name: Зберегти перелік опублікованих новин
+        if: github.event_name != 'push'
         run: |
           git config user.name  "prozorro-map-bot"
           git config user.email "actions@users.noreply.github.com"

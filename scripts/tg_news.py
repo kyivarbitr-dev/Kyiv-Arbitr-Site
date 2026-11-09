@@ -19,6 +19,7 @@ import time
 import urllib.parse
 import urllib.request
 from datetime import datetime, timedelta, timezone
+from zoneinfo import ZoneInfo
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
@@ -29,8 +30,11 @@ TOKEN = os.environ.get("TELEGRAM_BOT_TOKEN", "").strip()
 CHAT = os.environ.get("TELEGRAM_CHAT_ID", "").strip()
 SITE = os.environ.get("SITE_URL", "").strip().rstrip("/") or "https://kyivarbitr.com.ua"
 DRY = os.environ.get("TG_DRY_RUN") == "1"
-MAX_PER_RUN = int(os.environ.get("TG_NEWS_PER_RUN", "2"))  # скільки новин за один запуск (щогодини), решта — наступної години
-KYIV = timezone(timedelta(hours=3))  # дата «сьогодні» за Києвом (з точністю до години не критично)
+MAX_PER_RUN = int(os.environ.get("TG_NEWS_PER_RUN", "1"))  # скільки новин за один запуск (запуск кожні 2 години), решта — наступного разу
+KYIV = ZoneInfo("Europe/Kyiv")
+# Публікуємо лише вдень за Києвом (запуски о 08, 10, …, 20); уночі нічого не виходить
+HOUR_FROM = int(os.environ.get("TG_NEWS_HOUR_FROM", "8"))
+HOUR_TO = int(os.environ.get("TG_NEWS_HOUR_TO", "20"))
 CAPTION_MAX = 1024                   # межа підпису до фото в Telegram
 
 
@@ -84,8 +88,12 @@ def main():
     if not DRY and not (TOKEN and CHAT):
         print("Telegram (новини): токен або канал не задано — пропускаю")
         return 0
+    now = datetime.now(KYIV)
+    if not DRY and not (HOUR_FROM <= now.hour <= HOUR_TO):
+        print(f"Telegram (новини): {now:%H:%M} за Києвом — поза вікном {HOUR_FROM}:00–{HOUR_TO}:59, пропускаю")
+        return 0
     news = json.loads(NEWS_FILE.read_text(encoding="utf-8"))
-    today = datetime.now(KYIV).strftime("%Y-%m-%d")
+    today = now.strftime("%Y-%m-%d")
     ready = [n for n in news if isinstance(n, dict) and n.get("id") and n.get("title") and str(n.get("date", "9999")) <= today]
     ready.sort(key=lambda n: (str(n["date"]), str(n["id"])))
     first = not POSTED_FILE.exists()
