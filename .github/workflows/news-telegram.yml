@@ -64,6 +64,6 @@ jobs:
           if git diff --cached --quiet; then
             echo "Змін немає"
           else
-            git commit -m "Telegram: опубліковані новини"
+            git commit -m "Telegram: опубліковані новини [skip ci]"
             for i in 1 2 3; do git pull --rebase && git push && break; sleep 10; done
           fi
