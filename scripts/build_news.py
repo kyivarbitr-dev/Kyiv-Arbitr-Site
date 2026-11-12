@@ -129,9 +129,7 @@ def page(n: dict, head: str, foot: str, others: list) -> str:
       <div class="news-text">
         {body_html(n.get("text") or "")}
       </div>
-      <div class="news-links">
-          {links_html(n)}
-      </div>
+      {('<div class="news-links">' + links_html(n) + '</div>') if links_html(n) else ''}
     </article>
     <aside class="tg-cta">
       <p><b>Новини, лоти й&nbsp;думка&nbsp;— першими в&nbsp;Telegram.</b> Щоранку добірка лотів банкрутства з&nbsp;прапорцями ризиків і&nbsp;нові матеріали сайту.</p>
